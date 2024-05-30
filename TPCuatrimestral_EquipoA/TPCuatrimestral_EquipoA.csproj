@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CompraAlquilerPropiedad.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DetallePropiedad.aspx" />
     <Content Include="Estilos.css" />
@@ -79,6 +80,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompraAlquilerPropiedad.aspx.cs">
+      <DependentUpon>CompraAlquilerPropiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompraAlquilerPropiedad.aspx.designer.cs">
+      <DependentUpon>CompraAlquilerPropiedad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
