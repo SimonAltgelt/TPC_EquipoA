@@ -109,7 +109,7 @@
                                     <a class="nav-link" href="#">Comprar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Vender</a>
+                                    <a class="nav-link" href="VentaPropiedad.aspx">Vender</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Alquilar</a>
