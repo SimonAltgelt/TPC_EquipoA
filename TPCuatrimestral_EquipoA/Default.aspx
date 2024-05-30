@@ -26,10 +26,10 @@
             width: 100%;
         }
 
-            .form-group label {
-                margin-bottom: 5px;
-                font-size: 1.5em;
-            }
+        .form-group label {
+            margin-bottom: 5px;
+            font-size: 1.5em;
+        }
 
         .form-control {
             width: 100%;
@@ -40,7 +40,7 @@
         .btn-verde {
             background-color: #006744;
             color: white;
-            font-size:2em;
+            font-size: 2em;
             border: none;
             padding: 10px 20px;
             text-align: center;
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-verde mt-2">BUSCAR</button>
+                <a href="Resultados.aspx" class="btn btn-verde mt-2">BUSCAR</a>
             </div>
         </div>
     </div>

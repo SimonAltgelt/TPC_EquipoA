@@ -16,30 +16,29 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
-        
         .navbar-blue {
             background-color: #006744;
             color: white;
         }
 
-        .navbar-blue .nav-link {
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+            .navbar-blue .nav-link {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .navbar-blue .nav-link:hover {
-            font-weight: bold;
-        }
+                .navbar-blue .nav-link:hover {
+                    font-weight: bold;
+                }
 
-        .navbar-blue .navbar-brand {
-            color: white;
-        }
+            .navbar-blue .navbar-brand {
+                color: white;
+            }
 
         body {
             background-color: white;
-             font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         .navbar {
@@ -66,17 +65,24 @@
             gap: 25px;
             align-items: center;
         }
-        .nav-item{
-            font-size:20px
+
+        .nav-item {
+            font-size: 20px
         }
-        .Redes_sociales{
-            font-size:15px;
-            color:white;
+
+        .Redes_sociales {
+            font-size: 15px;
+            color: white;
         }
-        .autores{
-            font-family:'Baskerville Old Face';
-            color:darkgrey;
-            font-size:15px;
+
+        .autores {
+            font-family: 'Baskerville Old Face';
+            color: darkgrey;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-block-end: 0px;
         }
     </style>
 
@@ -114,7 +120,7 @@
                             </ul>
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <button type="button" class="btn btn-outline-danger">Iniciar sesión</button>
+                                    <button type="button" class="btn btn-outline-success">Iniciar sesión</button>
                                 </li>
                             </ul>
                         </div>
