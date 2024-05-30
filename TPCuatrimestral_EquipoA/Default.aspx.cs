@@ -11,7 +11,16 @@ namespace TPCuatrimestral_EquipoA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Rellenar el DropDownList con las opciones
+            ddlTipoPropiedad.Items.Add("Casa");
+            ddlTipoPropiedad.Items.Add("Departamento");
+            ddlTipoPropiedad.Items.Add("Terreno");
+            ddlTipoPropiedad.Items.Add("Comercial");
 
+            ddlOperacion.Items.Add("Comprar");
+            ddlOperacion.Items.Add("Vender");
+            ddlOperacion.Items.Add("Alquilar");
+           
         }
     }
 }
