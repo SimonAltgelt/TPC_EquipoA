@@ -76,6 +76,7 @@
     <Content Include="img\departamento.png" />
     <Content Include="img\familia1.png" />
     <Content Include="img\Inmobiliaria_Lusivi-removebg-preview.png" />
+    <Content Include="img\invertir-en-departamentos.png" />
     <Content Include="Resultados.aspx" />
     <Content Include="VentaPropiedad.aspx" />
     <Content Include="Web.config" />
