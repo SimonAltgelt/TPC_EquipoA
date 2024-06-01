@@ -234,3 +234,9 @@ C:\TP Cuatrimestral Prog III\TPCuatrimestral_EquipoA\TPC_EquipoA\TPCuatrimestral
 C:\TP Cuatrimestral Prog III\TPCuatrimestral_EquipoA\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatri.967BD577.Up2Date
 C:\TP Cuatrimestral Prog III\TPCuatrimestral_EquipoA\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatrimestral_EquipoA.dll
 C:\TP Cuatrimestral Prog III\TPCuatrimestral_EquipoA\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatrimestral_EquipoA.pdb
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.dll
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.dll
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.pdb
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.dll.config
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.pdb
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.dll.config

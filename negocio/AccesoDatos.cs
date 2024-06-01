@@ -21,7 +21,7 @@ namespace TPCuatrimestral_EquipoA
         {
             string conexionLV = "server=(LocalDb)\\MSSQLLocalDB; database=Inmobiliaria; integrated security=true";
             string conexionS = "server=.\\SQLEXPRESS; database=Inmobiliaria; integrated security=true";
-            conexion = new SqlConnection(conexionS);
+            conexion = new SqlConnection(conexionLV);
             comando = new SqlCommand();
         }
         public void setConsulta(string consulta)
