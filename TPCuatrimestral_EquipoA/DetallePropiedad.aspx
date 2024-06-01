@@ -53,7 +53,7 @@
             <!-- CARRUSEL -->
             <!-- me quedaron 2 columas transparentonas horribles -->
             <div class="col-8">
-                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div id="carouselExampleRide" class="carousel slide" >
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="img/cocina.png" class="d-block w-100" alt="...">
