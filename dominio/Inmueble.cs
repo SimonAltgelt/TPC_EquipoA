@@ -9,11 +9,12 @@ namespace TPCuatrimestral_EquipoA
     {
         public int ID { get; set; }
 
-        public int IDTipo { get; set; }
+        public string Tipo { get; set; }
 
-        public int IDUbicacion { get; set; }
+        public int Vendedor { get; set; }
+        public string Ubicacion{ get; set; }
 
-        public int IDDisponibilidad { get; set; }
+        public string Disponibilidad { get; set; }
         
         public int Metros2 { get; set; }
 
@@ -23,7 +24,7 @@ namespace TPCuatrimestral_EquipoA
     
         public int Baños { get; set; }
 
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
 
         public string Descripcion { get; set; }
 

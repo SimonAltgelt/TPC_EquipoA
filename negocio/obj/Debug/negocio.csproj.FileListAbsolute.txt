@@ -1,0 +1,9 @@
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\bin\Debug\negocio.dll
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\bin\Debug\negocio.pdb
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\bin\Debug\dominio.dll
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\bin\Debug\dominio.pdb
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\obj\Debug\negocio.dll
+C:\Users\kowal\Desktop\TP_Cuatri\TPC_EquipoA\negocio\obj\Debug\negocio.pdb

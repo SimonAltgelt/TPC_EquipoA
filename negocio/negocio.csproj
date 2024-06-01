@@ -54,10 +54,6 @@
       <Project>{7cb2bbf2-f708-4bf2-a2dc-2fbc4d8a61d5}</Project>
       <Name>dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TPCuatrimestral_EquipoA\TPCuatrimestral_EquipoA.csproj">
-      <Project>{9f073566-790c-4b80-af97-c310f76a540f}</Project>
-      <Name>TPCuatrimestral_EquipoA</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

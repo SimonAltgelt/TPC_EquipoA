@@ -19,8 +19,8 @@ namespace TPCuatrimestral_EquipoA
 
         public AccesoDatos()
         {
-            string conexionLV = "server=(LocalDb)\\MSSQLLocalDB; database=CATALOGO_P3_DB; integrated security=true";
-            string conexionS = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+            string conexionLV = "server=(LocalDb)\\MSSQLLocalDB; database=Inmobiliaria; integrated security=true";
+            string conexionS = "server=.\\SQLEXPRESS; database=Inmobiliaria; integrated security=true";
             conexion = new SqlConnection(conexionS);
             comando = new SqlCommand();
         }
