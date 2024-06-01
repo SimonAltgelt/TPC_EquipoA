@@ -146,6 +146,7 @@
     <Compile Include="Resultados.aspx.designer.cs">
       <DependentUpon>Resultados.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioNegocio.cs" />
     <Compile Include="VentaPropiedad.aspx.cs">
       <DependentUpon>VentaPropiedad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +190,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\dominio.csproj">
+      <Project>{7cb2bbf2-f708-4bf2-a2dc-2fbc4d8a61d5}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
