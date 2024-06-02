@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using dominio;
 
-namespace TPCuatrimestral_EquipoA
+namespace negocio
 {
     public class AdministradorNegocio : Usuario
     {

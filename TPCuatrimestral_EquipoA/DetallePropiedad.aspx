@@ -23,7 +23,6 @@
             font-family: "Roboto", sans-serif;
             font-weight: 700;
             font-style: normal;
-            margin-left: 300px;
         }
 
         .txtDescripcion {
@@ -37,7 +36,6 @@
             color: #006744;
         }
         .btn-secondary{
-            margin-left: 220px;
         }
         .custom-border {
             border: 2px solid #006744;
@@ -107,32 +105,50 @@
     <br />
      <!-- DATOS DE LA PROPIEDAD -->
     <div class="container text-center">
+
+        <%
+        lblPrecio.Text = "$" + misInmuebles[1].Precio.ToString();
+        lblNombre.Text = misInmuebles[1].Ubicacion.Direccion.ToString() + ", " + misInmuebles[1].Ubicacion.Localidad.ToString();
+        lblMetrosTotales.Text = misInmuebles[1].Metros2.ToString() + "mts Totales";
+        lblMetrosCubiertos.Text = misInmuebles[1].Metros2Cubiertos.ToString() + "mts Cubiertos";
+        lblAmbientes.Text = misInmuebles[1].Ambientes.ToString() + " ambiente/s";
+        lblBaños.Text = misInmuebles[1].Baños.ToString() + " baño/s";
+        lblDescripcion.Text = misInmuebles[1].Descripcion.ToString();
+        %>
+
         <div class="row custom-border">
-            <h5 class="direccion">Calle Falsa 123 </h5>
-                 <!-- ESTE BOTON NO LLEVA A NINGUN LADO, LO PONGO POR EL ESTILO
-                     DEBERIA DECIR ACA SI LA PROP ESTA EN VENTA O ALQUILER-->
+            <!-- ESTE BOTON NO LLEVA A NINGUN LADO, LO PONGO POR EL ESTILO DEBERIA DECIR ACA 
+                SI LA PROP ESTA EN VENTA O ALQUILER-->
             <button type="button" class="btn btn-secondary" disabled>ALQUILER</button>
-            <p class="precio">$ 540.000</p>
+            <asp:Label ID="lblPrecio" CssClass="p precio" runat="server"></asp:Label>
         </div>
+
         <br />
-        <div class="row custom-border d-flex justify-content-between align-items-center">
-            <i class="fa-solid fa-bath" style="color: #000000;"></i>
-            <h6>100 mts Totales</h6>
-            <i class="fa-solid fa-maximize " style="color: #000000;"></i>
-            <h6>88 mts Cubiertos</h6>
-            <i class="fa-solid fa-bed" style="color: #000000;"></i>
-            <h6>3 ambientes</h6>
-            <i class="fa-solid fa-bath" style="color: #000000;"></i>
-            <h6>1 baño</h6>
-        </div>
-        <br />
+
         <div class="row custom-border">
-            <%lblNombre.Text = misInmuebles[1].Ubicacion.ToString(); %>
             <asp:Label ID="lblNombre" runat="server" />
         </div>
+
         <br />
+
+        <div class="row custom-border d-flex justify-content-between align-items-center">
+            <i class="fa-solid fa-bath" style="color: #000000;"></i>
+            <asp:Label ID="lblMetrosTotales" CssClass="h6" runat="server"></asp:Label>
+
+            <i class="fa-solid fa-maximize " style="color: #000000;"></i>
+            <asp:Label ID="lblMetrosCubiertos" CssClass="h6" runat="server"></asp:Label>
+
+            <i class="fa-solid fa-bed" style="color: #000000;"></i>
+            <asp:Label ID="lblAmbientes" CssClass="h6" runat="server"></asp:Label>
+
+            <i class="fa-solid fa-bath" style="color: #000000;"></i>
+            <asp:Label ID="lblBaños" CssClass="h6" runat="server"></asp:Label>
+        </div>
+
+        <br />
+
         <div class="row custom-border">
-            <p class="card-text"><small class="text-body-secondary">Dpto. 2amb. Con Toilette y Cochera Descubierta. Edificio de 4 pisos de excelente calidad constructiva. Ubicado en un primer piso al co ...</small></p>
+            <asp:Label ID="lblDescripcion" CssClass="p card-text small text-body-secondary" runat="server"></asp:Label>
         </div>
     </div>
 

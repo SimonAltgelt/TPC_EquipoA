@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
-using TPCuatrimestral_EquipoA;
+using dominio;
 
-namespace TPCuatrimestral_EquipoA
+namespace negocio
 {
     public class InmuebleNegocio
     {
@@ -22,10 +22,13 @@ namespace TPCuatrimestral_EquipoA
                 while (datos.Lector.Read())
                 {
                     Inmueble aux = new Inmueble();
+                    Ubicacion aux2 = new Ubicacion();
 
                     aux.ID = (int)datos.Lector["ID"];
                     aux.Tipo = (string)datos.Lector["TIPO"];
-                    aux.Ubicacion = (string)datos.Lector["DIRECCION"];
+                    aux2.Direccion = (string)datos.Lector["DIRECCION"];
+                    aux2.Localidad = (string)datos.Lector["LOCALIDAD"];
+                    aux.Ubicacion = aux2;
                     aux.Metros2 = (int)datos.Lector["METROS2"];
                     aux.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
                     aux.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];

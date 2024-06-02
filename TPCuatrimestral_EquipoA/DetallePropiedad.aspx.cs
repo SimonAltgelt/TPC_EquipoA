@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using dominio;
+using negocio;
 
 namespace TPCuatrimestral_EquipoA
 {
@@ -31,7 +33,6 @@ namespace TPCuatrimestral_EquipoA
             {
                 Session["inmuebles"] = misInmuebles;
             }
-
         }
     }
 }

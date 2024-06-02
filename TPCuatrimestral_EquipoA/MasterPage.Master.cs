@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using dominio;
+using negocio;
 
 namespace TPCuatrimestral_EquipoA
 {
@@ -26,6 +28,9 @@ namespace TPCuatrimestral_EquipoA
         {
             InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
             List<Inmueble> misInmuebles = inmuebleNegocio.listar();
+            ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
+            List<Imagen> misImagenes = imagenesNegocio.listar();
+            imagenesNegocio.vincularImagenes(misInmuebles, misImagenes);
             if (Session["inmuebles"] == null)
             {
                 Session.Add("inmuebles", misInmuebles);

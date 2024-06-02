@@ -5,7 +5,9 @@ using System.Web;
 
 namespace dominio
 {
-    public class Cliente
+    public class Ubicacion
     {
+        public string Direccion { get; set; }
+        public string Localidad { get; set; }
     }
 }

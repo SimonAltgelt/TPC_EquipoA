@@ -79,32 +79,39 @@
     <br />
 
     <!-- Tarjeta de resultado centrada -->
+    <%foreach (dominio.Inmueble miInmueble in misInmuebles)
+        {
+            lblDireccion.Text = miInmueble.Ubicacion.Direccion.ToString();
+            lblPrecio.Text = "$" + miInmueble.Precio.ToString();
+            lblMtsTotales.Text = miInmueble.Metros2.ToString() + "mts totales";
+            lblMtsCubiertos.Text = miInmueble.Metros2Cubiertos.ToString() + "mts cubiertos";
+            lblBaños.Text = miInmueble.Baños.ToString() + " baño/s";
+            lblAmbientes.Text = miInmueble.Ambientes.ToString() + " ambiente/s";
+            lblDescripcion.Text = miInmueble.Descripcion.ToString();%>
     <div class="card-container">
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="./img/departamento.png" class="img-fluid rounded-start" alt="departamento">
+                    <img src="<%=miInmueble.Imagenes[0].URLImagen.ToString()%>" class="img-fluid rounded-start" alt="departamento">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="card-title">Calle Falsa 123</h5>
-                            <p class="card-precio">$ 540.000</p>
+                            <asp:Label ID="lblDireccion" CssClass="h5 card-title" runat="server"></asp:Label>
+                            <asp:Label ID="lblPrecio" CssClass="p card-precio" runat="server"></asp:Label>
                         </div>
                         <p class="card-text">San Fernando, G.B.A. Zona Norte, Argentina</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <i class="fa-solid fa-bath" style="color: #000000;"></i>
-                            <h6>100 mts Totales</h6>
+                            <asp:Label ID="lblMtsTotales" CssClass="h6" runat="server"></asp:Label>
                             <i class="fa-solid fa-maximize" style="color: #000000;"></i>
-                            <h6>88 mts Cubiertos</h6>
+                            <asp:Label ID="lblMtsCubiertos" CssClass="h6" runat="server"></asp:Label>
                             <i class="fa-solid fa-bed" style="color: #000000;"></i>
-                            <h6>3 ambientes</h6>
+                            <asp:Label ID="lblAmbientes" CssClass="h6" runat="server"></asp:Label>
                             <i class="fa-solid fa-bath" style="color: #000000;"></i>
-                            <h6>1 baño</h6>
+                            <asp:Label ID="lblBaños" CssClass="h6" runat="server"></asp:Label>
                         </div>
-                        <p class="card-text">
-                            <small class="text-body-secondary">Dpto. 2amb. Con Toilette y Cochera Descubierta. Edificio de 4 pisos de excelente calidad constructiva. Ubicado en un primer piso al co ...</small>
-                        </p>
+                        <asp:Label ID="lblDescripcion" CcClass="p card-text small text-body-secondary" runat="server"></asp:Label>
                         <div class="iconos">
                             <i class="fa-brands fa-whatsapp fa-xl"></i>
                             <i class="fa-regular fa-envelope fa-xl"></i>
@@ -118,4 +125,5 @@
             </div>
         </div>
     </div>
+    <%};%>
 </asp:Content>

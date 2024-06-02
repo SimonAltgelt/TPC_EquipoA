@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace TPCuatrimestral_EquipoA
+namespace dominio
 {
-    public class Imagenes
+    public class Imagen
     {
         public int ID { get; set; }
-
-        public int Propiedad { get; set; }
-
+        public int IDInmueble { get; set; }
         public string URLImagen { get; set; }
-
         public string Descripcion { get; set; }
     }
 }
