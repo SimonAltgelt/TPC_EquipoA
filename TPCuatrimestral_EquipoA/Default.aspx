@@ -18,10 +18,10 @@
         }
 
         .jumbotron {
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            background-color: rgba(0, 0, 0, 0.55); /* Fondo semitransparente */
             color: white;
             padding: 30px;
-            
+            border-radius: 10px
         }
 
         .form-container {
@@ -57,14 +57,14 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            
             cursor: pointer;
-            transition: font-weight 0.3s ease;
+            transition: all 0.3s;
             width: 100%;
         }
 
         .btn-verde:hover {
-            font-weight: bold;
+            transform: scale(1.01); 
+            color:white;
         }
 
         .display-4 {

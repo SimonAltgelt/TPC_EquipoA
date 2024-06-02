@@ -83,7 +83,7 @@
             </div>
 
             <!-- Columna de la imagen -->
-            <div class="col-md-6 img-container">
+            <div class="col-md-6 d-flex img-container">
                 <img src="https://img.freepik.com/foto-gratis/mujer-talla-media-que-trabaja-como-abogada_23-2151054054.jpg?t=st=1717281427~exp=1717285027~hmac=037728c9b23b7fde4605fa8e985cfdea0c6d27ad3be38543a8f7f58ec9a7c1aa&w=360" />
             </div>
         </div>

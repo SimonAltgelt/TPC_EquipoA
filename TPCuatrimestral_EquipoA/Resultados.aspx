@@ -5,20 +5,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
         .resultados {
-            background-image: url('img/ciudad.png');
+            background-image: url('img/edificiosupp.jpg');
+            
             background-size: cover;
             background-position: center;
             height: 120px;
             display: flex;
             align-items: center;
             padding-left: 20px;
-            color: wheat;
-            padding-top: 40px;
+            color: rgb(12, 4, 4);
         }
 
-            .resultados h1 {
-                margin: 0;
-            }
+        .resultados h1 {
+            margin: 0;
+        }
 
         .card-precio {
             color: #006744;
@@ -37,14 +37,14 @@
             justify-content: center;
         }
 
-            .iconos i {
-                margin: 0 5px;
-                margin-top: 5px;
-            }
+        .iconos i {
+            margin: 0 5px;
+            margin-top: 5px;
+        }
 
-                .iconos i:hover {
-                    color: #006744;
-                }
+        .iconos i:hover {
+            color: #006744;
+        }
 
         .card-container {
             display: flex;
@@ -74,7 +74,6 @@
     </style>
 
     <div class="resultados">
-        <h1>Resultados de la búsqueda</h1>
     </div>
     <br />
 

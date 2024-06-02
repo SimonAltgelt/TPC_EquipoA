@@ -35,8 +35,10 @@
             font-weight: bold;
             color: #006744;
         }
-        .btn-secondary{
+
+        .btn-secondary {
         }
+
         .custom-border {
             border: 2px solid #006744;
             border-radius: 15px;
@@ -51,7 +53,7 @@
             <!-- CARRUSEL -->
             <!-- me quedaron 2 columas transparentonas horribles -->
             <div class="col-8">
-                <div id="carouselExampleRide" class="carousel slide" >
+                <div id="carouselExampleRide" class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="img/cocina.png" class="d-block w-100" alt="...">
@@ -97,23 +99,23 @@
                     <div class="form-group">
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Comentarios"></textarea>
                     </div>
-                        <button type="button" class="btn btn-outline-success">Enviar</button>
+                    <button type="button" class="btn btn-outline-success">Enviar</button>
                 </div>
             </div>
         </div>
     </div>
     <br />
-     <!-- DATOS DE LA PROPIEDAD -->
+    <!-- DATOS DE LA PROPIEDAD -->
     <div class="container text-center">
 
         <%
-        lblPrecio.Text = "$" + misInmuebles[1].Precio.ToString();
-        lblNombre.Text = misInmuebles[1].Ubicacion.Direccion.ToString() + ", " + misInmuebles[1].Ubicacion.Localidad.ToString();
-        lblMetrosTotales.Text = misInmuebles[1].Metros2.ToString() + "mts Totales";
-        lblMetrosCubiertos.Text = misInmuebles[1].Metros2Cubiertos.ToString() + "mts Cubiertos";
-        lblAmbientes.Text = misInmuebles[1].Ambientes.ToString() + " ambiente/s";
-        lblBaños.Text = misInmuebles[1].Baños.ToString() + " baño/s";
-        lblDescripcion.Text = misInmuebles[1].Descripcion.ToString();
+            lblPrecio.Text = "$" + misInmuebles[1].Precio.ToString();
+            lblNombre.Text = misInmuebles[1].Ubicacion.Direccion.ToString() + ", " + misInmuebles[1].Ubicacion.Localidad.ToString();
+            lblMetrosTotales.Text = misInmuebles[1].Metros2.ToString() + "mts Totales";
+            lblMetrosCubiertos.Text = misInmuebles[1].Metros2Cubiertos.ToString() + "mts Cubiertos";
+            lblAmbientes.Text = misInmuebles[1].Ambientes.ToString() + " ambiente/s";
+            lblBaños.Text = misInmuebles[1].Baños.ToString() + " baño/s";
+            lblDescripcion.Text = misInmuebles[1].Descripcion.ToString();
         %>
 
         <div class="row custom-border">
