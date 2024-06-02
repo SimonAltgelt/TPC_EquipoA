@@ -127,7 +127,8 @@
         </div>
         <br />
         <div class="row custom-border">
-            <p>San Fernando, G.B.A. Zona Norte, Argentina</p>
+            <%lblNombre.Text = misInmuebles[1].Ubicacion.ToString(); %>
+            <asp:Label ID="lblNombre" runat="server" />
         </div>
         <br />
         <div class="row custom-border">

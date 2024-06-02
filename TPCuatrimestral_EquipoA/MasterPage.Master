@@ -94,7 +94,7 @@
                 <!-- MENU -->
                 <nav class="navbar navbar-expand-lg navbar-blue " style="height: 100px;">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="Default.aspx">
                             <img src="img/Inmobiliaria_Lusivi-removebg-preview.png" alt="Logo";" />
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,16 +106,16 @@
                                     <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Comprar</a>
+                                    <a class="nav-link" href="Resultados.aspx">Comprar</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="VentaPropiedad.aspx">Vender</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Alquilar</a>
+                                    <a class="nav-link" href="Resultados.aspx">Alquilar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contacto</a>
+                                    <a class="nav-link" href="Contacto.aspx">Contacto</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ml-auto">

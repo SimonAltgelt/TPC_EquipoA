@@ -11,7 +11,7 @@ namespace TPCuatrimestral_EquipoA
 {
 
 
-    public partial class Resultados
+    public partial class Contacto
     {
     }
 }

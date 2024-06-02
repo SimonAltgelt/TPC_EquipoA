@@ -11,64 +11,76 @@
             background-repeat: no-repeat;
             color: white;
             padding: 150px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ajusta la altura según sea necesario */
         }
 
         .jumbotron {
             background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
             color: white;
             padding: 30px;
+            
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .form-group {
             display: flex;
             flex-direction: column;
             margin-bottom: 15px;
-            width: 100%;
+            width: 80%;
         }
 
         .form-group label {
             margin-bottom: 5px;
-            font-size: 1.5em;
+            font-size:18px;
         }
 
         .form-control {
             width: 100%;
             padding: 10px;
-            font-size: 1.5em;
+            font-size:18px;
         }
 
         .btn-verde {
             background-color: #006744;
             color: white;
-            font-size: 2em;
+            font-size: 25px;
             border: none;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            
             cursor: pointer;
             transition: font-weight 0.3s ease;
+            width: 100%;
         }
 
-            .btn-verde:hover {
-                font-weight: bold;
-            }
+        .btn-verde:hover {
+            font-weight: bold;
+        }
 
         .display-4 {
             text-align: center;
+
         }
     </style>
 
     <div class="seccion-busqueda">
         <div class="jumbotron">
-            <h1 class="display-4">Mucho más que mudarte</h1>
-            <div class="form-group">
+            <h1 class="display-4">Encuentra la propiedad que sueñas</h1>
+            <div class="form-container">
                 <!-- Buscar por DDL OPERACION -->
                 <div class="form-group">
                     <label for="ddlOperacion" class="sr-only">Tipo operación </label>
                     <asp:Label ID="lblOperacion" runat="server" Text="Tipo operación:" />
-
                     <asp:DropDownList ID="ddlOperacion" runat="server" CssClass="form-control" />
                 </div>
                 <!-- Buscar por nombre LOCALIDADES -->
@@ -83,21 +95,10 @@
                     <asp:Label ID="lblPropiedad" runat="server" Text="Tipo de propiedad:" />
                     <asp:DropDownList ID="ddlTipoPropiedad" runat="server" CssClass="form-control" />
                 </div>
-            </div>
-            <div class="form-group">
-                <a href="Resultados.aspx" class="btn btn-verde mt-2">BUSCAR</a>
+                <div class="form-group">
+                    <a href="Resultados.aspx" class="btn btn-verde mt-2">ENCONTRAR</a>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-    <!--  <div>
-        MasterPage sin contenido
-    </div> -->
 </asp:Content>
