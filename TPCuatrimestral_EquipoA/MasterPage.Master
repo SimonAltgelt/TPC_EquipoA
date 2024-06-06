@@ -19,16 +19,16 @@
             color: white;
         }
 
-        .navbar-blue .nav-link {
-            color: rgb(206, 206, 206);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+            .navbar-blue .nav-link {
+                color: rgb(206, 206, 206);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
 
-        .nav-link::after{
-            content:'';
+        .nav-link::after {
+            content: '';
             position: absolute;
             left: 0;
             bottom: 0;
@@ -39,24 +39,23 @@
             margin-left: 2px;
             transform: scaleX(0);
             transform-origin: right;
-            transition: transform 0.2s ;
-
+            transition: transform 0.2s;
         }
 
-        .nav-link:hover{
-            color:white;
-        }
-
-        .nav-link:hover::after{
-            transform: scaleX(1);
-            transform-origin:left;
-        }
-
-        .navbar-blue .navbar-brand{
+        .nav-link:hover {
             color: white;
         }
 
-        body{
+            .nav-link:hover::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+
+        .navbar-blue .navbar-brand {
+            color: white;
+        }
+
+        body {
             background-color: white;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -88,7 +87,7 @@
         }
 
         .nav-item {
-            font-size: 20px
+            font-size: 20px;
         }
 
         .Redes_sociales {
@@ -139,10 +138,10 @@
                                     <a class="nav-link" href="Contacto.aspx">Contacto</a>
                                 </li>
                             </ul>
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <button type="button" class="btn btn-outline-success">Iniciar sesión</button>
-                                </li>
+                            <ul class="navbar-nav ms-auto">
+                                 <li class="nav-item">
+                                    <a href="InicioSesion.aspx" class="btn btn-outline-success">Iniciar sesión</a>
+                                 </li>
                             </ul>
                         </div>
                         </div>

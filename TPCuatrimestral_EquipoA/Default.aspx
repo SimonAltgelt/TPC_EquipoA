@@ -14,7 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Ajusta la altura según sea necesario */
+            height: 100vh; 
         }
 
         .jumbotron {

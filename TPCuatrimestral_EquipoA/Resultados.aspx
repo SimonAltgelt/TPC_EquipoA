@@ -6,7 +6,6 @@
     <style>
         .resultados {
             background-image: url('img/edificiosupp.jpg');
-            
             background-size: cover;
             background-position: center;
             height: 120px;
