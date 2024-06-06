@@ -81,6 +81,7 @@
         {
             lblDireccion.Text = miInmueble.Ubicacion.Direccion.ToString();
             lblPrecio.Text = "$" + miInmueble.Precio.ToString();
+            lblLocalidad.Text = miInmueble.Ubicacion.Localidad.ToString() + ", Buenos Aires, Argentina";
             lblMtsTotales.Text = miInmueble.Metros2.ToString() + "mts totales";
             lblMtsCubiertos.Text = miInmueble.Metros2Cubiertos.ToString() + "mts cubiertos";
             lblBaños.Text = miInmueble.Baños.ToString() + " baño/s";
@@ -98,7 +99,7 @@
                             <asp:Label ID="lblDireccion" CssClass="h5 card-title" runat="server"></asp:Label>
                             <asp:Label ID="lblPrecio" CssClass="p card-precio" runat="server"></asp:Label>
                         </div>
-                        <p class="card-text">San Fernando, G.B.A. Zona Norte, Argentina</p>
+                        <asp:Label ID="lblLocalidad" CssClass="p card-text" runat="server"></asp:Label>
                         <div class="d-flex justify-content-between align-items-center">
                             <i class="fa-solid fa-bath" style="color: #000000;"></i>
                             <asp:Label ID="lblMtsTotales" CssClass="h6" runat="server"></asp:Label>
