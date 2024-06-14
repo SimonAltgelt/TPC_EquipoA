@@ -41,5 +41,33 @@ namespace TPCuatrimestral_EquipoA
             }
 
         }
+
+        protected void btnAlquilar_Click(object sender, EventArgs e)
+        {
+            string disponibilidad = "Alquiler";
+            string localidad = "todas";
+            string tipoPropiedad = "todas";
+
+            // Almacenar los filtros en la sesión
+            Session["FiltroDisponibilidad"] = disponibilidad;
+            Session["FiltroLocalidad"] = localidad;
+            Session["FiltroTipoPropiedad"] = tipoPropiedad;
+            // Redirigir a la página de resultados
+            Response.Redirect("Resultados.aspx");
+        }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            string disponibilidad = "Venta";
+            string localidad = "todas";
+            string tipoPropiedad = "todas";
+
+            // Almacenar los filtros en la sesión
+            Session["FiltroDisponibilidad"] = disponibilidad;
+            Session["FiltroLocalidad"] = localidad;
+            Session["FiltroTipoPropiedad"] = tipoPropiedad;
+            // Redirigir a la página de resultados
+            Response.Redirect("Resultados.aspx");
+        }
     }
 }

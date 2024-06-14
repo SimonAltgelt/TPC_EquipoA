@@ -15,11 +15,11 @@ namespace TPCuatrimestral_EquipoA
             {
                 ddlTipoPropiedad.Items.Add("Casa");
                 ddlTipoPropiedad.Items.Add("Departamento");
+                ddlTipoPropiedad.Items.Add("PH");
                 ddlTipoPropiedad.Items.Add("Terreno");
                 ddlTipoPropiedad.Items.Add("Comercial");
 
                 ddlDisponibilidad.Items.Add("Compra");
-                ddlDisponibilidad.Items.Add("Venta");
                 ddlDisponibilidad.Items.Add("Alquiler");
             }
         }

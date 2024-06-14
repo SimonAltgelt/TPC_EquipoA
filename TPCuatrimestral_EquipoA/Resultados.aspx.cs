@@ -28,17 +28,10 @@ namespace TPCuatrimestral_EquipoA
         private void GetInmuebles(string disponibilidad, string localidad, string tipoPropiedad)
         {
             InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
-            List<Inmueble> todosInmuebles = inmuebleNegocio.listar();
+            List<Inmueble> inmueblesFiltrados = inmuebleNegocio.listarFiltrados(disponibilidad, localidad, tipoPropiedad);
             ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
             List<Imagen> misImagenes = imagenesNegocio.listar();
-            imagenesNegocio.vincularImagenes(todosInmuebles, misImagenes);
-
-            
-            var inmueblesFiltrados = todosInmuebles.Where(i =>
-                (string.IsNullOrEmpty(disponibilidad) || i.Disponibilidad == disponibilidad) &&
-                (string.IsNullOrEmpty(localidad) || i.Ubicacion.Localidad.Contains(localidad)) &&
-                (string.IsNullOrEmpty(tipoPropiedad) || i.Tipo == tipoPropiedad)
-            ).ToList();
+            imagenesNegocio.vincularImagenes(inmueblesFiltrados, misImagenes);
 
             Session["inmuebles"] = inmueblesFiltrados;
         }

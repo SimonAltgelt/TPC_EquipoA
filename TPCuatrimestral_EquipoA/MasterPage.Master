@@ -126,13 +126,13 @@
                                     <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Resultados.aspx">Comprar</a>
+                                    <asp:Button ID="btnComprar" runat="server" CcClass="a nav-link" Text="Comprar" OnClick="btnComprar_Click"/>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:Button ID="btnAlquilar" runat="server" CcClass="a nav-link" Text="Alquilar" OnClick="btnAlquilar_Click"/>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="VentaPropiedad.aspx">Vender</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Resultados.aspx">Alquilar</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="Contacto.aspx">Contacto</a>

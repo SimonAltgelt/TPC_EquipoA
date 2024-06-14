@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.DynamicData;
+using System.Web.UI.WebControls;
 using dominio;
 
 namespace negocio
@@ -90,13 +91,34 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string consulta = "SELECT * FROM dbo.VW_DatosInmuebles"; // guardo toda consulta
+                string consulta = "SELECT * FROM dbo.VW_DatosInmuebles "; // guardo toda consulta
                 // lo que quiero traer son los filtros aplicados
                 //
-                consulta += "WHERE DISPONIBILIDAD = '" + disponibilidad + "' ";
-                consulta += "AND LOCALIDAD = '" + localidad + "' ";
-                consulta += "AND TIPO = '" + tipo + "' ";
 
+                if (disponibilidad == "Compra")
+                {
+                    disponibilidad = "Venta";
+                }
+
+                consulta += "WHERE DISPONIBILIDAD = '" + disponibilidad + "' ";
+
+                if (localidad == "todas" || localidad == "")
+                {
+                    //no hace nada
+                } else 
+                {
+                    consulta += "AND LOCALIDAD LIKE '" + localidad + "%' ";
+                }
+
+                if (tipo == "todas")
+                {
+                    //no hace nada
+                }
+                else
+                {
+                    consulta += "AND TIPO = '" + tipo + "'";
+                }
+                
                 datos.setConsulta(consulta);
                 datos.ejecutarLectura();
 
@@ -129,6 +151,7 @@ namespace negocio
                 throw;
             }
         }
+        
     }
 
 }

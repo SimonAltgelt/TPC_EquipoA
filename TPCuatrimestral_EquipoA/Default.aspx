@@ -74,11 +74,11 @@
 
     <div class="seccion-busqueda">
         <div class="jumbotron">
-            <h1 class="display-4">Encuentra la propiedad que sueñas</h1>
+            <h1 class="display-4">Encontrá la propiedad que soñás</h1>
             <div class="form-container">
                 <!-- Buscar por DDL disponibilidad -->
                 <div class="form-group">
-                    <label for="ddlDisponibilidad" class="sr-only">Tipo operación </label>
+                    <label for="ddlDisponibilidad" class="sr-only">Tipo de operación </label>
                     <asp:Label ID="lbldisponibilidad" runat="server" Text="Tipo operación:" />
                     <asp:DropDownList ID="ddlDisponibilidad" runat="server" CssClass="form-control" />
                 </div>
@@ -86,7 +86,7 @@
                 <div class="form-group">
                     <label for="inputLocalidad" class="sr-only">Dónde querés mudarte?</label>
                     <asp:Label ID="lblLocalidad" runat="server" Text="Ubicación:" />
-                    <asp:TextBox ID="inputLocalidad" runat="server" CssClass="form-control" placeholder="Dónde querés mudarte?" />
+                    <asp:TextBox ID="inputLocalidad" runat="server" CssClass="form-control" placeholder="¿Dónde querés mudarte?" />
                 </div>
 
                 <!-- Buscar por DDL PROPIEDADES -->

@@ -311,3 +311,19 @@ C:\TP Cuatrimestral Prog III\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.pdb
 C:\TP Cuatrimestral Prog III\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.dll.config
 C:\TP Cuatrimestral Prog III\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.pdb
 C:\TP Cuatrimestral Prog III\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.dll.config
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\TPCuatrimestral_EquipoA.dll.config
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\TPCuatrimestral_EquipoA.dll
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\TPCuatrimestral_EquipoA.pdb
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.dll
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.dll
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.pdb
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\dominio.dll.config
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.pdb
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\negocio.dll.config
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatrimestral_EquipoA.csproj.AssemblyReference.cache
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatrimestral_EquipoA.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatri.967BD577.Up2Date
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatrimestral_EquipoA.dll
+C:\Users\Lucas\Desktop\TP Cuatrimestral\TPC_EquipoA\TPCuatrimestral_EquipoA\obj\Debug\TPCuatrimestral_EquipoA.pdb
