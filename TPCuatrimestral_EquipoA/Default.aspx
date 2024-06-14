@@ -14,7 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; 
+            height: 100vh;
         }
 
         .jumbotron {
@@ -37,15 +37,15 @@
             width: 80%;
         }
 
-        .form-group label {
-            margin-bottom: 5px;
-            font-size:18px;
-        }
+            .form-group label {
+                margin-bottom: 5px;
+                font-size: 18px;
+            }
 
         .form-control {
             width: 100%;
             padding: 10px;
-            font-size:18px;
+            font-size: 18px;
         }
 
         .btn-verde {
@@ -62,14 +62,13 @@
             width: 100%;
         }
 
-        .btn-verde:hover {
-            transform: scale(1.01); 
-            color:white;
-        }
+            .btn-verde:hover {
+                transform: scale(1.01);
+                color: white;
+            }
 
         .display-4 {
             text-align: center;
-
         }
     </style>
 
@@ -77,18 +76,19 @@
         <div class="jumbotron">
             <h1 class="display-4">Encuentra la propiedad que sueñas</h1>
             <div class="form-container">
-                <!-- Buscar por DDL OPERACION -->
+                <!-- Buscar por DDL disponibilidad -->
                 <div class="form-group">
-                    <label for="ddlOperacion" class="sr-only">Tipo operación </label>
-                    <asp:Label ID="lblOperacion" runat="server" Text="Tipo operación:" />
-                    <asp:DropDownList ID="ddlOperacion" runat="server" CssClass="form-control" />
+                    <label for="ddlDisponibilidad" class="sr-only">Tipo operación </label>
+                    <asp:Label ID="lbldisponibilidad" runat="server" Text="Tipo operación:" />
+                    <asp:DropDownList ID="ddlDisponibilidad" runat="server" CssClass="form-control" />
                 </div>
                 <!-- Buscar por nombre LOCALIDADES -->
                 <div class="form-group">
                     <label for="inputLocalidad" class="sr-only">Dónde querés mudarte?</label>
                     <asp:Label ID="lblLocalidad" runat="server" Text="Ubicación:" />
-                    <input type="text" class="form-control" id="inputLocalidad" placeholder="Dónde querés mudarte?">
+                    <asp:TextBox ID="inputLocalidad" runat="server" CssClass="form-control" placeholder="Dónde querés mudarte?" />
                 </div>
+
                 <!-- Buscar por DDL PROPIEDADES -->
                 <div class="form-group">
                     <label for="ddlTipoPropiedad" class="sr-only">Tipo de propiedad</label>
@@ -96,8 +96,9 @@
                     <asp:DropDownList ID="ddlTipoPropiedad" runat="server" CssClass="form-control" />
                 </div>
                 <div class="form-group">
-                    <a href="Resultados.aspx" class="btn btn-verde mt-2">ENCONTRAR</a>
+                    <asp:Button ID="btnEncontrar" runat="server" Text="ENCONTRAR" CssClass="btn btn-verde mt-2" OnClick="btnEncontrar_Click" />
                 </div>
+
             </div>
         </div>
     </div>

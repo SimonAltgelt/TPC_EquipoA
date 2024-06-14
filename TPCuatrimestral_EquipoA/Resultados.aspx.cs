@@ -12,30 +12,35 @@ namespace TPCuatrimestral_EquipoA
     public partial class Resultados : System.Web.UI.Page
     {
         public List<Inmueble> misInmuebles;
-        protected void Page_Load(object sender, EventArgs e) //ejecuta cada vez que se carga la página
+
+        protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) //Verifica si la página se carga por primera vez o si se carga por una acción del usuario
+            if (!IsPostBack)
             {
-                GetInmuebles();
+                string disponibilidad = (string)Session["FiltroDisponibilidad"];
+                string localidad = (string)Session["FiltroLocalidad"];
+                string tipoPropiedad = (string)Session["FiltroTipoPropiedad"];
+                GetInmuebles(disponibilidad, localidad, tipoPropiedad);
             }
             misInmuebles = (List<Inmueble>)Session["inmuebles"];
         }
 
-        private void GetInmuebles()
+        private void GetInmuebles(string disponibilidad, string localidad, string tipoPropiedad)
         {
             InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
-            List<Inmueble> misInmuebles = inmuebleNegocio.listar();
+            List<Inmueble> todosInmuebles = inmuebleNegocio.listar();
             ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
             List<Imagen> misImagenes = imagenesNegocio.listar();
-            imagenesNegocio.vincularImagenes(misInmuebles, misImagenes);
-            if (Session["inmuebles"] == null)
-            {
-                Session.Add("inmuebles", misInmuebles);
-            }
-            else
-            {
-                Session["inmuebles"] = misInmuebles;
-            }
+            imagenesNegocio.vincularImagenes(todosInmuebles, misImagenes);
+
+            
+            var inmueblesFiltrados = todosInmuebles.Where(i =>
+                (string.IsNullOrEmpty(disponibilidad) || i.Disponibilidad == disponibilidad) &&
+                (string.IsNullOrEmpty(localidad) || i.Ubicacion.Localidad.Contains(localidad)) &&
+                (string.IsNullOrEmpty(tipoPropiedad) || i.Tipo == tipoPropiedad)
+            ).ToList();
+
+            Session["inmuebles"] = inmueblesFiltrados;
         }
-    }
+    } 
 }
