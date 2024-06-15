@@ -18,7 +18,7 @@
         }
 
         .precio {
-            color: #006744;
+            color: #4c6444;
             font-size: 20px;
             font-family: "Roboto", sans-serif;
             font-weight: 700;
@@ -33,14 +33,14 @@
         .txtContacto {
             font-size: 30px;
             font-weight: bold;
-            color: #006744;
+            color: #4c6444;
         }
 
         .btn-secondary {
         }
 
         .custom-border {
-            border: 2px solid #006744;
+            border: 2px solid #4c6444;
             border-radius: 15px;
             padding: 20px;
         }

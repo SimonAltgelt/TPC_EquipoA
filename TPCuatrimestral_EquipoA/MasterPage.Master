@@ -15,19 +15,25 @@
     </asp:ContentPlaceHolder>
     <style>
         .navbar-blue {
-            background-color: #006744;
+            background-color: #4c6444;
             color: white;
         }
 
-            .navbar-blue .nav-link {
-                color: rgb(206, 206, 206);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-            }
+        .navbar-blue .nav-link, .nav-button {
+            color: rgb(206, 206, 206);
+            display: inline-flex; /* Cambiado de flex a inline-flex */
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0;
+            background: none; /* Asegura que el fondo sea transparente */
+            border: none; /* Asegura que no haya bordes */
+            margin-left: 10px; /* Mantén el margen izquierdo para los botones */
+        }
 
-        .nav-link::after {
+        .nav-link::after, .nav-button::after {
             content: '';
             position: absolute;
             left: 0;
@@ -42,14 +48,14 @@
             transition: transform 0.2s;
         }
 
-        .nav-link:hover {
+        .nav-link:hover, .nav-button:hover {
             color: white;
         }
 
-            .nav-link:hover::after {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
+        .nav-link:hover::after, .nav-button:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
 
         .navbar-blue .navbar-brand {
             color: white;
@@ -61,7 +67,7 @@
         }
 
         .navbar {
-            background-color: #006744;
+            background-color: #4c6444;
             font-family: Arial, Helvetica, sans-serif
         }
 
@@ -71,7 +77,7 @@
         }
 
         .contacto-nav {
-            background-color: crimson;
+            background-color: #caba9c;
             color: white;
             height: 30px;
             width: 100%;
@@ -84,10 +90,12 @@
             display: flex;
             gap: 25px;
             align-items: center;
+            color: #4d2d18;
         }
 
         .nav-item {
             font-size: 20px;
+            color: #caba9c;
         }
 
         .Redes_sociales {
@@ -104,8 +112,12 @@
         footer {
             margin-block-end: 0px;
         }
-    </style>
 
+        .btn-outline  {
+            color:#caba9c;
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -126,10 +138,10 @@
                                     <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <asp:Button ID="btnComprar" runat="server" CcClass="a nav-link" Text="Comprar" OnClick="btnComprar_Click"/>
+                                    <asp:Button ID="btnComprar" runat="server" Class="nav-button" Text="Comprar" OnClick="btnComprar_Click"/>
                                 </li>
                                 <li class="nav-item">
-                                    <asp:Button ID="btnAlquilar" runat="server" CcClass="a nav-link" Text="Alquilar" OnClick="btnAlquilar_Click"/>
+                                    <asp:Button ID="btnAlquilar" runat="server" Class="nav-button" Text="Alquilar" OnClick="btnAlquilar_Click"/>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="VentaPropiedad.aspx">Vender</a>
@@ -140,23 +152,23 @@
                             </ul>
                             <ul class="navbar-nav ms-auto">
                                  <li class="nav-item">
-                                    <a href="InicioSesion.aspx" class="btn btn-outline-success">Iniciar sesión</a>
+                                    <a href="InicioSesion.aspx" class="btn btn-outline">Iniciar sesión</a>
                                  </li>
                             </ul>
                         </div>
-                        </div>
+                    </div>
                 </nav>
                <!-- contacto -->
                 <div class="contacto-nav">
                     <div class="contacto-group">
-                        <i class="fa-solid fa-phone fa-shake" style="color: #ffffff;"></i>
+                        <i class="fa-solid fa-phone fa-shake" style="color: #4d2d18;"></i>
                         <asp:Label ID="lblTelefono" runat="server" Text="4444-5266" />
                         
-                        <i class="fa-solid fa-envelope fa-shake" style="color: #ffffff;"></i>
+                        <i class="fa-solid fa-envelope fa-shake" style="color: #4d2d18;"></i>
                         <asp:Label ID="lblMail" runat="server" Text="info@luvisi.com.ar" />
                            
-                        <i class="fa-solid fa-location-dot fa-shake" style="color: #ffffff;"></i>
-                        <asp:Label ID="lbl" runat="server" Text="Av. Siempreviva 742" />
+                        <i class="fa-solid fa-location-dot fa-shake" style="color: #4d2d18;"></i>
+                        <asp:Label ID="lbl" runat="server" Text="Av. Del Libertador 16742" />
                     </div>
                 </div>
 
@@ -168,11 +180,11 @@
     <br />
 
     <!-- FOOTER  -->
-    <footer style="background-color: #006744">
+    <footer style="background-color: #4c6444">
         <hr />
         <div class="text-center">
             <div class="Redes_sociales">
-            <h5>¡Seguinos en nuestras redes!</h5>
+                <h5>¡Seguinos en nuestras redes!</h5>
                 <a href="#" target="_blank" class="btn btn-social-icon btn-instagram">
                     <i class="fa-brands fa-instagram fa-beat" style="color: #ffffff;"></i>
                 </a>
@@ -198,10 +210,8 @@
                     <a href="mailto:simon.altgelt@alumnos.frgp.utn.edu.ar" style="margin-right: 10px;">simon.altgelt@alumnos.frgp.utn.edu.ar</a>
                     <a href="mailto:victoria.kowalk@alumnos.frgp.utn.edu.ar">maria.kowalk@alumnos.frgp.utn.edu.ar</a>
                 </p>
-
             </div>
         </div>
     </footer>
-
 </body>
 </html>

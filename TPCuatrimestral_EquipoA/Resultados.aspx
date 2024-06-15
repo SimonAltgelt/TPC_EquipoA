@@ -20,7 +20,7 @@
         }
 
         .card-precio {
-            color: #006744;
+            color: #4c6444;
             font-size: 20px;
             font-family: "Roboto", sans-serif;
             font-weight: 700;
@@ -42,7 +42,7 @@
         }
 
         .iconos i:hover {
-            color: #006744;
+            color: #4c6444;
         }
 
         .card-container {

@@ -49,7 +49,7 @@
         }
 
         .btn-verde {
-            background-color: #006744;
+            background-color: #4c6444;
             color: white;
             font-size: 25px;
             border: none;
