@@ -17,8 +17,6 @@
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
         }
-
-
         .form-container {
             background: rgba(255, 255, 255, 0.8);
             padding: 30px;
@@ -27,11 +25,9 @@
             width: 130%;
             text-align: center;
         }
-
         .form-group {
             margin-bottom: 1rem;
         }
-
         .form-container h2 {
             
             margin-bottom: 1rem;

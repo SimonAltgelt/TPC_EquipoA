@@ -1,83 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Resultados.aspx.cs" Inherits="TPCuatrimestral_EquipoA.Resultados" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Administracion.aspx.cs" Inherits="TPCuatrimestral_EquipoA.Administracion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <style>
-        .resultados {
-            background-image: url('img/edificiosupp.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            padding-left: 20px;
-            color: rgb(12, 4, 4);
-        }
-
-        .resultados h1 {
-            margin: 0;
-        }
-
-        .card-precio {
-            color: #4c6444;
-            font-size: 20px;
-            font-family: "Roboto", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        .iconos {
-            color: #000000;
-            cursor: pointer;
-            transition: font-weight 0.3s ease;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .iconos i {
-            margin: 0 5px;
-            margin-top: 5px;
-        }
-
-        .iconos i:hover {
-            color: #4c6444;
-        }
-
-        .card-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .card {
-            max-width: 1000px;
-            margin: 30px;
-        }
-
-        .card-body {
-            display: flex;
-            flex-direction: column; /* Alinea los elementos verticalmente */
-            justify-content: space-between; /* Espacio uniforme entre los elementos */
-            height: 100%; /* Para asegurarse de que ocupe toda la altura */
-        }
-
-        .iconos {
-            margin-bottom: 15px;
-        }
-
-        .btn-outline-info {
-            margin-top: auto; /* Empuja el botón hacia abajo */
-            align-self: center; /* Centra el botón horizontalmente */
-        }
-    </style>
 
     <div class="resultados">
+        <h1>Administración</h1>
     </div>
-    <br />
-
-    <!-- Tarjeta de resultado centrada -->
-    <%foreach (dominio.Inmueble miInmueble in misInmuebles)
+    <% foreach (dominio.Inmueble miInmueble in todoInmueble)
         {
             lblDireccion.Text = miInmueble.Ubicacion.Direccion.ToString();
             lblPrecio.Text = "$" + miInmueble.Precio.ToString();
@@ -125,5 +55,4 @@
         </div>
     </div>
     <%};%>
-
 </asp:Content>

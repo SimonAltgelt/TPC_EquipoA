@@ -69,5 +69,10 @@ namespace TPCuatrimestral_EquipoA
             // Redirigir a la página de resultados
             Response.Redirect("Resultados.aspx");
         }
+        protected void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Administracion.aspx");
+        }
     }
+
 }
