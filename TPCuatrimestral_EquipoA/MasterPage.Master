@@ -93,7 +93,7 @@
             color: #4d2d18;
         }
 
-        .nav-item {
+        .nav-item  {
             font-size: 20px;
             color: #caba9c;
         }
@@ -138,10 +138,10 @@
                                     <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <asp:Button ID="btnComprar" runat="server" Class="nav-button" Text="Comprar" OnClick="btnComprar_Click"/>
+                                    <asp:Button ID="btnComprar" runat="server" Class="nav-item" Text="Comprar" OnClick="btnComprar_Click"/>
                                 </li>
                                 <li class="nav-item">
-                                    <asp:Button ID="btnAlquilar" runat="server" Class="nav-button nav-item" Text="Alquilar" OnClick="btnAlquilar_Click"/>
+                                    <asp:Button ID="btnAlquilar" runat="server" Class="nav-item" Text="Alquilar" OnClick="btnAlquilar_Click"/>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="VentaPropiedad.aspx">Vender</a>
@@ -150,7 +150,7 @@
                                     <a class="nav-link" href="Contacto.aspx">Contacto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <asp:Button ID="btnAdmin" runat="server" Class="nav-button " Text="Admin" OnClick="btnAdmin_Click"/>
+                                    <asp:Button ID="btnAdmin" runat="server" Class="nav-button" Text="Admin" OnClick="btnAdmin_Click"/>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ms-auto">

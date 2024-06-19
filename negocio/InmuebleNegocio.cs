@@ -171,6 +171,37 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void agregar(Inmueble nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("INSERT INTO INMUEBLES (Tipo, Vendedor, Ubicacion, Disponibilidad, Metros2, Metros2Cubiertos, Ambientes, Baños, Precio, Descripcion) VALUES (@Tipo, @Vendedor, @Ubicacion, @Disponibilidad, @Metros2, @Metros2Cubiertos, @Ambientes, @Baños, @Precio, @Descripcion");
+                datos.setParametros("@Tipo", nuevo.Tipo);
+                datos.setParametros("@Vendedor", nuevo.Vendedor);
+                datos.setParametros("@Ubicacion", nuevo.Ubicacion);
+                //datos.setParametros("@Imagenes", nuevo.Imagenes); lo comento pq se va a traer problemas x ahora
+                datos.setParametros("@Disponibilidad", nuevo.Disponibilidad);
+                datos.setParametros("@Metros2", nuevo.Metros2);
+                datos.setParametros("@Metros2Cubiertos", nuevo.Metros2Cubiertos);
+                datos.setParametros("@Ambientes", nuevo.Ambientes);
+                datos.setParametros("@Baños", nuevo.Baños);
+                datos.setParametros("@Precio", nuevo.Precio);
+                datos.setParametros("@Descripcion", nuevo.Descripcion);
+                //datos.setParametros("@Estado", nuevo.Estado); lo comento pq se va a traer problemas x ahora
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 
 }

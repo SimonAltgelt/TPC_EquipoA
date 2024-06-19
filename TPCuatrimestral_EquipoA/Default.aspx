@@ -37,10 +37,10 @@
             width: 80%;
         }
 
-            .form-group label {
-                margin-bottom: 5px;
-                font-size: 18px;
-            }
+        .form-group label {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
 
         .form-control {
             width: 100%;
@@ -62,10 +62,10 @@
             width: 100%;
         }
 
-            .btn-verde:hover {
-                transform: scale(1.01);
-                color: white;
-            }
+        .btn-verde:hover {
+            transform: scale(1.01);
+            color: white;
+        }
 
         .display-4 {
             text-align: center;

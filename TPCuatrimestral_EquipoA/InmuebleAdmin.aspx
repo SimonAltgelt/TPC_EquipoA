@@ -8,7 +8,7 @@
         <div>
             /*aca quierocargr imagenes*/
           <div class="col-8">
-              <img src="img/cocina.png" class="d-block w-100" alt="...">
+              <img src="img/cocina.png" class="d-block w-50" alt="...">
           </div>
         </div>
         <div class="col-8">
@@ -28,7 +28,7 @@
                             <asp:ListItem Text="Venta" Value="1"></asp:ListItem>
                             <asp:ListItem Text="Alquiler" Value="2"></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:Button ID="btnAceptar" runat="server"  Text="Aceptar" class="btn btn-secondary" />
+                        <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" Text="Aceptar" class="btn btn-secondary" />
                     </div>
                 </div>
             </div>
