@@ -109,13 +109,13 @@
     <div class="container text-center">
 
         <%
-            lblPrecio.Text = "$" + misInmuebles[1].Precio.ToString();
-            lblNombre.Text = misInmuebles[1].Ubicacion.Direccion.ToString() + ", " + misInmuebles[1].Ubicacion.Localidad.ToString();
-            lblMetrosTotales.Text = misInmuebles[1].Metros2.ToString() + "mts Totales";
-            lblMetrosCubiertos.Text = misInmuebles[1].Metros2Cubiertos.ToString() + "mts Cubiertos";
-            lblAmbientes.Text = misInmuebles[1].Ambientes.ToString() + " ambiente/s";
-            lblBaños.Text = misInmuebles[1].Baños.ToString() + " baño/s";
-            lblDescripcion.Text = misInmuebles[1].Descripcion.ToString();
+            lblPrecio.Text = "$" + miInmueble.Precio.ToString();
+            lblNombre.Text = miInmueble.Ubicacion.Direccion.ToString() + ", " + miInmueble.Ubicacion.Localidad.ToString();
+            lblMetrosTotales.Text = miInmueble.Metros2.ToString() + "mts Totales";
+            lblMetrosCubiertos.Text = miInmueble.Metros2Cubiertos.ToString() + "mts Cubiertos";
+            lblAmbientes.Text = miInmueble.Ambientes.ToString() + " ambiente/s";
+            lblBaños.Text = miInmueble.Baños.ToString() + " baño/s";
+            lblDescripcion.Text = miInmueble.Descripcion.ToString();
         %>
 
         <div class="row custom-border">

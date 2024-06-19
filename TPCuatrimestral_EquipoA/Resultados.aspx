@@ -116,7 +116,7 @@
                             <i class="fa-regular fa-envelope fa-xl"></i>
                             <i class="fa-regular fa-calendar-days fa-xl"></i>
                             <div>
-                                <a href="DetallePropiedad.aspx" class="btn btn-outline-info">Ver Detalle</a>
+                                <a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>"" class="btn btn-outline-info">Ver Detalle</a>
                             </div>
                         </div>
                     </div>

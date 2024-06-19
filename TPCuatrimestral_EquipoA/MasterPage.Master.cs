@@ -39,7 +39,6 @@ namespace TPCuatrimestral_EquipoA
             {
                 Session["inmuebles"] = misInmuebles;
             }
-
         }
 
         protected void btnAlquilar_Click(object sender, EventArgs e)
