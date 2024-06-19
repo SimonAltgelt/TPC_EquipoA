@@ -40,5 +40,9 @@ namespace TPCuatrimestral_EquipoA
                 Session["inmuebles"] = misInmuebles;
             }
         }
+        protected void btnPublicar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InmuebleAdmin.aspx");
+        }
     }
 }

@@ -102,6 +102,7 @@
     <Content Include="img\portada.jpg" />
     <Content Include="img\Registro.jpg" />
     <Content Include="InicioSesion.aspx" />
+    <Content Include="InmuebleAdmin.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Resultados.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -151,6 +152,13 @@
     </Compile>
     <Compile Include="InicioSesion.aspx.designer.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InmuebleAdmin.aspx.cs">
+      <DependentUpon>InmuebleAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InmuebleAdmin.aspx.designer.cs">
+      <DependentUpon>InmuebleAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
