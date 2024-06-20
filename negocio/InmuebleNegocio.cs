@@ -101,14 +101,14 @@ namespace negocio
                     disponibilidad = "Venta";
                 }
 
-                consulta += "WHERE DISPONIBILIDAD = '" + disponibilidad + "' ";
+                consulta += " AND DISPONIBILIDAD = '" + disponibilidad + "' ";
 
                 if (localidad == "todas" || localidad == "")
                 {
                     //no hace nada
                 } else 
                 {
-                    consulta += "AND LOCALIDAD LIKE '" + localidad + "%' ";
+                    consulta += " AND LOCALIDAD LIKE '" + localidad + "%' ";
                 }
 
                 if (tipo == "todas")

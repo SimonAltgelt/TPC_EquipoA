@@ -20,7 +20,8 @@
         {
             //Llevame a la nueva página con los datos precargados
             Response.Redirect($"InmuebleAdmin.aspx?ID={IDPropiedad}");
-        } else if (e.CommandName == "Publicar")
+        }
+        else if (e.CommandName == "Publicar")
         {
             //Llevame a la nueva página
             Response.Redirect("InmuebleAdmin.aspx");
@@ -31,31 +32,84 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style>
+        .admin {
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+        }
 
-    <div class="resultados">
+        .btn-verde {
+            background-color: #4c6444;
+            color: white;
+            font-size: 25px;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-verde:hover {
+            transform: scale(1.01);
+            color: white;
+        }
+
+
+        .grid-container {
+            
+            
+            width: 80%;
+            margin: 0 auto;
+            text-align:center;
+           
+
+        }
+
+           .grid-container table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+           .grid-container table th {
+                background-color: #4c6444;
+                color: white;
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+           .grid-container table td {
+                 padding: 10px;
+                 border: 1px solid #ddd;
+                }
+    </style>
+
+    <div class="admin">
         <h1>Administración</h1>
-
     </div>
     <div>
-        <asp:Button ID="btnPublicar" runat="server" OnClick="btnPublicar_Click" Text="Publicar Nuevo Inmueble" />
+        <asp:Button ID="btnPublicar" runat="server" CssClass="btn btn-verde mt-2" OnClick="btnPublicar_Click" Text="Publicar Nuevo Inmueble" />
     </div>
+    <br />
+ 
 
-    <asp:gridview id="InmueblesGridView" 
-          autogeneratecolumns="False"
-          allowpaging="True" 
-          OnRowCommand ="InmueblesGridView_RowCommand"
-          runat="server">
-            <Columns>
-                <asp:BoundField DataField="ID" HeaderText="ID de Propiedad" ReadOnly="True"/>
-                <asp:BoundField DataField="UBICACION.DIRECCION" HeaderText="Dirección" />
-                <asp:BoundField DataField="UBICACION.LOCALIDAD" HeaderText="Localidad" />
-                <asp:BoundField DataField="DISPONIBILIDAD" HeaderText="Disponibilidad" />
-                <asp:ButtonField ButtonType="Button" Text="Modificar" CommandName="Modificar" />
-                
-                <asp:ButtonField ButtonType="Button" Text="Ocultar" CommandName="Ocultar" />
 
-            </Columns>
-       
-    </asp:gridview>
+        
 
+    <div class="grid-container">
+            <asp:GridView ID="InmueblesGridView"
+                AutoGenerateColumns="False"
+                AllowPaging="True"
+                OnRowCommand="InmueblesGridView_RowCommand"
+                runat="server">
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID de Propiedad" ReadOnly="True" />
+                    <asp:BoundField DataField="UBICACION.DIRECCION" HeaderText="Dirección" />
+                    <asp:BoundField DataField="UBICACION.LOCALIDAD" HeaderText="Localidad" />
+                    <asp:BoundField DataField="DISPONIBILIDAD" HeaderText="Disponibilidad" />
+                    <asp:ButtonField ButtonType="Button" Text="Modificar" CommandName="Modificar" />
+                    <asp:ButtonField ButtonType="Button" Text="Ocultar" CommandName="Ocultar" />
+                </Columns>
+            </asp:GridView>
+    </div>
 </asp:Content>

@@ -44,10 +44,14 @@
             border-radius: 15px;
             padding: 20px;
         }
+        .d-block {
+           display: flex;
+           width:600px;
+           height:600px;
+        
+        }
     </style>
-    <div class=" container text-center">
-        <label class="txtDescripcion">Dpto. 2amb Con Cochera Descubierta. </label>
-    </div>
+    <br />
     <div class="container text-center">
         <div class="row">
             <!-- CARRUSEL -->
@@ -55,16 +59,18 @@
             <div class="col-8">
                 <div id="carouselExampleRide" class="carousel slide">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/cocina.png" class="d-block w-100" alt="...">
+                        <%bool esActivo = true;
+                            foreach (dominio.Imagen miImagen in miInmueble.Imagenes)
+                            { %>
+                        <div class="carousel-item <%= esActivo ? "active" : "" %>">
+                            <img src="<% =miImagen.URLImagen %>" style="height: 800px; width: 100%; object-fit:contain;" class="d-block w-50" alt="...">
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/dormitorio.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/living.png" class="d-block w-100" alt="...">
-                        </div>
+                        <%esActivo = false; // setea el esActive a falso despues de la primer iteracion
+
+                            } %>
                     </div>
+
+    
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
