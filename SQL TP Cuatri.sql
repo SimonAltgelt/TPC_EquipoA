@@ -326,7 +326,17 @@ BEGIN
 	Declare @idubicacion int
 	Declare @iddisponibilidad int
 	Declare @idtipo int
-	SELECT @idlocalidad = ID FROM LOCALIDADES WHERE NOMBRE = @localidad;
+	
+	IF @localidad NOT IN (SELECT NOMBRE FROM LOCALIDADES)
+	BEGIN
+		INSERT INTO LOCALIDADES (NOMBRE) VALUES (@localidad)
+		SELECT @idlocalidad=@@IDENTITY
+	END
+	ELSE
+	BEGIN
+		SELECT @idlocalidad = ID FROM LOCALIDADES WHERE NOMBRE = @localidad;
+	END
+
 	SELECT @iddisponibilidad = ID FROM DISPONIBILIDADES WHERE NOMBRE = @disponibilidad;
 	SELECT @idtipo = ID FROM TIPOS WHERE Nombre = @tipo;
 	SELECT @idubicacion = u.ID FROM UBICACIONES u INNER JOIN INMUEBLES i ON i.IDUBICACION=u.ID

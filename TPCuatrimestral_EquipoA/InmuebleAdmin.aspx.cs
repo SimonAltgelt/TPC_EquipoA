@@ -30,9 +30,8 @@ namespace TPCuatrimestral_EquipoA
                     MetrosCuadrados.Text = miInmueble.Metros2.ToString();
                     MetrosCubiertos.Text = miInmueble.Metros2Cubiertos.ToString();
                     CantAmbientes.Text = miInmueble.Ambientes.ToString();
-                    CAntBaños.Text = miInmueble.Baños.ToString();
+                    CantBaños.Text = miInmueble.Baños.ToString();
                     ddlTipoOperacion.Items.FindByText(miInmueble.Disponibilidad).Selected = true;
-                    Session.Add("ID", miInmueble.ID);
                 }
             }
         }
@@ -51,23 +50,26 @@ namespace TPCuatrimestral_EquipoA
             miInmueble.Metros2 = int.Parse(MetrosCuadrados.Text);
             miInmueble.Metros2Cubiertos = int.Parse(MetrosCubiertos.Text);
             miInmueble.Ambientes = int.Parse(CantAmbientes.Text);
-            miInmueble.Baños = int.Parse(CAntBaños.Text);
+            miInmueble.Baños = int.Parse(CantBaños.Text);
             miInmueble.Disponibilidad = ddlTipoOperacion.SelectedItem.Text;
-
+            if (Request.QueryString["id"] != null)
+            {
+                int id = int.Parse(Request.QueryString["id"]);
+                miInmueble.ID = id;
+            }
             // L.D. 20/06
             // Dependiendo de si tiene ID asignada, actualizamos la tabla con los nuevos valores o agregamos
             // un nuevo registro
             InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
-            if (Session["ID"] != null)
+            if (miInmueble.ID != null)
             {
-                miInmueble.ID = (int)Session["ID"];
                 inmuebleNegocio.modificar(miInmueble);
-            } 
+            }
             else
             {
                 inmuebleNegocio.agregar(miInmueble);
             }
-            
+
             Response.Redirect("Administracion.aspx");
         }
     }

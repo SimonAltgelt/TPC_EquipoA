@@ -65,7 +65,7 @@
                         <asp:TextBox ID="MetrosCuadrados" runat="server" REQUIRED class="form-control" placeholder="Metros Cuadrados" />
                         <asp:TextBox ID="MetrosCubiertos" runat="server" REQUIRED class="form-control" placeholder="Metros Cubiertos" />
                         <asp:TextBox ID="CantAmbientes" runat="server" REQUIRED class="form-control" placeholder="Cantidad de Ambientes" />
-                        <asp:TextBox ID="CAntBaños" runat="server" REQUIRED class="form-control" placeholder="Cantidad de Baños" />
+                        <asp:TextBox ID="CantBaños" runat="server" REQUIRED class="form-control" placeholder="Cantidad de Baños" />
                         <asp:DropDownList ID="ddlTipoOperacion" runat="server" class="form-control">
                             <asp:ListItem Text="Venta" Value="1"></asp:ListItem>
                             <asp:ListItem Text="Alquiler" Value="2"></asp:ListItem>
