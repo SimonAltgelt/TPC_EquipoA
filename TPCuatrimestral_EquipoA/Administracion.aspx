@@ -15,6 +15,7 @@
         {
             negocio.InmuebleNegocio inmuebleNegocio = new negocio.InmuebleNegocio();
             inmuebleNegocio.ocultar(IDPropiedad);
+            Response.Redirect(Request.RawUrl);
         }
         else if (e.CommandName == "Modificar")
         {
