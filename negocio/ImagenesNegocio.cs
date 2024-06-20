@@ -58,7 +58,7 @@ namespace negocio
                 {
                     Imagen miImagen = new Imagen
                     {
-                        IDInmueble = miInmueble.ID,
+                        IDInmueble = (int)miInmueble.ID,
                         URLImagen = "https://images.posthousing.com/nophoto.png"
                     };
                     miInmueble.Imagenes.Add(miImagen);

@@ -15,13 +15,13 @@ namespace TPCuatrimestral_EquipoA
     {
 
         /// <summary>
-        /// tipoPropiedad control.
+        /// ddlTipoPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tipoPropiedad;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoPropiedad;
 
         /// <summary>
         /// txtDireccion control.

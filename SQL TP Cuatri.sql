@@ -257,14 +257,96 @@ INSERT INTO IMAGENES (IDINMUEBLE, URLIMAGEN, DESCRIPCION) VALUES
 -- Creación de la view
 GO
 CREATE OR ALTER VIEW VW_DatosInmuebles AS
-(SELECT i.ID, t.Nombre AS TIPO, us.NOMBRE, us.APELLIDO, u.DIRECCION AS DIRECCION, l.NOMBRE AS LOCALIDAD, i.METROS2, i.METROS2CUBIERTOS, d.NOMBRE AS DISPONIBILIDAD, i.AMBIENTES, i.BAÑOS, i.PRECIO, i.DESCRIPCION, i.ESTADO
+(SELECT i.ID, t.Nombre AS TIPO, u.DIRECCION AS DIRECCION, l.NOMBRE AS LOCALIDAD, i.METROS2, i.METROS2CUBIERTOS, d.NOMBRE AS DISPONIBILIDAD, i.AMBIENTES, i.BAÑOS, i.PRECIO, i.DESCRIPCION, i.ESTADO
 FROM INMUEBLES i
 INNER JOIN TIPOS t ON t.ID=i.IDTIPO
 INNER JOIN DISPONIBILIDADES d ON d.ID=i.IDDISPONIBILIDAD
 INNER JOIN UBICACIONES u ON u.ID=i.IDUBICACION
-INNER JOIN VENDEDORES v ON v.ID=i.IDVENDEDOR
-INNER JOIN USUARIOS us ON us.ID=v.IDUSUARIO
 INNER JOIN LOCALIDADES l ON l.ID=u.IDLOCALIDAD)
 GO
 
-SELECT * FROM dbo.VW_DatosInmuebles
+-- Creación del procedimiento para agregar
+CREATE OR ALTER PROCEDURE SP_Agregar_Inmueble(
+	@tipo varchar(30),
+	@direccion varchar(50),
+	@localidad varchar(50),
+	@precio money,
+	@descripcion varchar(500),
+	@metros2 int,
+	@metros2cubiertos int,
+	@ambientes int,
+	@baños int,
+	@disponibilidad varchar(30)
+)
+AS
+BEGIN
+	Declare @idlocalidad int
+	Declare @idubicacion int
+	Declare @iddisponibilidad int
+	Declare @idtipo int
+	SELECT @iddisponibilidad = ID FROM DISPONIBILIDADES WHERE NOMBRE = @disponibilidad;
+	SELECT @idtipo = ID FROM TIPOS WHERE Nombre = @tipo;
+
+	IF @localidad NOT IN (SELECT NOMBRE FROM LOCALIDADES)
+	BEGIN
+		INSERT INTO LOCALIDADES (NOMBRE) VALUES (@localidad)
+		SELECT @idlocalidad=@@IDENTITY
+	END
+	ELSE
+	BEGIN
+		SELECT @idlocalidad = ID FROM LOCALIDADES WHERE NOMBRE = @localidad;
+	END
+
+	INSERT INTO UBICACIONES (DIRECCION, IDLOCALIDAD)
+	VALUES (@direccion, @idlocalidad)
+	SELECT @idubicacion = @@IDENTITY
+
+	INSERT INTO INMUEBLES (IDTIPO, IDUBICACION, METROS2, METROS2CUBIERTOS, IDDISPONIBILIDAD,AMBIENTES,BAÑOS,PRECIO,DESCRIPCION,ESTADO)
+	VALUES (@idtipo, @idubicacion, @metros2, @metros2cubiertos, @iddisponibilidad, @ambientes, @baños, @precio, @descripcion, 1)
+END
+GO
+
+-- Creación del procedimiento para modificar
+CREATE OR ALTER PROCEDURE SP_Modificar_Inmueble(
+	@id int,
+	@tipo varchar(30),
+	@direccion varchar(50),
+	@localidad varchar(50),
+	@precio money,
+	@descripcion varchar(500),
+	@metros2 int,
+	@metros2cubiertos int,
+	@ambientes int,
+	@baños int,
+	@disponibilidad varchar(30)
+)
+AS
+BEGIN
+	Declare @idlocalidad int
+	Declare @idubicacion int
+	Declare @iddisponibilidad int
+	Declare @idtipo int
+	SELECT @idlocalidad = ID FROM LOCALIDADES WHERE NOMBRE = @localidad;
+	SELECT @iddisponibilidad = ID FROM DISPONIBILIDADES WHERE NOMBRE = @disponibilidad;
+	SELECT @idtipo = ID FROM TIPOS WHERE Nombre = @tipo;
+	SELECT @idubicacion = u.ID FROM UBICACIONES u INNER JOIN INMUEBLES i ON i.IDUBICACION=u.ID
+	WHERE i.ID = @id;
+
+	UPDATE UBICACIONES
+	SET DIRECCION=@direccion, IDLOCALIDAD=@idlocalidad
+	WHERE ID=@idubicacion;
+
+	UPDATE INMUEBLES
+	SET 
+		IDTIPO=@idtipo,
+		IDUBICACION=@idubicacion,
+		METROS2=@metros2,
+		METROS2CUBIERTOS=@metros2cubiertos,
+		IDDISPONIBILIDAD=@iddisponibilidad,
+		AMBIENTES=@ambientes,
+		BAÑOS=@baños,
+		PRECIO=@precio,
+		DESCRIPCION=@descripcion
+	WHERE ID=@id;
+END
+GO

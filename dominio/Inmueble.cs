@@ -7,7 +7,7 @@ namespace dominio
 {
     public class Inmueble
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public string Tipo { get; set; }
         public int Vendedor { get; set; }
         public Ubicacion Ubicacion { get; set; }
