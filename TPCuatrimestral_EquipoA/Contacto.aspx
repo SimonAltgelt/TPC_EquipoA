@@ -6,13 +6,12 @@
         .tituloVenta {
             font-size: 35px;
             font-weight: bold;
-            text-align:center;
-            
+            text-align: center;
         }
 
         .txtVenta {
             font-size: 20px;
-            text-align:center;
+            text-align: center;
         }
 
         .txtTelefono {
@@ -35,15 +34,18 @@
             max-height: 100%;
             object-fit: cover;
         }
+
         .form-control {
-            resize: none; 
+            resize: none;
         }
-          .form-group {
-            margin-bottom: 15px; 
+
+        .form-group {
+            margin-bottom: 15px;
         }
-           .btn-largo {
-     width: 80%; 
- }
+
+        .btn-largo {
+            width: 80%;
+        }
     </style>
 
     <div class="container">

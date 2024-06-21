@@ -15,15 +15,15 @@
             color: rgb(12, 4, 4);
         }
 
-        .resultados h1 {
-            margin: 0;
-        }
+            .resultados h1 {
+                margin: 0;
+            }
 
         .card-precio {
             color: #4c6444;
             font-size: 20px;
             font-family: "Roboto", sans-serif;
-            font-weight: 700;
+            font-weight: 900;
             font-style: normal;
         }
 
@@ -36,14 +36,14 @@
             justify-content: center;
         }
 
-        .iconos i {
-            margin: 0 5px;
-            margin-top: 5px;
-        }
+            .iconos i {
+                margin: 0 5px;
+                margin-top: 5px;
+            }
 
-        .iconos i:hover {
-            color: #4c6444;
-        }
+                .iconos i:hover {
+                    color: #4c6444;
+                }
 
         .card-container {
             display: flex;
@@ -60,15 +60,59 @@
             flex-direction: column; /* Alinea los elementos verticalmente */
             justify-content: space-between; /* Espacio uniforme entre los elementos */
             height: 100%; /* Para asegurarse de que ocupe toda la altura */
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            font-style: normal;
         }
 
         .iconos {
-            margin-bottom: 15px;
+            color: #000000;
+            cursor: pointer;
+            transition: font-weight 0.3s ease;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
         }
 
-        .btn-outline-info {
-            margin-top: auto; /* Empuja el botón hacia abajo */
-            align-self: center; /* Centra el botón horizontalmente */
+            .iconos i {
+                margin: 0 15px;
+                font-size: 2em;
+                font-weight: bold;
+            }
+
+                .iconos i:hover {
+                    color: #4c6444;
+                    font-size: 2.2em;
+                }
+        
+        .btn-verde {
+            background-color: #4c6444;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-verde:hover {
+            transform: scale(1.01);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
         }
     </style>
 
@@ -96,12 +140,12 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <asp:Label ID="lblDireccion" CssClass="h5 card-title" runat="server"></asp:Label>
+                            <asp:Label ID="lblDireccion" Class="card-title" runat="server"></asp:Label>
                             <asp:Label ID="lblPrecio" CssClass="p card-precio" runat="server"></asp:Label>
                         </div>
                         <asp:Label ID="lblLocalidad" CssClass="p card-text" runat="server"></asp:Label>
                         <div class="d-flex justify-content-between align-items-center">
-                            <i class="fa-solid fa-bath" style="color: #000000;"></i>
+                            <i class="fa-solid fa-expand" style="color: #000000;"></i>
                             <asp:Label ID="lblMtsTotales" CssClass="h6" runat="server"></asp:Label>
                             <i class="fa-solid fa-maximize" style="color: #000000;"></i>
                             <asp:Label ID="lblMtsCubiertos" CssClass="h6" runat="server"></asp:Label>
@@ -111,14 +155,19 @@
                             <asp:Label ID="lblBaños" CssClass="h6" runat="server"></asp:Label>
                         </div>
                         <asp:Label ID="lblDescripcion" CcClass="p card-text small text-body-secondary" runat="server"></asp:Label>
+                        <br />
+                        <br />
+
                         <div class="iconos">
                             <i class="fa-brands fa-whatsapp fa-xl"></i>
                             <i class="fa-regular fa-envelope fa-xl"></i>
                             <i class="fa-regular fa-calendar-days fa-xl"></i>
-                            <div>
-                                <a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>"" class="btn btn-outline-info">Ver Detalle</a>
-                            </div>
                         </div>
+                        <br />
+
+                            <div class="form-group">
+                                <a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>" Class="btn btn-verde">VER DETALLE</a> 
+                            </div>
                     </div>
                 </div>
             </div>

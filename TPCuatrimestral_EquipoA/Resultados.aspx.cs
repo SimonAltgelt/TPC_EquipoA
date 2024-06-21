@@ -35,5 +35,6 @@ namespace TPCuatrimestral_EquipoA
 
             Session["inmuebles"] = inmueblesFiltrados;
         }
+     
     } 
 }

@@ -6,6 +6,7 @@
     <style>
         .txtTel {
             font-size: 10px;
+            font-family: "Roboto", sans-serif;
         }
 
         .direccion {
@@ -19,24 +20,23 @@
 
         .precio {
             color: #4c6444;
-            font-size: 20px;
+            font-size: 25px;
             font-family: "Roboto", sans-serif;
-            font-weight: 700;
+            font-weight: bold;
             font-style: normal;
         }
 
         .txtDescripcion {
             font-size: 30px;
             font-weight: bold;
+            font-family: "Roboto", sans-serif;
         }
 
         .txtContacto {
             font-size: 30px;
             font-weight: bold;
             color: #4c6444;
-        }
-
-        .btn-secondary {
+            font-family: "Roboto", sans-serif;
         }
 
         .custom-border {
@@ -48,13 +48,65 @@
         .carousel-item img {
             width: 100%;
             height: 800px;
-            object-fit: cover; /* Puedes cambiar esto a 'contain' si prefieres que las imágenes se ajusten sin recortar */
+            object-fit: cover;
         }
 
         .d-block {
-           display: flex;
-           width: 600px;
-           height: 600px;
+            display: flex;
+            width: 600px;
+            height: 600px;
+        }
+
+        .btn-verde {
+            background-color: #4c6444;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .container-alquiler {
+            background-color: #4c6444;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .btn-verde:hover {
+            transform: scale(1.01);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .icono-detalle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            font-size: 25px;
+        }
+        .lbl-detalle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            font-size: 20px;
         }
     </style>
     <br />
@@ -65,13 +117,13 @@
                 <div id="carouselExampleRide" class="carousel slide">
                     <div class="carousel-inner">
                         <% bool esActivo = true;
-                           foreach (dominio.Imagen miImagen in miInmueble.Imagenes)
-                           { %>
+                            foreach (dominio.Imagen miImagen in miInmueble.Imagenes)
+                            { %>
                         <div class="carousel-item <%= esActivo ? "active" : "" %>">
                             <img src="<%= miImagen.URLImagen %>" alt="Imagen de la propiedad" class="d-block w-100">
                         </div>
                         <% esActivo = false; // setea el esActive a falso despues de la primer iteracion
-                           } %>
+                            } %>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -89,25 +141,33 @@
                     <div class="container text-center">
                         <label class="txtContacto">CONTACTO</label>
                     </div>
+                    <br />
+                    <br />
                     <div class="form-group">
                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre*">
                     </div>
+                    <br />
                     <div class="form-group">
                         <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Apellido*">
                     </div>
+                    <br />
                     <div class="form-group">
                         <input type="tel" class="form-control" id="exampleFormControlInput3" placeholder="Telefono*">
                         <label class="txtTel">
                             Ingrese un número completo con código de área. Ej: 112345678 (CABA) o 3511234567 (Ciudad de Córdoba)
                         </label>
                     </div>
+                    <br />
                     <div class="form-group">
                         <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="name@example.com">
                     </div>
+                    <br />
                     <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Comentarios"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Comentarios"></textarea>
                     </div>
-                    <button type="button" class="btn btn-outline-success">Enviar</button>
+                    <br />
+                    <br />
+                    <button type="button" class="btn btn-verde">Enviar</button>
                 </div>
             </div>
         </div>
@@ -125,9 +185,9 @@
             lblDescripcion.Text = miInmueble.Descripcion.ToString();
         %>
         <div class="row custom-border">
-            <!-- ESTE BOTON NO LLEVA A NINGUN LADO, LO PONGO POR EL ESTILO DEBERIA DECIR ACA
-                SI LA PROP ESTA EN VENTA O ALQUILER-->
-            <button type="button" class="btn btn-secondary" disabled>ALQUILER</button>
+            <div class="container-alquiler">
+                <asp:Label ID="lblAlquiler" Text="ALQUILER" runat="server" />
+            </div>
             <asp:Label ID="lblPrecio" CssClass="p precio" runat="server"></asp:Label>
         </div>
         <br />
@@ -135,16 +195,40 @@
             <asp:Label ID="lblNombre" runat="server" />
         </div>
         <br />
-        <div class="row custom-border d-flex justify-content-between align-items-center">
-            <i class="fa-solid fa-bath" style="color: #000000;"></i>
+<div class="custom-border d-flex flex-column justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <div class="icono-detalle">
+            <i class="fa-solid fa-expand" style="color: #000000;"></i>
+        </div>
+        <div class="lbl-detalle">
             <asp:Label ID="lblMetrosTotales" CssClass="h6" runat="server"></asp:Label>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <div class="icono-detalle">
             <i class="fa-solid fa-maximize " style="color: #000000;"></i>
+        </div>
+        <div class="lbl-detalle">
             <asp:Label ID="lblMetrosCubiertos" CssClass="h6" runat="server"></asp:Label>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <div class="icono-detalle">
             <i class="fa-solid fa-bed" style="color: #000000;"></i>
+        </div>
+        <div class="lbl-detalle">
             <asp:Label ID="lblAmbientes" CssClass="h6" runat="server"></asp:Label>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <div class="icono-detalle">
             <i class="fa-solid fa-bath" style="color: #000000;"></i>
+        </div>
+        <div class="lbl-detalle">
             <asp:Label ID="lblBaños" CssClass="h6" runat="server"></asp:Label>
         </div>
+    </div>
+</div>
         <br />
         <div class="row custom-border">
             <asp:Label ID="lblDescripcion" CssClass="p card-text small text-body-secondary" runat="server"></asp:Label>

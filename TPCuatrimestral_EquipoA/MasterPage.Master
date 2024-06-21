@@ -6,15 +6,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INMOBILIARIA LUSIVI</title>
+    <link rel="stylesheet" href="~/css/Estilos.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/341afd86c8.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    /*poner estilos aca*/
+  
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
+        .navbar {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+        }
         .navbar-blue {
             background-color: #4c6444;
             color: white;
@@ -48,21 +54,16 @@
             transform-origin: right;
             transition: transform 0.2s;
         }
-
-
         .nav-link:hover {
             color: white;
         }
-
             .nav-link:hover::after {
                 transform: scaleX(1);
                 transform-origin: left;
             }
-
         .navbar-blue .navbar-brand {
             color: white;
         }
-
         .nav-link-button-wrapper {
             display: inline-flex; /* Cambiado de flex a inline-flex */
             justify-content: center;
@@ -110,12 +111,12 @@
 
         body {
             background-color: white;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:  "Roboto", sans-serif;
         }
 
         .navbar {
             background-color: #4c6444;
-            font-family: Arial, Helvetica, sans-serif
+            font-family: "Roboto", sans-serif;
         }
 
         .navbar-brand img {
@@ -124,6 +125,9 @@
         }
 
         .contacto-nav {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: bold;
             background-color: #caba9c;
             color: white;
             height: 30px;
@@ -146,12 +150,15 @@
         }
 
         .Redes_sociales {
-            font-size: 15px;
+font-family: "Roboto", sans-serif;
+font-style: normal;
+font-size: 15px;
             color: white;
         }
 
         .autores {
             font-family: 'Baskerville Old Face';
+            font-weight: bold;
             color: darkgrey;
             font-size: 15px;
         }
