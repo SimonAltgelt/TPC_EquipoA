@@ -72,6 +72,18 @@ namespace TPCuatrimestral_EquipoA
         {
             Response.Redirect("Administracion.aspx");
         }
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
+        protected void btnContacto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Contacto.aspx");
+        }
+        protected void btnVender_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("VentaPropiedad.aspx");
+        }
     }
 
 }
