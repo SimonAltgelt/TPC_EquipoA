@@ -152,7 +152,7 @@ namespace negocio
                 throw;
             }
         }
-        
+
         public void ocultar(int id_inmueble)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -171,6 +171,46 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void desocultar(int id_inmueble)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 1 WHERE ID = " + id_inmueble + "");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void verOcultos()
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("SELECT * FROM INMUEBLES WHERE ESTADO=0");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
 
         public void modificar(Inmueble existente)
         {

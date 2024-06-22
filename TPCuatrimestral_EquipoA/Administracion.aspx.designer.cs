@@ -24,6 +24,15 @@ namespace TPCuatrimestral_EquipoA
         protected global::System.Web.UI.WebControls.Button btnPublicar;
 
         /// <summary>
+        /// btnOcultos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnOcultos;
+
+        /// <summary>
         /// InmueblesGridView control.
         /// </summary>
         /// <remarks>

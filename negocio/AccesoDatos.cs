@@ -21,7 +21,7 @@ namespace negocio
         {
             string conexionLV = "server=(LocalDb)\\MSSQLLocalDB; database=Inmobiliaria; integrated security=true";
             string conexionS = "server=.\\SQLEXPRESS; database=Inmobiliaria; integrated security=true";
-            conexion = new SqlConnection(conexionLV);
+            conexion = new SqlConnection(conexionS);
             comando = new SqlCommand();
         }
         public void setConsulta(string consulta)

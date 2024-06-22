@@ -26,23 +26,23 @@
             grid-gap: 5px;
         }
 
-            .img-grid img {
-                width: 100%;
-                height: auto;
-            }
+        .img-grid img {
+            width: 100%;
+            height: auto;
+        }
     </style>
     <div class="gestion">
         <h1>Gestion de Inmuebles</h1>
         <div>
             <div class="col-8">
-      
+
 
                 <div class="img-grid">
                     <img src="img/cocina.png" class="d-block w-50" alt="...">
                     <img src="img/dormitorio.png" class="d-block w-50" />
                     <img src="img/living.png" class="d-block w-50" />
                 </div>
-           
+
             </div>
             /Acá quiero cargar imágenes/
 

@@ -27,6 +27,14 @@
             //Llevame a la nueva página
             Response.Redirect("InmuebleAdmin.aspx");
         }
+        else if (e.CommandName == "Visualizar")
+        {
+
+            negocio.InmuebleNegocio inmuebleNegocio = new negocio.InmuebleNegocio();
+            inmuebleNegocio.verOcultos();
+            Response.Redirect(Request.RawUrl);
+
+        }
     }
 </script>
 
@@ -58,31 +66,28 @@
             color: white;
         }
 
-
         .grid-container {
-            
-            
             width: 80%;
             margin: 0 auto;
-            text-align:center;
-           
-
+            text-align: center;
         }
 
-           .grid-container table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-           .grid-container table th {
-                background-color: #4c6444;
-                color: white;
-                padding: 10px;
-                border: 1px solid #ddd;
-            }
-           .grid-container table td {
-                 padding: 10px;
-                 border: 1px solid #ddd;
-                }
+        .grid-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grid-container table th {
+            background-color: #4c6444;
+            color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .grid-container table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
     </style>
 
     <div class="admin">
@@ -90,27 +95,24 @@
     </div>
     <div>
         <asp:Button ID="btnPublicar" runat="server" CssClass="btn btn-verde mt-2" OnClick="btnPublicar_Click" Text="Publicar Nuevo Inmueble" />
+        <asp:Button ID="btnOcultos" runat="server" CssClass="btn btn-secondary mt-2" Text="Mostrar publicaciones ocultas" CommandName="Visualizar" />
     </div>
     <br />
- 
-
-
-        
 
     <div class="grid-container">
-            <asp:GridView ID="InmueblesGridView"
-                AutoGenerateColumns="False"
-                AllowPaging="True"
-                OnRowCommand="InmueblesGridView_RowCommand"
-                runat="server">
-                <Columns>
-                    <asp:BoundField DataField="ID" HeaderText="ID de Propiedad" ReadOnly="True" />
-                    <asp:BoundField DataField="UBICACION.DIRECCION" HeaderText="Dirección" />
-                    <asp:BoundField DataField="UBICACION.LOCALIDAD" HeaderText="Localidad" />
-                    <asp:BoundField DataField="DISPONIBILIDAD" HeaderText="Disponibilidad" />
-                    <asp:ButtonField ButtonType="Button" Text="Modificar" CommandName="Modificar" />
-                    <asp:ButtonField ButtonType="Button" Text="Ocultar" CommandName="Ocultar" />
-                </Columns>
-            </asp:GridView>
+        <asp:GridView ID="InmueblesGridView"
+            AutoGenerateColumns="False"
+            AllowPaging="True"
+            OnRowCommand="InmueblesGridView_RowCommand"
+            runat="server">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="ID de Propiedad" ReadOnly="True" />
+                <asp:BoundField DataField="UBICACION.DIRECCION" HeaderText="Dirección" />
+                <asp:BoundField DataField="UBICACION.LOCALIDAD" HeaderText="Localidad" />
+                <asp:BoundField DataField="DISPONIBILIDAD" HeaderText="Disponibilidad" />
+                <asp:ButtonField ButtonType="Button" Text="Modificar" CommandName="Modificar" />
+                <asp:ButtonField ButtonType="Button" Text="Ocultar" CommandName="Ocultar" />
+            </Columns>
+        </asp:GridView>
     </div>
 </asp:Content>
