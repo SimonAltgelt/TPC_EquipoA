@@ -156,7 +156,6 @@ namespace negocio
         public void ocultar(int id_inmueble)
         {
             AccesoDatos datos = new AccesoDatos();
-
             try
             {
                 datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 0 WHERE ID = " + id_inmueble + "");
@@ -172,14 +171,40 @@ namespace negocio
             }
         }
 
-        public void desocultar(int id_inmueble)
+        public List<Inmueble> verOcultos()
         {
+            List<Inmueble> lista = new List<Inmueble>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 1 WHERE ID = " + id_inmueble + "");
-                datos.ejecutarAccion();
+                datos.setConsulta("SELECT * FROM dbo.VW_DatosInmuebles WHERE ESTADO=0");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Inmueble aux = new Inmueble();
+                    Ubicacion aux2 = new Ubicacion();
+
+                    aux.ID = (int)datos.Lector["ID"];
+                    aux.Tipo = (string)datos.Lector["TIPO"];
+                    aux2.Direccion = (string)datos.Lector["DIRECCION"];
+                    aux2.Localidad = (string)datos.Lector["LOCALIDAD"];
+                    aux.Ubicacion = aux2;
+                    aux.Metros2 = (int)datos.Lector["METROS2"];
+                    aux.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
+                    aux.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
+                    aux.Ambientes = (int)datos.Lector["AMBIENTES"];
+                    aux.Baños = (int)datos.Lector["BAÑOS"];
+                    aux.Precio = (decimal)datos.Lector["PRECIO"];
+                    aux.Descripcion = (string)datos.Lector["DESCRIPCION"];
+                    aux.Estado = (bool)datos.Lector["ESTADO"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+
             }
             catch (Exception ex)
             {
@@ -189,26 +214,9 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
+
         }
 
-        public void verOcultos()
-        {
-            AccesoDatos datos = new AccesoDatos();
-
-            try
-            {
-                datos.setConsulta("SELECT * FROM INMUEBLES WHERE ESTADO=0");
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
 
 
 

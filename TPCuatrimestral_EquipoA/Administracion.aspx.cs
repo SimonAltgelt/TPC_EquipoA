@@ -14,11 +14,19 @@ namespace TPCuatrimestral_EquipoA
     public partial class Administracion : System.Web.UI.Page
     {
         public List<Inmueble> todoInmueble;
+        public Inmueble miInmueble;
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {          
             if (!IsPostBack)
             {
                 GetInmuebles();
+            }
+            if (Request.QueryString["h"] != null)
+            {
+                InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
+                List<Inmueble> ocultos = new List<Inmueble>();
+                ocultos = inmuebleNegocio.verOcultos();
+                Session["inmuebles"] = ocultos;
             }
             todoInmueble = (List<Inmueble>)Session["inmuebles"];
             InmueblesGridView.DataSource = todoInmueble;
@@ -43,6 +51,11 @@ namespace TPCuatrimestral_EquipoA
         protected void btnPublicar_Click(object sender, EventArgs e)
         {
             Response.Redirect("InmuebleAdmin.aspx");
+        }
+
+        protected void btnOcultos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Administracion.aspx?h=1");
         }
     }
 }

@@ -27,14 +27,6 @@
             //Llevame a la nueva página
             Response.Redirect("InmuebleAdmin.aspx");
         }
-        else if (e.CommandName == "Visualizar")
-        {
-
-            negocio.InmuebleNegocio inmuebleNegocio = new negocio.InmuebleNegocio();
-            inmuebleNegocio.verOcultos();
-            Response.Redirect(Request.RawUrl);
-
-        }
     }
 </script>
 
@@ -61,10 +53,10 @@
             width: 100%;
         }
 
-        .btn-verde:hover {
-            transform: scale(1.01);
-            color: white;
-        }
+            .btn-verde:hover {
+                transform: scale(1.01);
+                color: white;
+            }
 
         .grid-container {
             width: 80%;
@@ -72,22 +64,22 @@
             text-align: center;
         }
 
-        .grid-container table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+            .grid-container table {
+                width: 100%;
+                border-collapse: collapse;
+            }
 
-        .grid-container table th {
-            background-color: #4c6444;
-            color: white;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
+                .grid-container table th {
+                    background-color: #4c6444;
+                    color: white;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                }
 
-        .grid-container table td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
+                .grid-container table td {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                }
     </style>
 
     <div class="admin">
@@ -95,7 +87,7 @@
     </div>
     <div>
         <asp:Button ID="btnPublicar" runat="server" CssClass="btn btn-verde mt-2" OnClick="btnPublicar_Click" Text="Publicar Nuevo Inmueble" />
-        <asp:Button ID="btnOcultos" runat="server" CssClass="btn btn-secondary mt-2" Text="Mostrar publicaciones ocultas" CommandName="Visualizar" />
+        <asp:Button ID="btnOcultos" runat="server" CssClass="btn btn-secondary mt-2" OnClick="btnOcultos_Click" Text="Mostrar publicaciones ocultas" />
     </div>
     <br />
 
