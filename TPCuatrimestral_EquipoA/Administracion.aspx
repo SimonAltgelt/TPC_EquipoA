@@ -27,6 +27,12 @@
             //Llevame a la nueva página
             Response.Redirect("InmuebleAdmin.aspx");
         }
+        else if (e.CommandName == "Visualizar")
+        {
+            negocio.InmuebleNegocio inmuebleNegocio = new negocio.InmuebleNegocio();
+            inmuebleNegocio.desocultar(IDPropiedad);
+            Response.Redirect("Administracion.aspx?h=1");
+        }
     }
 </script>
 
@@ -87,9 +93,11 @@
     </div>
     <div>
         <asp:Button ID="btnPublicar" runat="server" CssClass="btn btn-verde mt-2" OnClick="btnPublicar_Click" Text="Publicar Nuevo Inmueble" />
-        <asp:Button ID="btnOcultos" runat="server" CssClass="btn btn-secondary mt-2" OnClick="btnOcultos_Click" Text="Mostrar publicaciones ocultas" />
+        <asp:Button ID="btnOcultos" runat="server" CssClass="btn btn-secondary mt-2" OnClick="btnOcultos_Click" Text="Mostrar publicaciones inactivas" />
+        <asp:Button ID="btnVisibles" runat="server" CssClass="btn btn-secondary mt-2" OnClick="btnVisibles_Click" Text="Mostras publicaciones activas" />
     </div>
     <br />
+
 
     <div class="grid-container">
         <asp:GridView ID="InmueblesGridView"

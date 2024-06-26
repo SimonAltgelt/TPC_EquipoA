@@ -27,10 +27,16 @@ namespace TPCuatrimestral_EquipoA
                 List<Inmueble> ocultos = new List<Inmueble>();
                 ocultos = inmuebleNegocio.verOcultos();
                 Session["inmuebles"] = ocultos;
+                if (InmueblesGridView.Columns[5] is ButtonField buttonField)
+                {
+                    buttonField.Text = "Visibilizar";
+                    buttonField.CommandName = "Visualizar";
+                }
             }
             todoInmueble = (List<Inmueble>)Session["inmuebles"];
             InmueblesGridView.DataSource = todoInmueble;
             InmueblesGridView.DataBind();
+
         }
         private void GetInmuebles()
         {
@@ -56,6 +62,11 @@ namespace TPCuatrimestral_EquipoA
         protected void btnOcultos_Click(object sender, EventArgs e)
         {
             Response.Redirect("Administracion.aspx?h=1");
+        }
+
+        protected void btnVisibles_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Administracion.aspx");
         }
     }
 }

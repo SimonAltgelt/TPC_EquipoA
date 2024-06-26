@@ -217,6 +217,25 @@ namespace negocio
 
         }
 
+        public void desocultar(int id_inmueble)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 1 WHERE ID = " + id_inmueble + "");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
 
 
 
