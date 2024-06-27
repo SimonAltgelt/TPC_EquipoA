@@ -21,6 +21,7 @@
             font-family: "Roboto", sans-serif;
             font-style: normal;
         }
+
         .navbar-blue {
             background-color: #4c6444;
             color: white;
@@ -54,16 +55,20 @@
             transform-origin: right;
             transition: transform 0.2s;
         }
+
         .nav-link:hover {
             color: white;
         }
+
             .nav-link:hover::after {
                 transform: scaleX(1);
                 transform-origin: left;
             }
+
         .navbar-blue .navbar-brand {
             color: white;
         }
+
         .nav-link-button-wrapper {
             display: inline-flex; /* Cambiado de flex a inline-flex */
             justify-content: center;
@@ -111,7 +116,7 @@
 
         body {
             background-color: white;
-            font-family:  "Roboto", sans-serif;
+            font-family: "Roboto", sans-serif;
         }
 
         .navbar {
@@ -150,9 +155,9 @@
         }
 
         .Redes_sociales {
-font-family: "Roboto", sans-serif;
-font-style: normal;
-font-size: 15px;
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-size: 15px;
             color: white;
         }
 
@@ -214,7 +219,10 @@ font-size: 15px;
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <asp:Button ID="btnAdmin" runat="server" Class="nav-button" Text="Admin" OnClick="btnAdmin_Click"/>
+                                    <div class="nav-link-button-wrapper">
+
+                                     <asp:Button ID="btnAdmin" runat="server" CssClass="nav-link-button" Text="Admin" OnClick="btnAdmin_Click"/>
+                                    </div>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ms-auto">

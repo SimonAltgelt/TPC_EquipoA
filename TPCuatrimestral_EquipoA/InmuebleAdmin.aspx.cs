@@ -72,5 +72,10 @@ namespace TPCuatrimestral_EquipoA
 
             Response.Redirect("Administracion.aspx");
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Administracion.aspx");
+        }
     }
 }

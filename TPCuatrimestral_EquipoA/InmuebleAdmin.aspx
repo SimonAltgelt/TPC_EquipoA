@@ -71,6 +71,7 @@
                             <asp:ListItem Text="Alquiler" Value="2"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" Text="Aceptar" class="btn btn-secondary" />
+                        <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" CssClass="btn btn-secondary" />
                     </div>
                 </div>
             </div>
