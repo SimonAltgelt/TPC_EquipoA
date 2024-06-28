@@ -5,6 +5,11 @@ using System.Web;
 
 namespace dominio
 {
+    public enum TipoUsuario
+    {
+        Cliente = 1,
+        Administrador = 2
+    }
     public class Usuario
     {
         public int ID { get; set; }
@@ -14,5 +19,15 @@ namespace dominio
         public string Apellido { get; set; }
         public string Telefono { get; set; }
         public string DNI { get; set; }
+        public TipoUsuario Tipo { get; set; }
+
+        /*constructor de la clase usuario*/
+        public Usuario(string Ususario, string contraseña, bool admin)
+        {
+            Email = Ususario;
+            Contraseña = contraseña;
+            /* el ? es como un if en una sola linea*/
+            Tipo = admin ? TipoUsuario.Administrador : TipoUsuario.Cliente;
+        }
     }
 }

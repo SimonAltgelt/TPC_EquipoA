@@ -53,7 +53,7 @@
                 <label>Mantener sesión iniciada </label>
             </div>
             <div class="form-group text-center">
-                <asp:Button ID="btnIniciarSesion" runat="server" CssClass="btn btn-primary" Text="Iniciar Sesión" />
+                <asp:Button ID="btnIniciarSesion" runat="server" CssClass="btn btn-primary" OnClick="btnLogin" Text="Iniciar Sesión" />
                 <a href="Registro.aspx" class="btn btn-outline-success">Registrarme</a>
             </div>
         </div>

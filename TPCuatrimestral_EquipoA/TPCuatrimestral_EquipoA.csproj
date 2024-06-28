@@ -87,6 +87,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="DetallePropiedad.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Estilos.css" />
     <Content Include="Global.asax" />
     <Content Include="img\ciudad.png" />
@@ -103,6 +104,7 @@
     <Content Include="img\Registro.jpg" />
     <Content Include="InicioSesion.aspx" />
     <Content Include="InmuebleAdmin.aspx" />
+    <Content Include="LoginExitoso.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Resultados.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -143,6 +145,13 @@
     <Compile Include="DetallePropiedad.aspx.designer.cs">
       <DependentUpon>DetallePropiedad.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -159,6 +168,13 @@
     </Compile>
     <Compile Include="InmuebleAdmin.aspx.designer.cs">
       <DependentUpon>InmuebleAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginExitoso.aspx.cs">
+      <DependentUpon>LoginExitoso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginExitoso.aspx.designer.cs">
+      <DependentUpon>LoginExitoso.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
