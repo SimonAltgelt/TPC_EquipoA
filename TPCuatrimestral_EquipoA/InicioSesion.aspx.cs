@@ -19,15 +19,16 @@ namespace TPCuatrimestral_EquipoA
 
         protected void btnLogin(object sender, EventArgs e)
         {
+            //Se crea un objeto de la clase Usuario
             Usuario miusuario;
             UsuarioNegocio negocio = new UsuarioNegocio();
             try
-            {
+            {      //Se instancia el objeto con los datos ingresados por el usuario
                 miusuario = new Usuario(email.Text, password.Text, false);
-                if (negocio.Login(miusuario))
+                if (negocio.Login(miusuario)) //si el usuario existe en la base de datos
                 {
-
                     Session.Add("usuario", miusuario);
+                   
                     Response.Redirect("LoginExitoso.aspx", false);
                 }
                 else
@@ -36,9 +37,8 @@ namespace TPCuatrimestral_EquipoA
                     Response.Redirect("Error.aspx", false);
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) //Si hay un error, se redirige a la página de error
             {
-
                 Session.Add("error", ex.ToString());
                 Response.Redirect("Error.aspx", false);
             }

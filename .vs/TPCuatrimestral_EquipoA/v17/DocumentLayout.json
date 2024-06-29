@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_ok\\tpc_equipoa\\tpcuatrimestral_equipoa\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_ok\\tpc_equipoa\\tpcuatrimestral_equipoa\\loginexitoso.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\loginexitoso.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_ok\\tpc_equipoa\\tpcuatrimestral_equipoa\\loginexitoso.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\loginexitoso.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_ok\\tpc_equipoa\\tpcuatrimestral_equipoa\\iniciosesion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\iniciosesion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,12 +11,8 @@
       "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\iniciosesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_ok\\tpc_equipoa\\tpcuatrimestral_equipoa\\error.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\error.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_ok\\tpc_equipoa\\tpcuatrimestral_equipoa\\error.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\error.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_ok\\tpc_equipoa\\tpcuatrimestral_equipoa\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,71 +22,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 174,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a5174402-226b-48da-aa5c-91376ed45871}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Default.aspx",
-              "ToolTip": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Default.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-28T23:03:02.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginExitoso.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\LoginExitoso.aspx.cs",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\LoginExitoso.aspx.cs",
-              "ToolTip": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\LoginExitoso.aspx.cs",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\LoginExitoso.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T23:02:20.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginExitoso.aspx",
-              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\LoginExitoso.aspx",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\LoginExitoso.aspx",
-              "ToolTip": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\LoginExitoso.aspx",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\LoginExitoso.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-28T23:02:07.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "InicioSesion.aspx.cs",
               "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\InicioSesion.aspx.cs",
               "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\InicioSesion.aspx.cs",
               "ToolTip": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\InicioSesion.aspx.cs",
               "RelativeToolTip": "TPCuatrimestral_EquipoA\\InicioSesion.aspx.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAwC4AAAABAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T23:01:29.535Z",
+              "WhenOpened": "2024-06-29T18:14:14.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "InicioSesion.aspx",
               "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\InicioSesion.aspx",
               "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\InicioSesion.aspx",
@@ -110,33 +59,20 @@
               "RelativeToolTip": "TPCuatrimestral_EquipoA\\InicioSesion.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-28T23:01:18.949Z",
+              "WhenOpened": "2024-06-29T18:14:02.536Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Error.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Error.aspx.cs",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Error.aspx.cs",
-              "ToolTip": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Error.aspx.cs",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Error.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T23:00:58.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Error.aspx",
-              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Error.aspx",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Error.aspx",
-              "ToolTip": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Error.aspx",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Error.aspx",
+              "DocumentIndex": 2,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Default.aspx",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\TP_ok\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-28T23:00:55.08Z",
+              "WhenOpened": "2024-06-29T18:02:05.619Z",
               "EditorCaption": ""
             }
           ]

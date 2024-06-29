@@ -18,6 +18,15 @@ namespace TPCuatrimestral_EquipoA
                 Response.Redirect("Error", false);
                 /*Podemos poner un boton de login o directamente redireccionar a la pag de login*/
             }
+           
+        }
+        protected void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Administracion.aspx");
+        }
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }

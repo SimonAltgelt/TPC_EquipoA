@@ -16,7 +16,13 @@ namespace TPCuatrimestral_EquipoA
         public List<Inmueble> todoInmueble;
         public Inmueble miInmueble;
         protected void Page_Load(object sender, EventArgs e)
-        {          
+        {   
+            //si no hay un usuario logueado o si el usuario logueado no es un administrador, redirige a la página de error
+            if (!(Session["Usuario"] != null && ((dominio.Usuario)Session["Usuario"]).Tipo == dominio.TipoUsuario.Administrador))
+            {
+                Session.Add("error", "No tienes permisos para acceder a esta página");
+                Response.Redirect("Error.aspx", false);
+            }
             if (!IsPostBack)
             {
                 GetInmuebles();
