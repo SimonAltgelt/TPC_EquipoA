@@ -46,16 +46,34 @@
             width: 100%;
         }
 
+        .imagenes {
+            width: 500px;
+            height: auto;
+        }
+
     </style>
     <div class="gestion">
         <h1>Gestión de Inmuebles</h1>
 
+        <div class="imagenes">
+        <%if (!esNuevo)
+            {
+                List<dominio.Imagen> imagenes = imagenesNegocio.listar();
+                foreach (dominio.Imagen imagen in imagenes)
+                {
+                    if(imagen.IDInmueble == IDInmueble)
+                    {%>
 
+                    <img src="<%=imagen.URLImagen.ToString()%>" />
+                    <%}
+                }
+            }
+        %>
+        </div>
         <div class="col-8">
             <div class="mb-3" style="width: 40%;">
               <label class="form-label">Imágenes de inmueble</label>
-              <input type="file" id="txtImagen" class="form-control" runat="server">
-              <asp:Button ID="subirImagenes" runat="server" CssClass="btn btn-verde" Text="Subir" OnClick="subirImagenes_Click"/>
+              <asp:FileUpload ID="txtImagen" runat="server" AllowMultiple="true" />
             </div>
         </div>
         <div class="col-8">
@@ -69,14 +87,14 @@
                             <asp:ListItem Text="Terreno" Value="4"></asp:ListItem>
                             <asp:ListItem Text="Oficina" Value="5"></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:TextBox ID="txtDireccion" runat="server" REQUIRED class="form-control" placeholder="Dirección" />
-                        <asp:TextBox ID="txtLocalidad" runat="server" REQUIRED class="form-control" placeholder="Localidad" />
-                        <asp:TextBox ID="txtPrecio" runat="server" REQUIRED class="form-control" placeholder="Precio" />
-                        <asp:TextBox ID="txtDescripcion" runat="server" REQUIRED class="form-control" placeholder="Descripción" />
-                        <asp:TextBox ID="MetrosCuadrados" runat="server" REQUIRED class="form-control" placeholder="Metros Cuadrados" />
-                        <asp:TextBox ID="MetrosCubiertos" runat="server" REQUIRED class="form-control" placeholder="Metros Cubiertos" />
-                        <asp:TextBox ID="CantAmbientes" runat="server" REQUIRED class="form-control" placeholder="Cantidad de Ambientes" />
-                        <asp:TextBox ID="CantBaños" runat="server" REQUIRED class="form-control" placeholder="Cantidad de Baños" />
+                        <asp:TextBox ID="txtDireccion" runat="server" class="form-control" placeholder="Dirección" />
+                        <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" placeholder="Localidad" />
+                        <asp:TextBox ID="txtPrecio" runat="server" class="form-control" placeholder="Precio" />
+                        <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" placeholder="Descripción" />
+                        <asp:TextBox ID="MetrosCuadrados" runat="server" class="form-control" placeholder="Metros Cuadrados" />
+                        <asp:TextBox ID="MetrosCubiertos" runat="server" class="form-control" placeholder="Metros Cubiertos" />
+                        <asp:TextBox ID="CantAmbientes" runat="server" class="form-control" placeholder="Cantidad de Ambientes" />
+                        <asp:TextBox ID="CantBaños" runat="server" class="form-control" placeholder="Cantidad de Baños" />
                         <asp:DropDownList ID="ddlTipoOperacion" runat="server" class="form-control">
                             <asp:ListItem Text="Venta" Value="1"></asp:ListItem>
                             <asp:ListItem Text="Alquiler" Value="2"></asp:ListItem>

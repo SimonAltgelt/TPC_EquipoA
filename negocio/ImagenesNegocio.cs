@@ -8,6 +8,30 @@ namespace negocio
 {
     public class ImagenesNegocio
     {
+        public void agregarImagenes(List<Imagen> imagenesSubidas, int IDInmueble)
+        {
+            foreach (Imagen nuevaImagen in imagenesSubidas)
+            {
+                AccesoDatos accesoDatos = new AccesoDatos();
+                try
+                {
+                    
+                    accesoDatos.setConsulta("INSERT INTO IMAGENES(IDInmueble, URLImagen) VALUES (@IDINMUEBLE, @URLIMAGEN)");
+                    accesoDatos.setParametros("@IDINMUEBLE", IDInmueble);
+                    accesoDatos.setParametros("@URLIMAGEN", nuevaImagen.URLImagen);
+                    accesoDatos.ejecutarAccion();
+                }
+                catch (Exception ex )
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    accesoDatos.cerrarConexion();
+                }
+            }
+        }
+
         public List<Imagen> listar()
         {
             List<Imagen> lista = new List<Imagen>();
@@ -24,7 +48,7 @@ namespace negocio
                     aux.ID = (int)datos.Lector["ID"];
                     aux.IDInmueble = (int)datos.Lector["IDINMUEBLE"];
                     aux.URLImagen = (string)datos.Lector["URLIMAGEN"];
-                    aux.Descripcion = (string)datos.Lector["DESCRIPCION"];
+                    //aux.Descripcion = (string)datos.Lector["DESCRIPCION"];
 
                     lista.Add(aux);
                 }

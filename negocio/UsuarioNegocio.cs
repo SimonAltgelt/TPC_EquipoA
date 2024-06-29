@@ -52,8 +52,6 @@ namespace negocio
                 datos.setParametros("@Contraseña", nuevo.Contraseña);
                 datos.setParametros("@Telefono", nuevo.Telefono);
                 datos.ejecutarAccion();
-
-
             }
             catch (Exception ex)
             {

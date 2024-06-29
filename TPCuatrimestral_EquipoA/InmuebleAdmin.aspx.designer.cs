@@ -21,16 +21,7 @@ namespace TPCuatrimestral_EquipoA
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile txtImagen;
-
-        /// <summary>
-        /// subirImagenes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button subirImagenes;
+        protected global::System.Web.UI.WebControls.FileUpload txtImagen;
 
         /// <summary>
         /// ddlTipoPropiedad control.
