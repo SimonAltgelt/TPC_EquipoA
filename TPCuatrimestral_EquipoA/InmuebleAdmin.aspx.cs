@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -16,7 +17,9 @@ namespace TPCuatrimestral_EquipoA
         public Ubicacion suUbicacion = new Ubicacion();
         public InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
         public ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
-        
+        public List<Imagen> imagenesSubidas = new List<Imagen>();
+
+
         public int IDInmueble;
         public bool esNuevo=true;
         protected void Page_Load(object sender, EventArgs e)
@@ -69,14 +72,12 @@ namespace TPCuatrimestral_EquipoA
             else
             {
                 inmuebleNegocio.agregar(miInmueble);
+                IDInmueble = inmuebleNegocio.obtenerIDInmueble();
             }
 
-            //0. Necesito recuperar el ID de mi inmueble.
-            if (esNuevo)
-                IDInmueble = inmuebleNegocio.obtenerIDInmueble();
+           
 
             //1. Guardar las imágenes con el ID del inmueble
-            List<Imagen> imagenesSubidas = new List<Imagen>();
 
             string ruta = Server.MapPath("./img/");
             if (txtImagen.HasFiles)
@@ -96,10 +97,9 @@ namespace TPCuatrimestral_EquipoA
 
             //2. Necesito agregar las imágenes a la base de datos vinculadas a ese ID de inmueble.
             imagenesNegocio.agregarImagenes(imagenesSubidas, IDInmueble);
-            List<Inmueble> misInmuebles = inmuebleNegocio.listar();
-            List<Imagen> misImagenes = imagenesNegocio.listar();
-            imagenesNegocio.vincularImagenes(misInmuebles, misImagenes);
-            Response.Redirect("Administracion.aspx");
+
+            //Necesito un mensaje que diga: "Inmueble cargado con éxito"//
+            Response.Write("<script>alert('Inmueble agregado correctamente.');window.location = 'Administracion.aspx';</script>");
             // Debería redirigir a una página que diga carga exitosa
         }
 
