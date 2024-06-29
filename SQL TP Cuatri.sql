@@ -352,3 +352,21 @@ BEGIN
 	WHERE ID=@id;
 END
 GO
+
+
+go
+create or alter procedure InsertarUsuario(
+@Nombre varchar (20),
+@Apellido varchar (20),
+@Email varchar (50),
+@Contraseña varchar (20),
+@Telefono varchar (20)
+)
+as
+insert into USUARIOS (NOMBRE, APELLIDO,EMAIL, CONTRASEÑA, TELEFONO, TIPOUSUARIO)
+--para que traiga el id del ultimo creado
+output inserted.ID
+values	(@Nombre, @Apellido, @Email, @Contraseña,@Telefono, 1)
+
+
+--exec InsertarUsuario 'juan', 'Perez', 'pepe@email.com', 'pass123', '1165423699'

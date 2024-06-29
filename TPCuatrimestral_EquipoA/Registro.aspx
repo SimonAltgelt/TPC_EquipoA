@@ -57,18 +57,14 @@
                 <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido" />
             </div>
             <div class="form-group">
-                <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" placeholder="Usuario" />
-            </div>
+    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Email" />
+</div>
             <div class="form-group">
                 <asp:TextBox ID="txtContraseña" runat="server" CssClass="form-control" TextMode="Password" placeholder="Contraseña" />
             </div>
-            <div class="form-group">
-                <asp:TextBox ID="txtConfirmaContra" runat="server" CssClass="form-control" TextMode="Password" placeholder="Confirma Contraseña" />
-            </div>
-            <div class="form-group">
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Email" />
-            </div>
-            <div class="form-group">
+           
+            
+          <div class="form-group">
                 <asp:TextBox ID="txtTel" runat="server" CssClass="form-control" placeholder="Telefono" />
             </div>
             <div class="form-group form-check">
@@ -76,8 +72,8 @@
                 <asp:Label ID="lblRecuardame" runat="server" AssociatedControlID="chkRecuerdame" CssClass="form-check-label" Text="Recuerdame" />
             </div>
             <div class="form-group">
-                <asp:Button ID="btnRegistrar" runat="server" CssClass="btn btn-primary" Text="Registrarme" />
-                <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-link" Text="Cancelar" />
+                <asp:Button ID="btnRegistrar" runat="server" CssClass="btn btn-primary" Text="Registrarme" OnClick="btnRegistrar_Click" />
+                <asp:Button ID="btnCancelar" runat="server" CssClass="btn btn-link" Text="Cancelar" OnClick="btnCancelar_Click" />
             </div>
         </div>
     </form>

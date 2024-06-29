@@ -37,5 +37,33 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void insertarNuevo(Usuario nuevo)
+        {
+
+            // agregar imagen de perfil
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setConsulta("exec InsertarUsuario @Nombre, @Apellido, @Email, @Contraseña, @Telefono");
+                datos.setParametros("@Nombre", nuevo.Nombre);
+                datos.setParametros("@Apellido", nuevo.Apellido);
+                datos.setParametros("@Email", nuevo.Email);
+                datos.setParametros("@Contraseña", nuevo.Contraseña);
+                datos.setParametros("@Telefono", nuevo.Telefono);
+                datos.ejecutarAccion();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

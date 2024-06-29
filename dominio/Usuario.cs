@@ -21,6 +21,10 @@ namespace dominio
         public string DNI { get; set; }
         public TipoUsuario Tipo { get; set; }
 
+        /*Agregar a la base una columna para cargar la imagen de perfil*/
+
+
+
         /*constructor de la clase usuario*/
         public Usuario(string Ususario, string contraseña, bool admin)
         {
@@ -28,6 +32,9 @@ namespace dominio
             Contraseña = contraseña;
             /* el ? es como un if en una sola linea*/
             Tipo = admin ? TipoUsuario.Administrador : TipoUsuario.Cliente;
+        }
+        public Usuario()
+        {
         }
     }
 }
