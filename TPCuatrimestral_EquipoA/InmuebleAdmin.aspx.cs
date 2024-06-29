@@ -77,5 +77,8 @@ namespace TPCuatrimestral_EquipoA
         {
             Response.Redirect("Administracion.aspx");
         }
+        protected void subirImagenes_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

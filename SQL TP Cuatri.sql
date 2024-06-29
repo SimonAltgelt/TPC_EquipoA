@@ -31,7 +31,8 @@ CREATE TABLE USUARIOS(
 	NOMBRE VARCHAR(20) NOT NULL,
 	APELLIDO VARCHAR(20) NOT NULL,
 	TELEFONO VARCHAR(20) NOT NULL,
-	DNI VARCHAR(10) NOT NULL
+	DNI VARCHAR(10) NOT NULL,
+	TIPOUSUARIO INT NOT NULL,
 )
 
 CREATE TABLE VENDEDORES(
@@ -227,11 +228,14 @@ INSERT INTO DISPONIBILIDADES (NOMBRE) VALUES
 ('Alquiler');
 
 -- Insertando datos en la tabla USUARIOS
-INSERT INTO USUARIOS (EMAIL, CONTRASEÑA, NOMBRE, APELLIDO, TELEFONO, DNI) VALUES
-('juanperez@gmail.com', 'password123', 'Juan', 'Perez', '1122334455', '32551481'),
-('mariagonzalez@gmail.com', 'password456', 'Maria', 'Gonzalez', '1122334456', '36942764'),
-('pedrolopez@gmail.com', 'password789', 'Pedro', 'Lopez', '1122334457', '10801517'),
-('juanchitomei@hotmail.com', 'password432', 'Juan', 'Tomei', '1524803439', '41812337'); 
+INSERT INTO USUARIOS (EMAIL, CONTRASEÑA, NOMBRE, APELLIDO, TELEFONO, DNI, TIPOUSUARIO) VALUES
+('juanperez@gmail.com', 'password123', 'Juan', 'Perez', '1122334455', '32551481', 1),
+('mariagonzalez@gmail.com', 'password456', 'Maria', 'Gonzalez', '1122334456', '36942764', 1),
+('pedrolopez@gmail.com', 'password789', 'Pedro', 'Lopez', '1122334457', '10801517', 1),
+('juanchitomei@hotmail.com', 'password432', 'Juan', 'Tomei', '1524803439', '41812337', 1),
+('victoria@lusivi.com.ar', 'admin123', 'Victoria', 'Kowalk', '1566156439', '33058211',2),
+('lucas@lusivi.com.ar', 'admin123', 'Lucas', 'Delfino', '1566156439', '36942764', 2),
+('simon@lusivi.com.ar', 'admin123', 'Simon', 'Altgelt', '1566156439', '44444444', 2)
 
 -- Insertando datos en la tabla VENDEDORES
 INSERT INTO VENDEDORES (IDUSUARIO) VALUES

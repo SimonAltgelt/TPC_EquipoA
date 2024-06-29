@@ -30,22 +30,38 @@
             width: 100%;
             height: auto;
         }
+
+        .btn-verde {
+            background-color: #4c6444;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
     </style>
     <div class="gestion">
-        <h1>Gestion de Inmuebles</h1>
+        <h1>Gestión de Inmuebles</h1>
         <div>
             <div class="col-8">
-
-
                 <div class="img-grid">
                     <img src="img/cocina.png" class="d-block w-50" alt="...">
-                    <img src="img/dormitorio.png" class="d-block w-50" />
-                    <img src="img/living.png" class="d-block w-50" />
                 </div>
-
             </div>
-            /Acá quiero cargar imágenes/
-
+        </div>
+        <div class="col-8">
+            <div class="mb-3" style="width: 40%;">
+              <label class="form-label">Imágenes de inmueble</label>
+              <input type="file" id="txtImagen" class="form-control">
+              <asp:Button ID="subirImagenes" runat="server" CssClass="btn btn-verde" Text="Subir" OnClick="subirImagenes_Click"/>
+            </div>
         </div>
         <div class="col-8">
             <div class="custom-border">
