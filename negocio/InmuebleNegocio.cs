@@ -277,7 +277,6 @@ namespace negocio
 
             try
             {
-                // CREAR, NO FUNCIONA
                 datos.setConsulta("Exec SP_Agregar_Inmueble @Tipo, @Direccion, @Localidad, @Precio, @Descripcion, @Metros2, @Metros2Cubiertos, @Ambientes, @Baños, @Disponibilidad");
                 datos.setParametros("@Tipo", nuevo.Tipo);
                 datos.setParametros("@Direccion", nuevo.Ubicacion.Direccion);

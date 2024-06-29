@@ -31,19 +31,12 @@ CREATE TABLE USUARIOS(
 	NOMBRE VARCHAR(20) NOT NULL,
 	APELLIDO VARCHAR(20) NOT NULL,
 	TELEFONO VARCHAR(20) NOT NULL,
-	DNI VARCHAR(10) NOT NULL,
 	TIPOUSUARIO INT NOT NULL,
-)
-
-CREATE TABLE VENDEDORES(
-	ID INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-	IDUSUARIO INT FOREIGN KEY REFERENCES USUARIOS(ID)
 )
 
 CREATE TABLE INMUEBLES(
 	ID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	IDTIPO INT NOT NULL FOREIGN KEY REFERENCES TIPOS(id),
-	IDVENDEDOR INT FOREIGN KEY REFERENCES VENDEDORES(ID),
 	IDUBICACION INT NOT NULL FOREIGN KEY REFERENCES UBICACIONES(ID),
 	METROS2 INT NOT NULL,
 	METROS2CUBIERTOS INT NOT NULL,
@@ -228,27 +221,22 @@ INSERT INTO DISPONIBILIDADES (NOMBRE) VALUES
 ('Alquiler');
 
 -- Insertando datos en la tabla USUARIOS
-INSERT INTO USUARIOS (EMAIL, CONTRASEÑA, NOMBRE, APELLIDO, TELEFONO, DNI, TIPOUSUARIO) VALUES
-('juanperez@gmail.com', 'password123', 'Juan', 'Perez', '1122334455', '32551481', 1),
-('mariagonzalez@gmail.com', 'password456', 'Maria', 'Gonzalez', '1122334456', '36942764', 1),
-('pedrolopez@gmail.com', 'password789', 'Pedro', 'Lopez', '1122334457', '10801517', 1),
-('juanchitomei@hotmail.com', 'password432', 'Juan', 'Tomei', '1524803439', '41812337', 1),
-('victoria@lusivi.com.ar', 'admin123', 'Victoria', 'Kowalk', '1566156439', '33058211',2),
-('lucas@lusivi.com.ar', 'admin123', 'Lucas', 'Delfino', '1566156439', '36942764', 2),
-('simon@lusivi.com.ar', 'admin123', 'Simon', 'Altgelt', '1566156439', '44444444', 2)
-
--- Insertando datos en la tabla VENDEDORES
-INSERT INTO VENDEDORES (IDUSUARIO) VALUES
-(1),
-(2)
+INSERT INTO USUARIOS (EMAIL, CONTRASEÑA, NOMBRE, APELLIDO, TELEFONO, TIPOUSUARIO) VALUES
+('juanperez@gmail.com', 'password123', 'Juan', 'Perez', '1122334455', 0),
+('mariagonzalez@gmail.com', 'password456', 'Maria', 'Gonzalez', '1122334456', 0),
+('pedrolopez@gmail.com', 'password789', 'Pedro', 'Lopez', '1122334457', 0),
+('juanchitomei@hotmail.com', 'password432', 'Juan', 'Tomei', '1524803439', 0),
+('victoria@lusivi.com.ar', 'admin123', 'Victoria', 'Kowalk', '1566156439', 1),
+('lucas@lusivi.com.ar', 'admin123', 'Lucas', 'Delfino', '1566156439', 1),
+('simon@lusivi.com.ar', 'admin123', 'Simon', 'Altgelt', '1566156439', 1)
 
 -- Insertando datos en la tabla INMUEBLES
-INSERT INTO INMUEBLES (IDTIPO, IDVENDEDOR, IDUBICACION, METROS2, METROS2CUBIERTOS, IDDISPONIBILIDAD, AMBIENTES, BAÑOS, PRECIO, DESCRIPCION, ESTADO) VALUES
-(1, 1, 1, 200, 150, 1, 4, 2, 250000, 'Casa amplia con jardín', 1),
-(2, 1, 2, 80, 80, 2, 3, 1, 15000, 'Departamento céntrico', 1),
-(3, 1, 3, 120, 120, 2, 5, 2, 20000, 'PH con patio', 1),
-(1, 2, 4, 250, 200, 1, 5, 3, 300000, 'Casa amplia con jardín', 1),
-(4, 2, 8, 250, 0, 1, 0, 0, 100000, 'Terreno sin edificar', 1);
+INSERT INTO INMUEBLES (IDTIPO, IDUBICACION, METROS2, METROS2CUBIERTOS, IDDISPONIBILIDAD, AMBIENTES, BAÑOS, PRECIO, DESCRIPCION, ESTADO) VALUES
+(1, 1, 200, 150, 1, 4, 2, 250000, 'Casa amplia con jardín', 1),
+(2, 2, 80, 80, 2, 3, 1, 15000, 'Departamento céntrico', 1),
+(3, 3, 120, 120, 2, 5, 2, 20000, 'PH con patio', 1),
+(1, 4, 250, 200, 1, 5, 3, 300000, 'Casa amplia con jardín', 1),
+(4, 8, 250, 0, 1, 0, 0, 100000, 'Terreno sin edificar', 1);
 
 -- Insertando datos en la tabla IMAGENES
 INSERT INTO IMAGENES (IDINMUEBLE, URLIMAGEN, DESCRIPCION) VALUES

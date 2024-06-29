@@ -18,6 +18,7 @@ namespace TPCuatrimestral_EquipoA
             if (!IsPostBack)
             {
                 if (Request.QueryString["id"] != null)
+                // L.D. 29/06 Si llegamos con un ID, buscamos el inmueble pertinente
                 {
                     int id = int.Parse(Request.QueryString["id"]);
                     miInmueble = ((List<Inmueble>)Session["inmuebles"]).Find(x => x.ID == id);
@@ -38,6 +39,7 @@ namespace TPCuatrimestral_EquipoA
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+            InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
             // L.D. 20/06
             // Le asignamos a miInmueble todos los datos de los campos
             // ES IMPORTANTE VALIDAR
@@ -52,17 +54,13 @@ namespace TPCuatrimestral_EquipoA
             miInmueble.Ambientes = int.Parse(CantAmbientes.Text);
             miInmueble.Baños = int.Parse(CantBaños.Text);
             miInmueble.Disponibilidad = ddlTipoOperacion.SelectedItem.Text;
+            // L.D. 20/06
+            // Dependiendo de si tiene ID asignada, actualizamos la tabla con los nuevos valores o agregamos
+            // un nuevo registro
             if (Request.QueryString["id"] != null)
             {
                 int id = int.Parse(Request.QueryString["id"]);
                 miInmueble.ID = id;
-            }
-            // L.D. 20/06
-            // Dependiendo de si tiene ID asignada, actualizamos la tabla con los nuevos valores o agregamos
-            // un nuevo registro
-            InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
-            if (miInmueble.ID != null)
-            {
                 inmuebleNegocio.modificar(miInmueble);
             }
             else
@@ -79,6 +77,15 @@ namespace TPCuatrimestral_EquipoA
         }
         protected void subirImagenes_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string ruta = Server.MapPath("./img/");
+                txtImagen.PostedFile.SaveAs(ruta + txtImagen.PostedFile.FileName);
+            }
+            catch (Exception ex)
+            {
+                Session.Add("Error", ex.ToString());
+            }
         }
     }
 }

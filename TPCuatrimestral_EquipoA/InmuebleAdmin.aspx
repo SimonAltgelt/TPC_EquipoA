@@ -49,17 +49,12 @@
     </style>
     <div class="gestion">
         <h1>Gestión de Inmuebles</h1>
-        <div>
-            <div class="col-8">
-                <div class="img-grid">
-                    <img src="img/cocina.png" class="d-block w-50" alt="...">
-                </div>
-            </div>
-        </div>
+
+
         <div class="col-8">
             <div class="mb-3" style="width: 40%;">
               <label class="form-label">Imágenes de inmueble</label>
-              <input type="file" id="txtImagen" class="form-control">
+              <input type="file" id="txtImagen" class="form-control" runat="server">
               <asp:Button ID="subirImagenes" runat="server" CssClass="btn btn-verde" Text="Subir" OnClick="subirImagenes_Click"/>
             </div>
         </div>

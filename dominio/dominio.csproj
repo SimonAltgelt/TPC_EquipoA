@@ -70,7 +70,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs" />
     <Compile Include="Imagen.cs" />
     <Compile Include="Inmueble.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

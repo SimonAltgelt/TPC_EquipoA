@@ -23,7 +23,7 @@ namespace negocio
                 {
                     miusuario.ID = (int)datos.Lector["ID"];
 
-                    miusuario.Tipo = (int)(datos.Lector["TipoUsuario"]) == 1 ? TipoUsuario.Cliente : TipoUsuario.Administrador;
+                    miusuario.Tipo = (int)(datos.Lector["TipoUsuario"]) == 0 ? TipoUsuario.Cliente : TipoUsuario.Administrador;
                     return true;
                 }
                 return false;
