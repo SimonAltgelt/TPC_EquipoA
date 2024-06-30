@@ -48,8 +48,8 @@
                     <a href=#>¿Olvidaste tu contraseña?</a>
                 </asp:Label>
             </div>
-            <div class="form-group form-check">
-                <asp:CheckBox ID="chkMantenerSesion" runat="server" CssClass="form-check-input" />
+            <div class="form-group">
+                <asp:CheckBox ID="chkMantenerSesion" runat="server"/>
                 <label>Mantener sesión iniciada </label>
             </div>
             <div class="form-group text-center">

@@ -120,7 +120,7 @@
                             foreach (dominio.Imagen miImagen in miInmueble.Imagenes)
                             { %>
                         <div class="carousel-item <%= esActivo ? "active" : "" %>">
-                            <img src="<%= miImagen.URLImagen %>" alt="Imagen de la propiedad" class="d-block w-100">
+                            <img src="<%= miImagen.URLImagen %>" alt="Imagen de la propiedad" class="d-block w-100" onerror="this.onerror=null;this.src='https://images.posthousing.com/nophoto.png';">
                         </div>
                         <% esActivo = false; // setea el esActive a falso despues de la primer iteracion
                             } %>

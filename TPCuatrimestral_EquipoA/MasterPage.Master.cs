@@ -54,6 +54,10 @@ namespace TPCuatrimestral_EquipoA
         {
             Response.Redirect("Administracion.aspx");
         }
+        protected void btnPerfil_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Perfil.aspx");
+        }
     }
 
 }

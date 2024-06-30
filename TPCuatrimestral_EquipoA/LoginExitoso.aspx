@@ -10,7 +10,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            min-height: 80vh;
             text-align: center;
             text-align: center;
             font-family: "Roboto", sans-serif;
@@ -39,25 +39,17 @@
 
     <div class="center-container">
         <div class="col-12">
-            <h1>Logueo existoso!</h1>
+            <h1>¡Logueo exitoso!</h1>
+             <!-- si el usuario es administrador, señalarlo -->
+            <% if (Session["Usuario"] != null && ((dominio.Usuario)Session["Usuario"]).Tipo == dominio.TipoUsuario.Administrador)
+                {  %>
+            <p>Eres administrador.</p>
+            <% } %>
             <hr />
             <br />
         </div>
-
         <div class="row1">
-            <asp:Button ID="btnIngresar" runat="server" CssClass="btn btn-verde mt-2" Text="Ingresar" OnClick="btnIngresar_Click" />
-        </div>
-        <br />
-        <br />
-        <div class="row2">
-            <!-- si el usuario es administrador, mostrar el boton de adm -->
-            <% if (Session["Usuario"] != null && ((dominio.Usuario)Session["Usuario"]).Tipo == dominio.TipoUsuario.Administrador)
-                {  %>
-            <asp:Button ID="btnAdmin" runat="server" CssClass="btn btn-verde mt-2" Text="Admin" OnClick="btnAdmin_Click" />
-            <p>Debes ser administrador.</p>
-
-            <% } %>
+            <asp:Button ID="btnIngresar" runat="server" CssClass="btn btn-verde mt-2" Text="Continuar a Home" OnClick="btnIngresar_Click" />
         </div>
     </div>
-
 </asp:Content>

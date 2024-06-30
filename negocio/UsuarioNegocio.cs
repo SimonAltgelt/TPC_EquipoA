@@ -10,20 +10,30 @@ namespace negocio
 {
     public class UsuarioNegocio
     {
-        public bool Login(Usuario miusuario)
+        public bool Login(Usuario usuario)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setConsulta("select ID, TipoUsuario from Usuarios where Email = @Usuario and Contraseña = @Contraseña");
-                datos.setParametros("@Usuario", miusuario.Email);
-                datos.setParametros("@Contraseña", miusuario.Contraseña);
+                datos.setConsulta("SELECT ID, TipoUsuario, Apellido, Nombre, Telefono, Documento, Domicilio FROM USUARIOS WHERE Email = @Usuario AND Contraseña = @Contraseña");
+                datos.setParametros("@Usuario", usuario.Email);
+                datos.setParametros("@Contraseña", usuario.Contraseña);
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
-                    miusuario.ID = (int)datos.Lector["ID"];
-
-                    miusuario.Tipo = (int)(datos.Lector["TipoUsuario"]) == 0 ? TipoUsuario.Cliente : TipoUsuario.Administrador;
+                    usuario.ID = (int)datos.Lector["ID"];
+                    usuario.Tipo = (int)datos.Lector["TipoUsuario"] == 0 ? TipoUsuario.Cliente : TipoUsuario.Administrador;
+                    usuario.Nombre = (string)datos.Lector["Nombre"];
+                    usuario.Apellido = (string)datos.Lector["Apellido"];
+                    usuario.Telefono = (string)datos.Lector["Telefono"];
+                    if (!(datos.Lector["Documento"] is DBNull))
+                    {
+                        usuario.Documento = (string)datos.Lector["Documento"];
+                    }
+                    if (!(datos.Lector["Domicilio"] is DBNull))
+                    {
+                        usuario.Domicilio = (string)datos.Lector["Domicilio"];
+                    }
                     return true;
                 }
                 return false;
@@ -38,19 +48,34 @@ namespace negocio
             }
         }
 
-        public void insertarNuevo(Usuario nuevo)
+        public void actualizarUsuario(Usuario usuario)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                /*La consulta*/
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void insertarNuevo(Usuario nuevoUsuario)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setConsulta("exec InsertarUsuario @Nombre, @Apellido, @Email, @Contraseña, @Telefono");
-                //datos.setConsulta("exec InsertarUsuario @Nombre, @Apellido, @Email, @Contraseña, @Telefono, @ImagenPerfil");
-                datos.setParametros("@Nombre", nuevo.Nombre);
-                datos.setParametros("@Apellido", nuevo.Apellido);
-                datos.setParametros("@Email", nuevo.Email);
-                datos.setParametros("@Contraseña", nuevo.Contraseña);
-                datos.setParametros("@Telefono", nuevo.Telefono);
-                //datos.setParametros("@ImagenPerfil", nuevo.ImagenPerfil);
+                datos.setParametros("@Nombre", nuevoUsuario.Nombre);
+                datos.setParametros("@Apellido", nuevoUsuario.Apellido);
+                datos.setParametros("@Email", nuevoUsuario.Email);
+                datos.setParametros("@Contraseña", nuevoUsuario.Contraseña);
+                datos.setParametros("@Telefono", nuevoUsuario.Telefono);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

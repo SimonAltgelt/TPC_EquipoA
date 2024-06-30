@@ -18,14 +18,15 @@ namespace dominio
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Telefono { get; set; }
-        public string DNI { get; set; }
+        public string Documento { get; set; }
+        public string Domicilio { get; set; }
         public TipoUsuario Tipo { get; set; }
-        //public string ImagenPerfil { get; set; }
+        public string ImagenPerfil { get; set; }
 
         /*Constructor con argumentos*/
-        public Usuario(string Ususario, string contraseña, bool admin)
+        public Usuario(string usuario, string contraseña, bool admin)
         {
-            Email = Ususario;
+            Email = usuario;
             Contraseña = contraseña;
             Tipo = admin ? TipoUsuario.Administrador : TipoUsuario.Cliente;
         }
