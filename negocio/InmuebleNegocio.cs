@@ -14,7 +14,7 @@ namespace negocio
     {
         public List<Inmueble> listar()
         {
-            List<Inmueble> lista = new List<Inmueble>();
+            List<Inmueble> listaInmuebles = new List<Inmueble>();
             AccesoDatos datos = new AccesoDatos();
 
             try
@@ -24,28 +24,25 @@ namespace negocio
 
                 while (datos.Lector.Read())
                 {
-                    Inmueble aux = new Inmueble();
-                    Ubicacion aux2 = new Ubicacion();
+                    Inmueble inmueble = new Inmueble();
+                    Ubicacion ubicacion = new Ubicacion();
 
-                    aux.ID = (int)datos.Lector["ID"];
-                    aux.Tipo = (string)datos.Lector["TIPO"];
-                    aux2.Direccion = (string)datos.Lector["DIRECCION"];
-                    aux2.Localidad = (string)datos.Lector["LOCALIDAD"];
-                    aux.Ubicacion = aux2;
-                    aux.Metros2 = (int)datos.Lector["METROS2"];
-                    aux.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
-                    aux.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
-                    aux.Ambientes = (int)datos.Lector["AMBIENTES"];
-                    aux.Baños = (int)datos.Lector["BAÑOS"];
-                    aux.Precio = (decimal)datos.Lector["PRECIO"];
-                    aux.Descripcion = (string)datos.Lector["DESCRIPCION"];
-                    aux.Estado = (bool)datos.Lector["ESTADO"];
-
-                    lista.Add(aux);
+                    inmueble.ID = (int)datos.Lector["ID"];
+                    inmueble.Tipo = (string)datos.Lector["TIPO"];
+                    ubicacion.Direccion = (string)datos.Lector["DIRECCION"];
+                    ubicacion.Localidad = (string)datos.Lector["LOCALIDAD"];
+                    inmueble.Ubicacion = ubicacion;
+                    inmueble.Metros2 = (int)datos.Lector["METROS2"];
+                    inmueble.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
+                    inmueble.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
+                    inmueble.Ambientes = (int)datos.Lector["AMBIENTES"];
+                    inmueble.Baños = (int)datos.Lector["BAÑOS"];
+                    inmueble.Precio = (decimal)datos.Lector["PRECIO"];
+                    inmueble.Descripcion = (string)datos.Lector["DESCRIPCION"];
+                    inmueble.Estado = (bool)datos.Lector["ESTADO"];
+                    listaInmuebles.Add(inmueble);
                 }
-
-                return lista;
-
+                return listaInmuebles;
             }
             catch (Exception ex)
             {
@@ -58,43 +55,14 @@ namespace negocio
 
         }
 
-        public int obtenerIDInmueble()
-        {
-            AccesoDatos datos = new AccesoDatos();
-            Inmueble nuevo = new Inmueble();
-
-            try
-            {
-                datos.setConsulta("SELECT * FROM Inmuebles WHERE ID = (SELECT MAX(ID) FROM Inmuebles);");
-                datos.ejecutarLectura();
-
-                while (datos.Lector.Read())
-                {
-                    nuevo.ID = (int)datos.Lector["Id"];
-                }
-
-                return (int)nuevo.ID;
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
-        
         public List<Inmueble> listarFiltrados(string disponibilidad, string localidad, string tipo)
         {
-            List<Inmueble> lista = new List<Inmueble>();
+            List<Inmueble> listaInmuebles = new List<Inmueble>();
             AccesoDatos datos = new AccesoDatos();
+
             try
             {
-                string consulta = "SELECT * FROM dbo.VW_DatosInmuebles WHERE ESTADO=1"; // guardo toda consulta
-                // lo que quiero traer son los filtros aplicados
-                //
+                string consulta = "SELECT * FROM dbo.VW_DatosInmuebles WHERE ESTADO=1";
 
                 if (disponibilidad == "Compra")
                 {
@@ -103,19 +71,12 @@ namespace negocio
 
                 consulta += " AND DISPONIBILIDAD = '" + disponibilidad + "' ";
 
-                if (localidad == "todas" || localidad == "")
-                {
-                    //no hace nada
-                } else 
+                if (localidad != "todas" && localidad != "")
                 {
                     consulta += " AND LOCALIDAD LIKE '" + localidad + "%' ";
                 }
 
-                if (tipo == "todas")
-                {
-                    //no hace nada
-                }
-                else
+                if (tipo != "todas")
                 {
                     consulta += "AND TIPO = '" + tipo + "'";
                 }
@@ -125,40 +86,42 @@ namespace negocio
 
                 while (datos.Lector.Read())
                 {
-                    Inmueble aux = new Inmueble();
-                    Ubicacion aux2 = new Ubicacion();
+                    Inmueble inmueble = new Inmueble();
+                    Ubicacion ubicacion = new Ubicacion();
 
-                    aux.ID = (int)datos.Lector["ID"];
-                    aux.Tipo = (string)datos.Lector["TIPO"];
-                    aux2.Direccion = (string)datos.Lector["DIRECCION"];
-                    aux2.Localidad = (string)datos.Lector["LOCALIDAD"];
-                    aux.Ubicacion = aux2;
-                    aux.Metros2 = (int)datos.Lector["METROS2"];
-                    aux.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
-                    aux.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
-                    aux.Ambientes = (int)datos.Lector["AMBIENTES"];
-                    aux.Baños = (int)datos.Lector["BAÑOS"];
-                    aux.Precio = (decimal)datos.Lector["PRECIO"];
-                    aux.Descripcion = (string)datos.Lector["DESCRIPCION"];
-                    aux.Estado = (bool)datos.Lector["ESTADO"];
-
-                    lista.Add(aux);
+                    inmueble.ID = (int)datos.Lector["ID"];
+                    inmueble.Tipo = (string)datos.Lector["TIPO"];
+                    ubicacion.Direccion = (string)datos.Lector["DIRECCION"];
+                    ubicacion.Localidad = (string)datos.Lector["LOCALIDAD"];
+                    inmueble.Ubicacion = ubicacion;
+                    inmueble.Metros2 = (int)datos.Lector["METROS2"];
+                    inmueble.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
+                    inmueble.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
+                    inmueble.Ambientes = (int)datos.Lector["AMBIENTES"];
+                    inmueble.Baños = (int)datos.Lector["BAÑOS"];
+                    inmueble.Precio = (decimal)datos.Lector["PRECIO"];
+                    inmueble.Descripcion = (string)datos.Lector["DESCRIPCION"];
+                    inmueble.Estado = (bool)datos.Lector["ESTADO"];
+                    listaInmuebles.Add(inmueble);
                 }
-
-                return lista;
+                return listaInmuebles;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
 
-        public void ocultar(int id_inmueble)
+        public void ocultar(int IDInmueble)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 0 WHERE ID = " + id_inmueble + "");
+                datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 0 WHERE ID = " + IDInmueble + "");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -171,9 +134,28 @@ namespace negocio
             }
         }
 
-        public List<Inmueble> verOcultos()
+        public void desocultar(int IDInmueble)
         {
-            List<Inmueble> lista = new List<Inmueble>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 1 WHERE ID = " + IDInmueble + "");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Inmueble> listarOcultos()
+        {
+            List<Inmueble> listaInmuebles = new List<Inmueble>();
             AccesoDatos datos = new AccesoDatos();
 
             try
@@ -183,48 +165,25 @@ namespace negocio
 
                 while (datos.Lector.Read())
                 {
-                    Inmueble aux = new Inmueble();
-                    Ubicacion aux2 = new Ubicacion();
+                    Inmueble inmueble = new Inmueble();
+                    Ubicacion ubicacion = new Ubicacion();
 
-                    aux.ID = (int)datos.Lector["ID"];
-                    aux.Tipo = (string)datos.Lector["TIPO"];
-                    aux2.Direccion = (string)datos.Lector["DIRECCION"];
-                    aux2.Localidad = (string)datos.Lector["LOCALIDAD"];
-                    aux.Ubicacion = aux2;
-                    aux.Metros2 = (int)datos.Lector["METROS2"];
-                    aux.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
-                    aux.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
-                    aux.Ambientes = (int)datos.Lector["AMBIENTES"];
-                    aux.Baños = (int)datos.Lector["BAÑOS"];
-                    aux.Precio = (decimal)datos.Lector["PRECIO"];
-                    aux.Descripcion = (string)datos.Lector["DESCRIPCION"];
-                    aux.Estado = (bool)datos.Lector["ESTADO"];
-
-                    lista.Add(aux);
+                    inmueble.ID = (int)datos.Lector["ID"];
+                    inmueble.Tipo = (string)datos.Lector["TIPO"];
+                    ubicacion.Direccion = (string)datos.Lector["DIRECCION"];
+                    ubicacion.Localidad = (string)datos.Lector["LOCALIDAD"];
+                    inmueble.Ubicacion = ubicacion;
+                    inmueble.Metros2 = (int)datos.Lector["METROS2"];
+                    inmueble.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
+                    inmueble.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
+                    inmueble.Ambientes = (int)datos.Lector["AMBIENTES"];
+                    inmueble.Baños = (int)datos.Lector["BAÑOS"];
+                    inmueble.Precio = (decimal)datos.Lector["PRECIO"];
+                    inmueble.Descripcion = (string)datos.Lector["DESCRIPCION"];
+                    inmueble.Estado = (bool)datos.Lector["ESTADO"];
+                    listaInmuebles.Add(inmueble);
                 }
-
-                return lista;
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-
-        }
-
-        public void desocultar(int id_inmueble)
-        {
-            AccesoDatos datos = new AccesoDatos();
-
-            try
-            {
-                datos.setConsulta("UPDATE INMUEBLES SET ESTADO = 1 WHERE ID = " + id_inmueble + "");
-                datos.ejecutarAccion();
+                return listaInmuebles;
             }
             catch (Exception ex)
             {
@@ -236,29 +195,24 @@ namespace negocio
             }
         }
 
-
-
-
-        public void modificar(Inmueble existente)
+        public void modificar(Inmueble viejo)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                // MODIFICAR, NO FUNCIONA
                 datos.setConsulta("Exec SP_Modificar_Inmueble @ID, @Tipo, @Direccion, @Localidad, @Precio, @Descripcion, @Metros2, @Metros2Cubiertos, @Ambientes, @Baños, @Disponibilidad");
-                datos.setParametros("@ID", existente.ID);
-                datos.setParametros("@Tipo", existente.Tipo);
-                datos.setParametros("@Direccion", existente.Ubicacion.Direccion);
-                datos.setParametros("@Localidad", existente.Ubicacion.Localidad);
-                datos.setParametros("@Precio", existente.Precio);
-                datos.setParametros("@Descripcion", existente.Descripcion);
-                datos.setParametros("@Metros2", existente.Metros2);
-                datos.setParametros("@Metros2Cubiertos", existente.Metros2Cubiertos);
-                datos.setParametros("@Ambientes", existente.Ambientes);
-                datos.setParametros("@Baños", existente.Baños);
-                datos.setParametros("@Disponibilidad", existente.Disponibilidad);
-                //datos.setParametros("@Imagenes", nuevo.Imagenes); lo comento pq se va a traer problemas x ahora
+                datos.setParametros("@ID", viejo.ID);
+                datos.setParametros("@Tipo", viejo.Tipo);
+                datos.setParametros("@Direccion", viejo.Ubicacion.Direccion);
+                datos.setParametros("@Localidad", viejo.Ubicacion.Localidad);
+                datos.setParametros("@Precio", viejo.Precio);
+                datos.setParametros("@Descripcion", viejo.Descripcion);
+                datos.setParametros("@Metros2", viejo.Metros2);
+                datos.setParametros("@Metros2Cubiertos", viejo.Metros2Cubiertos);
+                datos.setParametros("@Ambientes", viejo.Ambientes);
+                datos.setParametros("@Baños", viejo.Baños);
+                datos.setParametros("@Disponibilidad", viejo.Disponibilidad);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -288,7 +242,6 @@ namespace negocio
                 datos.setParametros("@Ambientes", nuevo.Ambientes);
                 datos.setParametros("@Baños", nuevo.Baños);
                 datos.setParametros("@Disponibilidad", nuevo.Disponibilidad);
-                //datos.setParametros("@Imagenes", nuevo.Imagenes); lo comento pq se va a traer problemas x ahora
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -300,6 +253,33 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public int obtenerIDInmueble()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Inmueble ultimoInmueble = new Inmueble();
+
+            try
+            {
+                datos.setConsulta("SELECT * FROM Inmuebles WHERE ID = (SELECT MAX(ID) FROM Inmuebles);");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    ultimoInmueble.ID = (int)datos.Lector["Id"];
+                }
+                return (int)ultimoInmueble.ID;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 
 }

@@ -70,18 +70,21 @@
         .display-4 {
             text-align: center;
         }
+
     </style>
 
     <div class="seccion-busqueda">
         <div class="jumbotron">
             <h1 class="display-4">Encontrá la propiedad que soñás</h1>
             <div class="form-container">
+                
                 <!-- Buscar por DDL disponibilidad -->
                 <div class="form-group">
                     <label for="ddlDisponibilidad" class="sr-only">Tipo de operación </label>
                     <asp:Label ID="lbldisponibilidad" runat="server" Text="Tipo operación:" />
                     <asp:DropDownList ID="ddlDisponibilidad" runat="server" CssClass="form-control" />
                 </div>
+
                 <!-- Buscar por nombre LOCALIDADES -->
                 <div class="form-group">
                     <label for="inputLocalidad" class="sr-only">Dónde querés mudarte?</label>

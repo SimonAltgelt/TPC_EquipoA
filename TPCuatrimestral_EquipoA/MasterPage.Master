@@ -27,19 +27,19 @@
             color: white;
         }
 
-            .navbar-blue .nav-link {
-                color: rgb(206, 206, 206);
-                display: inline-flex; 
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                font-size: 20px;
-                text-decoration: none;
-                padding: 0;
-                background: none; 
-                border: none; 
-                margin-left: 10px;
-            }
+        .navbar-blue .nav-link {
+            color: rgb(206, 206, 206);
+            display: inline-flex; 
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 0;
+            background: none; 
+            border: none; 
+            margin-left: 10px;
+        }
 
         .nav-link::after {
             content: '';
@@ -60,10 +60,10 @@
             color: white;
         }
 
-            .nav-link:hover::after {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
 
         .navbar-blue .navbar-brand {
             color: white;
@@ -82,25 +82,25 @@
             margin-left: 10px; /* Mantén el margen izquierdo para los botones */
         }
 
-            .nav-link-button-wrapper::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -10px; /* Ajusta según sea necesario */
-                width: 95%;
-                height: 2.75px;
-                background: white;
-                border-radius: 100px;
-                margin-left: 2px;
-                transform: scaleX(0);
-                transform-origin: right;
-                transition: transform 0.2s;
-            }
+        .nav-link-button-wrapper::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px; /* Ajusta según sea necesario */
+            width: 95%;
+            height: 2.75px;
+            background: white;
+            border-radius: 100px;
+            margin-left: 2px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.2s;
+        }
 
-            .nav-link-button-wrapper:hover::after {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
+        .nav-link-button-wrapper:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
 
         .nav-link-button {
             background: none;
@@ -109,10 +109,9 @@
             font-size: 20px; /* Asegúrate de que coincida con el estilo de tus enlaces */
         }
 
-            .nav-link-button:hover {
-                color: white; /* O el color que prefieras para el hover */
-            }
-
+        .nav-link-button:hover {
+            color: white; /* O el color que prefieras para el hover */
+        }
 
         body {
             background-color: white;
@@ -176,6 +175,7 @@
             color: #caba9c;
             font-size: 25px;
         }
+
     </style>
 </head>
 <body>
@@ -218,7 +218,14 @@
                                         <asp:Button ID="btnContacto" runat="server" CssClass="nav-link-button" Text="Contacto" OnClick="btnContacto_Click" />
                                     </div>
                                 </li>
-            
+                                <% if (Session["Usuario"] != null && ((dominio.Usuario)Session["Usuario"]).Tipo == dominio.TipoUsuario.Administrador)
+                                {  %>
+                                <li class="nav-item">
+                                    <div class="nav-link-button-wrapper">
+                                        <asp:Button ID="btnAdmin" runat="server" CssClass="nav-link-button" Text="Admin" OnClick="btnAdmin_Click1" />
+                                    </div>
+                                </li>
+                                <% } %>
                             </ul>
                             <ul class="navbar-nav ms-auto">
                                  <li class="nav-item">

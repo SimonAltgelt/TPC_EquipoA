@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TPCuatrimestral_EquipoA
 {
-    public partial class LoginExitoso : System.Web.UI.Page
+    public partial class LoginExitoso : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

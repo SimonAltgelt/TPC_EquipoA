@@ -15,9 +15,9 @@
             color: rgb(12, 4, 4);
         }
 
-            .resultados h1 {
-                margin: 0;
-            }
+        .resultados h1 {
+            margin: 0;
+        }
 
         .card-precio {
             color: #4c6444;
@@ -36,14 +36,14 @@
             justify-content: center;
         }
 
-            .iconos i {
-                margin: 0 5px;
-                margin-top: 5px;
-            }
+        .iconos i {
+            margin: 0 5px;
+            margin-top: 5px;
+        }
 
-                .iconos i:hover {
-                    color: #4c6444;
-                }
+        .iconos i:hover {
+            color: #4c6444;
+        }
 
         .card-container {
             display: flex;
@@ -81,16 +81,16 @@
             justify-content: center;
         }
 
-            .iconos i {
-                margin: 0 15px;
-                font-size: 2em;
-                font-weight: bold;
-            }
+        .iconos i {
+            margin: 0 15px;
+            font-size: 2em;
+            font-weight: bold;
+        }
 
-                .iconos i:hover {
-                    color: #4c6444;
-                    font-size: 2.2em;
-                }
+        .iconos i:hover {
+            color: #4c6444;
+            font-size: 2.2em;
+        }
         
         .btn-verde {
             background-color: #4c6444;
@@ -121,7 +121,7 @@
     <br />
 
     <!-- Tarjeta de resultado centrada -->
-    <%foreach (dominio.Inmueble miInmueble in misInmuebles)
+    <%foreach (dominio.Inmueble miInmueble in listaInmuebles)
         {
             lblDireccion.Text = miInmueble.Ubicacion.Direccion.ToString();
             lblPrecio.Text = "$" + miInmueble.Precio.ToString();
@@ -131,11 +131,12 @@
             lblBaños.Text = miInmueble.Baños.ToString() + " baño/s";
             lblAmbientes.Text = miInmueble.Ambientes.ToString() + " ambiente/s";
             lblDescripcion.Text = miInmueble.Descripcion.ToString();%>
+
     <div class="card-container">
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="<%=miInmueble.Imagenes[0].URLImagen.ToString()%>" class="img-fluid rounded-start" alt="departamento">
+                    <img src="<%=miInmueble.Imagenes[0].URLImagen.ToString()%>" class="img-fluid rounded-start" alt="departamento" onerror="this.onerror=null;this.src='https://images.posthousing.com/nophoto.png';">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">

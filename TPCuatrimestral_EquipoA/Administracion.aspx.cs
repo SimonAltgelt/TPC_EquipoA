@@ -13,51 +13,52 @@ namespace TPCuatrimestral_EquipoA
 {
     public partial class Administracion : System.Web.UI.Page
     {
-        public List<Inmueble> todoInmueble;
-        public Inmueble miInmueble;
+        public List<Inmueble> listaInmuebles;
+        public List<Imagen> listaImagenes;
+        public InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
+        ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
         protected void Page_Load(object sender, EventArgs e)
         {   
             //si no hay un usuario logueado o si el usuario logueado no es un administrador, redirige a la página de error
-            if (!(Session["Usuario"] != null && ((dominio.Usuario)Session["Usuario"]).Tipo == dominio.TipoUsuario.Administrador))
+            if (Session["Usuario"] != null && ((Usuario)Session["Usuario"]).Tipo != TipoUsuario.Administrador)
             {
                 Session.Add("error", "No tienes permisos para acceder a esta página");
                 Response.Redirect("Error.aspx", false);
             }
+            
             if (!IsPostBack)
             {
-                GetInmuebles();
+                obtenerInmuebles();
             }
-            if (Request.QueryString["h"] != null)
+
+            if (Request.QueryString["h"] != null) // Aplicamos la opción de ver inmuebles ocultos
             {
-                InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
-                List<Inmueble> ocultos = new List<Inmueble>();
-                ocultos = inmuebleNegocio.verOcultos();
-                Session["inmuebles"] = ocultos;
+                Session["inmuebles"] = inmuebleNegocio.listarOcultos();
                 if (InmueblesGridView.Columns[5] is ButtonField buttonField)
                 {
                     buttonField.Text = "Visibilizar";
                     buttonField.CommandName = "Visualizar";
                 }
             }
-            todoInmueble = (List<Inmueble>)Session["inmuebles"];
-            InmueblesGridView.DataSource = todoInmueble;
+
+            listaInmuebles = (List<Inmueble>)Session["inmuebles"];
+            InmueblesGridView.DataSource = listaInmuebles;
             InmueblesGridView.DataBind();
 
         }
-        private void GetInmuebles()
+        private void obtenerInmuebles()
         {
-            InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
-            List<Inmueble> misInmuebles = inmuebleNegocio.listar();
-            ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
-            List<Imagen> misImagenes = imagenesNegocio.listar();
-            imagenesNegocio.vincularImagenes(misInmuebles, misImagenes);
+            listaInmuebles = inmuebleNegocio.listar();
+            listaImagenes = imagenesNegocio.listar();
+            imagenesNegocio.vincularImagenes(listaInmuebles, listaImagenes);
+
             if (Session["inmuebles"] == null)
             {
-                Session.Add("inmuebles", misInmuebles);
+                Session.Add("inmuebles", listaInmuebles);
             }
             else
             {
-                Session["inmuebles"] = misInmuebles;
+                Session["inmuebles"] = listaInmuebles;
             }
         }
         protected void btnPublicar_Click(object sender, EventArgs e)

@@ -40,22 +40,21 @@ namespace negocio
 
         public void insertarNuevo(Usuario nuevo)
         {
-
-            // agregar imagen de perfil
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setConsulta("exec InsertarUsuario @Nombre, @Apellido, @Email, @Contraseña, @Telefono");
+                //datos.setConsulta("exec InsertarUsuario @Nombre, @Apellido, @Email, @Contraseña, @Telefono, @ImagenPerfil");
                 datos.setParametros("@Nombre", nuevo.Nombre);
                 datos.setParametros("@Apellido", nuevo.Apellido);
                 datos.setParametros("@Email", nuevo.Email);
                 datos.setParametros("@Contraseña", nuevo.Contraseña);
                 datos.setParametros("@Telefono", nuevo.Telefono);
+                //datos.setParametros("@ImagenPerfil", nuevo.ImagenPerfil);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally

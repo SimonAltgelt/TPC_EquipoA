@@ -9,7 +9,7 @@ using negocio;
 
 namespace TPCuatrimestral_EquipoA
 {
-    public partial class Registro : System.Web.UI.Page
+    public partial class Registro : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,14 +33,13 @@ namespace TPCuatrimestral_EquipoA
                 UsuarioNegocio negocio = new UsuarioNegocio();
                 negocio.insertarNuevo(miusuario);
 
-                Session.Add("usuario", miusuario); //agregar a la sesion el usuario
-
+                Session.Add("usuario", miusuario);
                 Response.Redirect("Default.aspx");
             }
             catch (Exception ex)
             {
-
                 Session.Add("error", false);
+                throw ex;
             }
         }
     }

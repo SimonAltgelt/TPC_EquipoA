@@ -5,7 +5,6 @@
     {
         // Guarda el índice de la fila
         int index = Convert.ToInt32(e.CommandArgument);
-
         // Guarda el ID de Propiedad de la fila seleccionada
         GridViewRow selectedRow = InmueblesGridView.Rows[index];
         TableCell ID = selectedRow.Cells[0];
@@ -13,23 +12,19 @@
 
         if (e.CommandName == "Ocultar")
         {
-            negocio.InmuebleNegocio inmuebleNegocio = new negocio.InmuebleNegocio();
             inmuebleNegocio.ocultar(IDPropiedad);
             Response.Redirect(Request.RawUrl);
         }
         else if (e.CommandName == "Modificar")
         {
-            //Llevame a la nueva página con los datos precargados
             Response.Redirect($"InmuebleAdmin.aspx?ID={IDPropiedad}");
         }
         else if (e.CommandName == "Publicar")
         {
-            //Llevame a la nueva página
             Response.Redirect("InmuebleAdmin.aspx");
         }
         else if (e.CommandName == "Visualizar")
         {
-            negocio.InmuebleNegocio inmuebleNegocio = new negocio.InmuebleNegocio();
             inmuebleNegocio.desocultar(IDPropiedad);
             Response.Redirect("Administracion.aspx?h=1");
         }
@@ -59,10 +54,10 @@
             width: 100%;
         }
 
-            .btn-verde:hover {
-                transform: scale(1.01);
-                color: white;
-            }
+        .btn-verde:hover {
+            transform: scale(1.01);
+            color: white;
+        }
 
         .grid-container {
             width: 80%;
@@ -70,22 +65,23 @@
             text-align: center;
         }
 
-            .grid-container table {
-                width: 100%;
-                border-collapse: collapse;
-            }
+        .grid-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-                .grid-container table th {
-                    background-color: #4c6444;
-                    color: white;
-                    padding: 10px;
-                    border: 1px solid #ddd;
-                }
+        .grid-container table th {
+            background-color: #4c6444;
+            color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
 
-                .grid-container table td {
-                    padding: 10px;
-                    border: 1px solid #ddd;
-                }
+        .grid-container table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
     </style>
 
     <div class="admin">
@@ -97,7 +93,6 @@
         <asp:Button ID="btnVisibles" runat="server" CssClass="btn btn-secondary mt-2" OnClick="btnVisibles_Click" Text="Mostras publicaciones activas" />
     </div>
     <br />
-
 
     <div class="grid-container">
         <asp:GridView ID="InmueblesGridView"
@@ -115,4 +110,5 @@
             </Columns>
         </asp:GridView>
     </div>
+
 </asp:Content>

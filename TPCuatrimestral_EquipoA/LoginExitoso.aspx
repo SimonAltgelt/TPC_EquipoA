@@ -30,10 +30,11 @@
             width: 100%;
         }
 
-            .btn-verde:hover {
-                transform: scale(1.01);
-                color: white;
-            }
+        .btn-verde:hover {
+            transform: scale(1.01);
+            color: white;
+        }
+
     </style>
 
     <div class="center-container">
@@ -42,7 +43,7 @@
             <hr />
             <br />
         </div>
-        <!--a los btn les falta el evento click-->
+
         <div class="row1">
             <asp:Button ID="btnIngresar" runat="server" CssClass="btn btn-verde mt-2" Text="Ingresar" OnClick="btnIngresar_Click" />
         </div>

@@ -75,10 +75,6 @@ namespace TPCuatrimestral_EquipoA
                 IDInmueble = inmuebleNegocio.obtenerIDInmueble();
             }
 
-           
-
-            //1. Guardar las imágenes con el ID del inmueble
-
             string ruta = Server.MapPath("./img/");
             if (txtImagen.HasFiles)
             {
@@ -95,10 +91,8 @@ namespace TPCuatrimestral_EquipoA
                 }
             }
 
-            //2. Necesito agregar las imágenes a la base de datos vinculadas a ese ID de inmueble.
             imagenesNegocio.agregarImagenes(imagenesSubidas, IDInmueble);
 
-            //Necesito un mensaje que diga: "Inmueble cargado con éxito"//
             Response.Write("<script>alert('Inmueble agregado correctamente.');window.location = 'Administracion.aspx';</script>");
             // Debería redirigir a una página que diga carga exitosa
         }

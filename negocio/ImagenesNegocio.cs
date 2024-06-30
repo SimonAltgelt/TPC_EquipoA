@@ -66,8 +66,6 @@ namespace negocio
         }
 
         public void vincularImagenes(List<Inmueble> inmuebles, List<Imagen> imagenes)
-        // Vamos artículo por artículo y recorremos todas las imágenes para agregarlas
-        // a la lista de imágenes de cada artículo, cuando sea apropiado.
         {
             foreach (Inmueble miInmueble in inmuebles)
             {

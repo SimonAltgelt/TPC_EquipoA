@@ -57,19 +57,17 @@
                 <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido" />
             </div>
             <div class="form-group">
-    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Email" />
-</div>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Email" />
+            </div>
             <div class="form-group">
                 <asp:TextBox ID="txtContraseña" runat="server" CssClass="form-control" TextMode="Password" placeholder="Contraseña" />
             </div>
-           
-            
-          <div class="form-group">
-                <asp:TextBox ID="txtTel" runat="server" CssClass="form-control" placeholder="Telefono" />
+            <div class="form-group">
+                <asp:TextBox ID="txtTel" runat="server" CssClass="form-control" placeholder="Teléfono" />
             </div>
-            <div class="form-group form-check">
-                <asp:CheckBox ID="chkRecuerdame" runat="server" CssClass="form-check-input" />
-                <asp:Label ID="lblRecuardame" runat="server" AssociatedControlID="chkRecuerdame" CssClass="form-check-label" Text="Recuerdame" />
+            <div class="form-group">
+                <asp:CheckBox ID="chkRecuerdame" runat="server"/>
+                <asp:Label ID="lblRecuerdame" runat="server" AssociatedControlID="chkRecuerdame" CssClass="form-check-label" Text="Recuérdame" />
             </div>
             <div class="form-group">
                 <asp:Button ID="btnRegistrar" runat="server" CssClass="btn btn-primary" Text="Registrarme" OnClick="btnRegistrar_Click" />

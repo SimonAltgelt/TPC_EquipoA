@@ -11,29 +11,30 @@ namespace TPCuatrimestral_EquipoA
 {
     public partial class Resultados : System.Web.UI.Page
     {
-        public List<Inmueble> misInmuebles;
+        public List<Inmueble> listaInmuebles;
+        public List<Imagen> listaImagenes;
+        public InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
+        public ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                string disponibilidad = (string)Session["FiltroDisponibilidad"];
-                string localidad = (string)Session["FiltroLocalidad"];
-                string tipoPropiedad = (string)Session["FiltroTipoPropiedad"];
-                GetInmuebles(disponibilidad, localidad, tipoPropiedad);
+                string disponibilidad = (string)Session["disponibilidad"];
+                string localidad = (string)Session["localidad"];
+                string tipoPropiedad = (string)Session["tipoPropiedad"];
+                obtenerInmuebles(disponibilidad, localidad, tipoPropiedad);
             }
-            misInmuebles = (List<Inmueble>)Session["inmuebles"];
+            listaInmuebles = (List<Inmueble>)Session["inmuebles"];
         }
 
-        private void GetInmuebles(string disponibilidad, string localidad, string tipoPropiedad)
+        private void obtenerInmuebles(string disponibilidad, string localidad, string tipoPropiedad)
         {
-            InmuebleNegocio inmuebleNegocio = new InmuebleNegocio();
-            List<Inmueble> inmueblesFiltrados = inmuebleNegocio.listarFiltrados(disponibilidad, localidad, tipoPropiedad);
-            ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
-            List<Imagen> misImagenes = imagenesNegocio.listar();
-            imagenesNegocio.vincularImagenes(inmueblesFiltrados, misImagenes);
+            listaInmuebles = inmuebleNegocio.listarFiltrados(disponibilidad, localidad, tipoPropiedad);
+            listaImagenes = imagenesNegocio.listar();
+            imagenesNegocio.vincularImagenes(listaInmuebles, listaImagenes);
 
-            Session["inmuebles"] = inmueblesFiltrados;
+            Session["inmuebles"] = listaInmuebles;
         }
      
     } 

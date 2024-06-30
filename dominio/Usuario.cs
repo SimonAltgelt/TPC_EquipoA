@@ -20,21 +20,17 @@ namespace dominio
         public string Telefono { get; set; }
         public string DNI { get; set; }
         public TipoUsuario Tipo { get; set; }
+        //public string ImagenPerfil { get; set; }
 
-        /*Agregar a la base una columna para cargar la imagen de perfil*/
-
-
-
-        /*constructor de la clase usuario*/
+        /*Constructor con argumentos*/
         public Usuario(string Ususario, string contraseña, bool admin)
         {
             Email = Ususario;
             Contraseña = contraseña;
-            /* el ? es como un if en una sola linea*/
             Tipo = admin ? TipoUsuario.Administrador : TipoUsuario.Cliente;
         }
-        public Usuario()
-        {
-        }
+
+        /*Constructor vacío*/
+        public Usuario() { }
     }
 }

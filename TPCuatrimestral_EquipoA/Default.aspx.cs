@@ -31,9 +31,9 @@ namespace TPCuatrimestral_EquipoA
             string tipoPropiedad = ddlTipoPropiedad.SelectedValue;
 
             // Almacenar los filtros en la sesión
-            Session["FiltroDisponibilidad"] = disponibilidad;
-            Session["FiltroLocalidad"] = localidad;
-            Session["FiltroTipoPropiedad"] = tipoPropiedad;
+            Session["disponibilidad"] = disponibilidad;
+            Session["localidad"] = localidad;
+            Session["tipoPropiedad"] = tipoPropiedad;
 
             // Redirigir a la página de resultados
             Response.Redirect("Resultados.aspx");

@@ -12,7 +12,7 @@ namespace TPCuatrimestral_EquipoA
     public partial class DetallePropiedad : System.Web.UI.Page
     {
         public Inmueble miInmueble;
-        protected void Page_Load(object sender, EventArgs e) //ejecuta cada vez que se carga la página
+        protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) //Verifica si la página se carga por primera vez o si se carga por una acción del usuario
             {
