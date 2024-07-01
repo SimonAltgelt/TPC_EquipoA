@@ -18,7 +18,17 @@ namespace TPCuatrimestral_EquipoA
             {
                 int id = int.Parse(Request.QueryString["id"]);
                 miInmueble = ((List<Inmueble>)Session["inmuebles"]).Find(x => x.ID == id);
+                Session["inmueble"]=miInmueble;
             }
+            else
+            {
+                miInmueble=(Inmueble)Session["inmueble"];
+            }
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

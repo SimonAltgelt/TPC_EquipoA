@@ -94,14 +94,16 @@
             font-weight: bold;
             font-size: 18px;
         }
-        .icono-detalle{
+
+        .icono-detalle {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 10px;
             font-size: 25px;
         }
-        .lbl-detalle{
+
+        .lbl-detalle {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -173,6 +175,31 @@
         </div>
     </div>
     <br />
+    <%--  --%>
+    <div class="container text-center">
+        <asp:Calendar ID="calendar1" runat="server">
+
+            <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
+
+            <TitleStyle BackColor="#4c6444"
+                ForeColor="White"></TitleStyle>
+
+            <DayStyle BackColor="White"></DayStyle>
+
+            <SelectedDayStyle BackColor="Gray"
+                Font-Bold="True"></SelectedDayStyle>
+
+        </asp:Calendar>
+        <asp:RadioButton ID="Radio1" Text="Turno Mañana" CssClass="btn btn-verde" Checked="True" GroupName="RadioGroup1" runat="server" /><br />
+
+        <asp:RadioButton ID="Radio2" Text="Turno Mediodia" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
+
+        <asp:RadioButton ID="Radio3" runat="server" CssClass="btn btn-verde" Text="Turno Tarde" GroupName="RadioGroup1" /><br />
+
+        <asp:Button Text="Submit" CssClass="btn btn-primary" OnClick="Unnamed_Click" runat="server" />
+
+    </div>
+    <%--  --%>
     <!-- DATOS DE LA PROPIEDAD -->
     <div class="container text-center">
         <%
@@ -195,40 +222,40 @@
             <asp:Label ID="lblNombre" runat="server" />
         </div>
         <br />
-<div class="custom-border d-flex flex-column justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
-        <div class="icono-detalle">
-            <i class="fa-solid fa-expand" style="color: #000000;"></i>
+        <div class="custom-border d-flex flex-column justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <div class="icono-detalle">
+                    <i class="fa-solid fa-expand" style="color: #000000;"></i>
+                </div>
+                <div class="lbl-detalle">
+                    <asp:Label ID="lblMetrosTotales" CssClass="h6" runat="server"></asp:Label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="icono-detalle">
+                    <i class="fa-solid fa-maximize " style="color: #000000;"></i>
+                </div>
+                <div class="lbl-detalle">
+                    <asp:Label ID="lblMetrosCubiertos" CssClass="h6" runat="server"></asp:Label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="icono-detalle">
+                    <i class="fa-solid fa-bed" style="color: #000000;"></i>
+                </div>
+                <div class="lbl-detalle">
+                    <asp:Label ID="lblAmbientes" CssClass="h6" runat="server"></asp:Label>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="icono-detalle">
+                    <i class="fa-solid fa-bath" style="color: #000000;"></i>
+                </div>
+                <div class="lbl-detalle">
+                    <asp:Label ID="lblBaños" CssClass="h6" runat="server"></asp:Label>
+                </div>
+            </div>
         </div>
-        <div class="lbl-detalle">
-            <asp:Label ID="lblMetrosTotales" CssClass="h6" runat="server"></asp:Label>
-        </div>
-    </div>
-    <div class="d-flex align-items-center">
-        <div class="icono-detalle">
-            <i class="fa-solid fa-maximize " style="color: #000000;"></i>
-        </div>
-        <div class="lbl-detalle">
-            <asp:Label ID="lblMetrosCubiertos" CssClass="h6" runat="server"></asp:Label>
-        </div>
-    </div>
-    <div class="d-flex align-items-center">
-        <div class="icono-detalle">
-            <i class="fa-solid fa-bed" style="color: #000000;"></i>
-        </div>
-        <div class="lbl-detalle">
-            <asp:Label ID="lblAmbientes" CssClass="h6" runat="server"></asp:Label>
-        </div>
-    </div>
-    <div class="d-flex align-items-center">
-        <div class="icono-detalle">
-            <i class="fa-solid fa-bath" style="color: #000000;"></i>
-        </div>
-        <div class="lbl-detalle">
-            <asp:Label ID="lblBaños" CssClass="h6" runat="server"></asp:Label>
-        </div>
-    </div>
-</div>
         <br />
         <div class="row custom-border">
             <asp:Label ID="lblDescripcion" CssClass="p card-text small text-body-secondary" runat="server"></asp:Label>
