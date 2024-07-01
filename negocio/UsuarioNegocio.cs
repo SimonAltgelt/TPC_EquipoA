@@ -54,6 +54,20 @@ namespace negocio
             try
             {
                 /*La consulta*/
+                datos.setConsulta("UPDATE USUARIOS SET Nombre = @Nombre, Apellido = @Apellido, Documento = @Documento, " +
+                    "Domicilio = @Domicilio, Telefono = @Telefono, Email = @Email, Contraseña = @Contraseña, " +
+                    "ImagenPerfil = @ImagenPerfil WHERE ID = @ID");
+                datos.setParametros("@Nombre", usuario.Nombre);
+                datos.setParametros("@Apellido", usuario.Apellido);
+                datos.setParametros("@Documento", usuario.Documento);
+                datos.setParametros("@Domicilio", usuario.Domicilio);
+                datos.setParametros("@Telefono", usuario.Telefono);
+                datos.setParametros("@Email", usuario.Email);
+                datos.setParametros("@Contraseña", usuario.Contraseña);
+                datos.setParametros("@ImagenPerfil", usuario.ImagenPerfil);
+                datos.setParametros("@ID", usuario.ID);
+                datos.ejecutarAccion();
+
             }
             catch (Exception ex)
             {

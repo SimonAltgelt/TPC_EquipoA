@@ -369,10 +369,12 @@ as
 insert into USUARIOS (NOMBRE, APELLIDO,EMAIL, CONTRASEÑA, TELEFONO, TIPOUSUARIO)
 --para que traiga el id del ultimo creado
 output inserted.ID
-values	(@Nombre, @Apellido, @Email, @Contraseña,@Telefono, 1)
+values	(@Nombre, @Apellido, @Email, @Contraseña,@Telefono, 0)
 
 
 --exec InsertarUsuario 'juan', 'Perez', 'pepe@email.com', 'pass123', '1165423699'
 
 SELECT * FROM INMUEBLES
 SELECT * FROM IMAGENES
+
+select * from USUARIOS
