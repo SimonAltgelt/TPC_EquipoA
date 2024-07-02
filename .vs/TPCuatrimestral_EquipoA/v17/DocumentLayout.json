@@ -1,74 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\",
+  "WorkspaceRootPath": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\resultados.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\resultados.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\tpcuatrimestral_equipoa\\detallepropiedad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\detallepropiedad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\tpcuatrimestral_equipoa\\detallepropiedad.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\detallepropiedad.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\ventapropiedad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\ventapropiedad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\iniciosesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\iniciosesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\tpcuatrimestral_equipoa\\contacto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\contacto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E86812DF-F448-416B-91F7-BFE5EDB680D5}|negocio\\negocio.csproj|c:\\tp cuatrimestral prog iii\\tpc_equipoa\\negocio\\imagenesnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E86812DF-F448-416B-91F7-BFE5EDB680D5}|negocio\\negocio.csproj|solutionrelative:negocio\\imagenesnegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E86812DF-F448-416B-91F7-BFE5EDB680D5}|negocio\\negocio.csproj|C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E86812DF-F448-416B-91F7-BFE5EDB680D5}|negocio\\negocio.csproj|solutionrelative:negocio\\usuarionegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E86812DF-F448-416B-91F7-BFE5EDB680D5}|negocio\\negocio.csproj|C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E86812DF-F448-416B-91F7-BFE5EDB680D5}|negocio\\negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\tpcuatrimestral_equipoa\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\tpcuatrimestral_equipoa\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\tpcuatrimestral_equipoa\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\tpcuatrimestral_equipoa\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\tpcuatrimestral_equipoa\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\registro.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\registro.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\tpcuatrimestral_equipoa\\ventapropiedad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\ventapropiedad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\ventapropiedad.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\ventapropiedad.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\masterpage.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\masterpage.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\tpcuatrimestral_equipoa\\contacto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\contacto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\iniciosesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\iniciosesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|c:\\users\\kowal\\desktop\\tp_cuatri\\tpc_equipoa\\tpcuatrimestral_equipoa\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F073566-790C-4B80-AF97-C310F76A540F}|TPCuatrimestral_EquipoA\\TPCuatrimestral_EquipoA.csproj|solutionrelative:tpcuatrimestral_equipoa\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -84,9 +64,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Default.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
               "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Default.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx",
               "RelativeToolTip": "TPCuatrimestral_EquipoA\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -95,32 +75,12 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DetallePropiedad.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\DetallePropiedad.aspx",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\DetallePropiedad.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\DetallePropiedad.aspx",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\DetallePropiedad.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-01T23:04:17.12Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DetallePropiedad.aspx.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\DetallePropiedad.aspx.cs",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\DetallePropiedad.aspx.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\DetallePropiedad.aspx.cs",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\DetallePropiedad.aspx.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T23:06:28.088Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Bookmark",
@@ -128,37 +88,102 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Resultados.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Resultados.aspx",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Resultados.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Resultados.aspx",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Resultados.aspx",
+              "DocumentIndex": 5,
+              "Title": "VentaPropiedad.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\VentaPropiedad.aspx.designer.cs",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\VentaPropiedad.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\VentaPropiedad.aspx.designer.cs",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\VentaPropiedad.aspx.designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T21:54:09.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MasterPage.Master.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\MasterPage.Master.cs",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\MasterPage.Master.cs",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\MasterPage.Master.cs",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\MasterPage.Master.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwDAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T21:44:55.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MasterPage.Master",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\MasterPage.Master",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\MasterPage.Master",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\MasterPage.Master",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\MasterPage.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-02T03:36:59.729Z",
+              "WhenOpened": "2024-07-02T21:44:17.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Global.asax.cs",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Global.asax.cs",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Global.asax.cs",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Global.asax.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAiwBcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T20:49:38.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InicioSesion.aspx",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\InicioSesion.aspx",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\InicioSesion.aspx",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\InicioSesion.aspx",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\InicioSesion.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-02T20:33:59.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Registro.aspx",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Registro.aspx",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Registro.aspx",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Registro.aspx",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Registro.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-02T20:27:21.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Web.config",
+              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Web.config",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Web.config",
+              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-07-02T20:18:03.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Default.aspx.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx.cs",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Default.aspx.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Default.aspx.cs",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Default.aspx.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwD8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T02:55:16.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "VentaPropiedad.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\VentaPropiedad.aspx",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\VentaPropiedad.aspx",
               "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\VentaPropiedad.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\VentaPropiedad.aspx",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\VentaPropiedad.aspx",
               "RelativeToolTip": "TPCuatrimestral_EquipoA\\VentaPropiedad.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -167,37 +192,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MasterPage.Master",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\MasterPage.Master",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\MasterPage.Master",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\MasterPage.Master",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\MasterPage.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-02T02:37:57.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "InicioSesion.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\InicioSesion.aspx",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\InicioSesion.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\InicioSesion.aspx",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\InicioSesion.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-02T02:14:16.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Contacto.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Contacto.aspx",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Contacto.aspx",
               "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Contacto.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Contacto.aspx",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Contacto.aspx",
               "RelativeToolTip": "TPCuatrimestral_EquipoA\\Contacto.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -206,103 +205,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Administracion.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Administracion.aspx",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Administracion.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Administracion.aspx",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Administracion.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-07-02T02:14:10.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ImagenesNegocio.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\ImagenesNegocio.cs",
-              "RelativeDocumentMoniker": "negocio\\ImagenesNegocio.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\ImagenesNegocio.cs",
-              "RelativeToolTip": "negocio\\ImagenesNegocio.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwCMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T02:14:04.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Administracion.aspx.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Administracion.aspx.cs",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Administracion.aspx.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Administracion.aspx.cs",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Administracion.aspx.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T02:14:19.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AccesoDatos.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\AccesoDatos.cs",
-              "RelativeDocumentMoniker": "negocio\\AccesoDatos.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\AccesoDatos.cs",
-              "RelativeToolTip": "negocio\\AccesoDatos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T23:02:39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
               "Title": "Perfil.aspx.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx.cs",
               "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Perfil.aspx.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx.cs",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx.cs",
               "RelativeToolTip": "TPCuatrimestral_EquipoA\\Perfil.aspx.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwCIAAAAIAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAMwA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T22:15:44.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UsuarioNegocio.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\UsuarioNegocio.cs",
-              "RelativeDocumentMoniker": "negocio\\UsuarioNegocio.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\negocio\\UsuarioNegocio.cs",
-              "RelativeToolTip": "negocio\\UsuarioNegocio.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAgwAwAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T20:18:21.083Z",
+              "WhenOpened": "2024-07-01T22:15:44.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 2,
               "Title": "Perfil.aspx",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx",
               "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Perfil.aspx",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\Tp_Cuatri\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Perfil.aspx",
               "RelativeToolTip": "TPCuatrimestral_EquipoA\\Perfil.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-30T20:40:55.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Registro.aspx.cs",
-              "DocumentMoniker": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Registro.aspx.cs",
-              "RelativeDocumentMoniker": "TPCuatrimestral_EquipoA\\Registro.aspx.cs",
-              "ToolTip": "C:\\TP Cuatrimestral Prog III\\TPC_EquipoA\\TPCuatrimestral_EquipoA\\Registro.aspx.cs",
-              "RelativeToolTip": "TPCuatrimestral_EquipoA\\Registro.aspx.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAwCkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T21:15:00.712Z"
+              "WhenOpened": "2024-06-30T20:40:55.452Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -38,10 +38,15 @@
             <div class="form-group">
                 <label for="email">Correo Electrónico</label>
                 <asp:TextBox ID="email" runat="server" CssClass="form-control" placeholder="Correo Electrónico" type="email" />
+                <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="email" ErrorMessage="El email es obligatorio." CssClass="text-danger" Display="Dynamic" />
+                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="email" ErrorMessage="El email no es válido." ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" CssClass="text-danger" Display="Dynamic" />
+
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
                 <asp:TextBox ID="password" runat="server" CssClass="form-control" placeholder="Contraseña" TextMode="Password" />
+                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="password" ErrorMessage="La contraseña es obligatoria." CssClass="text-danger" Display="Dynamic" />
+
             </div>
             <div class="form-group">
                 <asp:Label ID="lblForgotPassword" runat="server" CssClass="form-text text-muted">
