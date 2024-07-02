@@ -105,12 +105,12 @@
         .nav-link-button {
             background: none;
             border: none;
-            color: rgb(206, 206, 206); /* O el color que prefieras */
-            font-size: 20px; /* Asegúrate de que coincida con el estilo de tus enlaces */
+            color: rgb(206, 206, 206); 
+            font-size: 20px; 
         }
 
         .nav-link-button:hover {
-            color: white; /* O el color que prefieras para el hover */
+            color: white; 
         }
 
         body {

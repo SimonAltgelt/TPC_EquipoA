@@ -26,9 +26,14 @@ namespace TPCuatrimestral_EquipoA
             }
         }
 
-        protected void Unnamed_Click(object sender, EventArgs e)
+        protected void Confirmar_Click(object sender, EventArgs e)
         {
+            // reserva el turno asignado
+        }
 
+        protected void Calendario_SelectionChanged(object sender, EventArgs e)
+        {
+            LblCapturaDia.Text = Calendario.SelectedDate.ToString("dd/MM/yyyy");
         }
     }
-}
+}   

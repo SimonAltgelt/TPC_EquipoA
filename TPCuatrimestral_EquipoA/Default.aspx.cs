@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -37,6 +38,29 @@ namespace TPCuatrimestral_EquipoA
 
             // Redirigir a la página de resultados
             Response.Redirect("Resultados.aspx");
+        }
+        public static List<string> GetLocations(string prefix)
+        {
+            List<string> locations = new List<string>();
+            string connString = "tu cadena de conexión aquí";
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT LocationName FROM Locations WHERE LocationName LIKE @prefix + '%'", conn))
+                {
+                    cmd.Parameters.AddWithValue("@prefix", prefix);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            locations.Add(reader["LocationName"].ToString());
+                        }
+                    }
+                }
+            }
+
+            return locations;
         }
     }
 }

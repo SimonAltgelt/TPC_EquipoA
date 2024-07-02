@@ -15,40 +15,58 @@ namespace TPCuatrimestral_EquipoA
     {
 
         /// <summary>
-        /// calendar1 control.
+        /// Calendario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendar1;
+        protected global::System.Web.UI.WebControls.Calendar Calendario;
 
         /// <summary>
-        /// Radio1 control.
+        /// TurnoMañana control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton Radio1;
+        protected global::System.Web.UI.WebControls.RadioButton TurnoMañana;
 
         /// <summary>
-        /// Radio2 control.
+        /// TurnoMediodia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton Radio2;
+        protected global::System.Web.UI.WebControls.RadioButton TurnoMediodia;
 
         /// <summary>
-        /// Radio3 control.
+        /// TurnoTarde control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton Radio3;
+        protected global::System.Web.UI.WebControls.RadioButton TurnoTarde;
+
+        /// <summary>
+        /// LblCapturaDia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCapturaDia;
+
+        /// <summary>
+        /// Confirmar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Confirmar;
 
         /// <summary>
         /// lblAlquiler control.

@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     
     <style>
         .txtTel {
             font-size: 10px;
@@ -88,11 +89,8 @@
             width: 100%;
         }
 
-        .btn-verde:hover {
-            transform: scale(1.01);
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
+        .form-control {
+            resize: none;
         }
 
         .icono-detalle {
@@ -110,6 +108,17 @@
             margin: 10px;
             font-size: 20px;
         }
+
+        .btn-primary {
+            background-color: #4c6444;
+            border-color: #4c6444;
+        }
+
+            .btn-primary:hover {
+                background-color: #4c6444;
+                border-color: #4c6444;
+                color: black;
+            }
     </style>
     <br />
     <div class="container text-center">
@@ -169,37 +178,41 @@
                     </div>
                     <br />
                     <br />
-                    <button type="button" class="btn btn-verde">Enviar</button>
+                    <button type="button" class="btn btn-verde" id="calendario">Enviar</button>
                 </div>
             </div>
         </div>
     </div>
     <br />
     <%--  --%>
+    <%-- CALENDARIO --%>
     <div class="container text-center">
-        <asp:Calendar ID="calendar1" runat="server">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-5" style="margin-left: 112px">
+                <asp:Calendar ID="Calendario" runat="server" OnSelectionChanged="Calendario_SelectionChanged">
+                    <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
+                    <TitleStyle BackColor="#4c6444"
+                        ForeColor="Black"></TitleStyle>
+                    <DayStyle BackColor="White"></DayStyle>
+                    <SelectedDayStyle BackColor="#4d2d18"
+                        Font-Bold="True"></SelectedDayStyle>
+                </asp:Calendar>
+            </div>
 
-            <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
-
-            <TitleStyle BackColor="#4c6444"
-                ForeColor="White"></TitleStyle>
-
-            <DayStyle BackColor="White"></DayStyle>
-
-            <SelectedDayStyle BackColor="Gray"
-                Font-Bold="True"></SelectedDayStyle>
-
-        </asp:Calendar>
-        <asp:RadioButton ID="Radio1" Text="Turno Mañana" CssClass="btn btn-verde" Checked="True" GroupName="RadioGroup1" runat="server" /><br />
-
-        <asp:RadioButton ID="Radio2" Text="Turno Mediodia" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
-
-        <asp:RadioButton ID="Radio3" runat="server" CssClass="btn btn-verde" Text="Turno Tarde" GroupName="RadioGroup1" /><br />
-
-        <asp:Button Text="Submit" CssClass="btn btn-primary" OnClick="Unnamed_Click" runat="server" />
-
+            <div class="col-md-5" style="margin-left:-202px">
+                <asp:RadioButton ID="TurnoMañana" Text="Turno Mañana" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
+                <asp:RadioButton ID="TurnoMediodia" Text="Turno Mediodia" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
+                <asp:RadioButton ID="TurnoTarde" Text="Turno Tarde" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
+                <asp:Label ID="LblCapturaDia" Text="" runat="server"></asp:Label>
+                <br />
+                <asp:Button ID="Confirmar" Text="Confirmar turno" CssClass="btn btn-primary" OnClick="Confirmar_Click" runat="server" />
+            </div>
+        </div>
     </div>
-    <%--  --%>
+
+    <br />
+    <%-- FIN CALENDARIO  --%>
+
     <!-- DATOS DE LA PROPIEDAD -->
     <div class="container text-center">
         <%
