@@ -51,15 +51,6 @@ namespace TPCuatrimestral_EquipoA
         protected global::System.Web.UI.WebControls.RadioButton TurnoTarde;
 
         /// <summary>
-        /// LblCapturaDia control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCapturaDia;
-
-        /// <summary>
         /// Confirmar control.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace TPCuatrimestral_EquipoA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Confirmar;
+
+        /// <summary>
+        /// LblCapturaDia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCapturaDia;
 
         /// <summary>
         /// lblAlquiler control.

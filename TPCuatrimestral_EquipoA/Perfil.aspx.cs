@@ -15,25 +15,23 @@ namespace TPCuatrimestral_EquipoA
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) { 
-            
-            miUsuario = (Usuario)Session["usuario"];
+            if (!IsPostBack) {
+                miUsuario = (Usuario)Session["usuario"];
 
-            txtNombre.Text = miUsuario.Nombre;
-            txtApellido.Text = miUsuario.Apellido;
-            txtDocumento.Text = miUsuario.Documento;
-            txtDomicilio.Text = miUsuario.Domicilio;
-            txtTelefono.Text = miUsuario.Telefono;
-            txtEmail.Text = miUsuario.Email;
-            txtContraseña.Text = miUsuario.Contraseña;
-            imagenPerfil.ImageUrl = miUsuario.ImagenPerfil;
+                txtNombre.Text = miUsuario.Nombre;
+                txtApellido.Text = miUsuario.Apellido;
+                txtDocumento.Text = miUsuario.Documento;
+                txtDomicilio.Text = miUsuario.Domicilio;
+                txtTelefono.Text = miUsuario.Telefono;
+                txtEmail.Text = miUsuario.Email;
+                txtContraseña.Text = miUsuario.Contraseña;
+                imagenPerfil.ImageUrl = miUsuario.ImagenPerfil;
             }
             miUsuario = (Usuario)Session["usuario"];
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-
             /* FALTA TERMINAR LA FUNCION, FALTA MANEJAR VALORES VACÍOS */
             miUsuario.Nombre = txtNombre.Text;
             miUsuario.Apellido = txtApellido.Text;
@@ -47,7 +45,6 @@ namespace TPCuatrimestral_EquipoA
             UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
             usuarioNegocio.actualizarUsuario(miUsuario);
             Response.Redirect("Default.aspx");
-
         }
     }
 }

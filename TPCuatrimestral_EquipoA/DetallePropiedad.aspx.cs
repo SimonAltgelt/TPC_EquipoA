@@ -12,8 +12,8 @@ namespace TPCuatrimestral_EquipoA
     public partial class DetallePropiedad : System.Web.UI.Page
     {
         public Inmueble miInmueble;
-        public string fechaSeleccionada = "05-07-2024";
-        public string turno;
+        public string fechaSeleccionada = "";
+        public string turno = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) //Verifica si la página se carga por primera vez o si se carga por una acción del usuario
@@ -21,10 +21,17 @@ namespace TPCuatrimestral_EquipoA
                 int id = int.Parse(Request.QueryString["id"]);
                 miInmueble = ((List<Inmueble>)Session["inmuebles"]).Find(x => x.ID == id);
                 Session["inmueble"] = miInmueble;
+
+                if (Session["Fecha"] == null)
+                {
+                    Session.Add("Fecha", "");
+                }
             }
             else
             {
                 miInmueble = (Inmueble)Session["inmueble"];
+                fechaSeleccionada = (string)Session["fecha"];
+                LblCapturaDia.Text = "";
             }
         }
 
@@ -36,8 +43,12 @@ namespace TPCuatrimestral_EquipoA
                 turno = "d";
             else if (TurnoTarde.Checked)
                 turno = "t";
-
-            // ACTUALMENTE LA FECHA ESTÁ HARDCODEADA, NO LA LEVANTA CORRECTAMENTE DEL CALENDARIO
+            
+            if (string.IsNullOrEmpty(turno) || string.IsNullOrEmpty(fechaSeleccionada))
+            {
+                LblCapturaDia.Text = "Seleccione un turno por favor.";
+                return;
+            }
 
             AccesoDatos datos = new AccesoDatos();
 
@@ -48,7 +59,7 @@ namespace TPCuatrimestral_EquipoA
             datos.cerrarConexion();
             if (resultado > 0)
             {
-                // ACTUALIZAR UN LABEL QUE DIGA "El turno no está disponible, elige otro por favor."
+                LblCapturaDia.Text = "El turno no está disponible, elija otro por favor.";
             }
             else
             {
@@ -70,14 +81,14 @@ namespace TPCuatrimestral_EquipoA
                 {
                     datos2.cerrarConexion();
                 }
+                LblCapturaDia.Text = "Se guardó correctamente el turno para el día " + fechaSeleccionada + ".";
             }
         }
 
         protected void Calendario_SelectionChanged(object sender, EventArgs e)
         {
-            // ACTUALMENTE LA FECHA ESTÁ HARDCODEADA, NO LA LEVANTA CORRECTAMENTE DEL CALENDARIO
-            LblCapturaDia.Text = Calendario.SelectedDate.ToString("dd/MM/yyyy");
             fechaSeleccionada = Calendario.SelectedDate.ToString("dd/MM/yyyy");
+            Session["fecha"] = fechaSeleccionada;
         }
     }
 }

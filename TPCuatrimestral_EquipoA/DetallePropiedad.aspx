@@ -203,9 +203,10 @@
                 <asp:RadioButton ID="TurnoMañana" Text="Turno Mañana" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
                 <asp:RadioButton ID="TurnoMediodia" Text="Turno Mediodia" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
                 <asp:RadioButton ID="TurnoTarde" Text="Turno Tarde" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
-                <asp:Label ID="LblCapturaDia" Text="" runat="server"></asp:Label>
                 <br />
                 <asp:Button ID="Confirmar" Text="Confirmar turno" CssClass="btn btn-primary" OnClick="Confirmar_Click" runat="server" />
+                <br />
+                <asp:Label ID="LblCapturaDia" CssClass="h3" runat="server"></asp:Label>
             </div>
         </div>
     </div>
