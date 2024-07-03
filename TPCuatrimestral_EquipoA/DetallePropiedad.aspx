@@ -127,20 +127,47 @@
         }
 
         .btn-primary {
-            background-color: #4c6444;
-            border-color: #4c6444;
+            background-color: #356AA0;
+            border-color: #356AA0;
+            margin-left: 15.8%;
         }
 
             .btn-primary:hover {
-                background-color: #4c6444;
-                border-color: #4c6444;
+                background-color: #356AA0;
+                border-color: #356AA0;
                 color: black;
             }
 
         #info {
-            width: 30%;
+            width: 570px;
             margin-left: 35%;
             padding: 14px;
+        }
+
+        .turno {
+            background-color: #4c6444;
+            color: white;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            width: 40%;
+            margin-left: 15.8%;
+        }
+
+        .small-space {
+            margin-top: 5px;
+        }
+
+        .capturado{
+            margin-left:15.8%
         }
     </style>
 
@@ -202,76 +229,13 @@
                     </div>
                     <br />
                     <br />
-                    <button type="button" class="btn btn-verde" id="calendario">Enviar</button>
+                    <button type="button" class="btn btn-verde">Enviar</button>
                 </div>
             </div>
         </div>
     </div>
     <br />
     <%--  --%>
-    <%-- INFO A CONSIDERAR --%>
-    <h2 class="txtContacto" style="text-align: center">TURNOS DISPONIBLES</h2>
-    <div id="info" class="row custom-border text-center">
-        <div class="txtInfo">
-            Informacion a considerar:
-        </div>
-        <div class="txtInfoDescripcion">
-            TURNO MAÑANA: 9hs. - 11hs.
-        </div>
-        <div class="txtInfoDescripcion">
-            TURNO MEDIODIA: 11:30hs. - 13:30hs.
-        </div>
-        <div class="txtInfoDescripcion">
-            TURNO TARDE: 14hs. - 16hs.
-        </div>
-        <br />
-    </div>
-    <br />
-
-    <%-- CALENDARIO --%>
-    <div class="container text-center">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-5" style="margin-left: 112px">
-
-                <asp:ScriptManager runat="server" />
-                <asp:UpdatePanel ID="updCalendario" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-
-                        <asp:Calendar ID="Calendario" runat="server" OnSelectionChanged="Calendario_SelectionChanged">
-
-                            <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
-                            <TitleStyle BackColor="#4c6444" ForeColor="Black"></TitleStyle>
-                            <DayStyle BackColor="White"></DayStyle>
-                            <SelectedDayStyle BackColor="#4d2d18" Font-Bold="True"></SelectedDayStyle>
-
-                        </asp:Calendar>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-
-            </div>
-
-            <div class="col-md-5" style="margin-left: -202px">
-                <asp:RadioButton ID="TurnoMañana" Text="Turno Mañana" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
-                <asp:RadioButton ID="TurnoMediodia" Text="Turno Mediodia" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
-                <asp:RadioButton ID="TurnoTarde" Text="Turno Tarde" CssClass="btn btn-verde" GroupName="RadioGroup1" runat="server" /><br />
-                <br />
-                <asp:UpdatePanel runat="server">
-                    <ContentTemplate>
-                        <asp:Button ID="Confirmar" Text="Confirmar turno" CssClass="btn btn-primary" OnClick="Confirmar_Click" runat="server" />
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-                <br />
-                <asp:UpdatePanel runat="server">
-                    <ContentTemplate>
-                        <asp:Label ID="LblCapturaDia" CssClass="h3" runat="server"></asp:Label>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </div>
-        </div>
-    </div>
-
-    <br />
-    <%-- FIN CALENDARIO  --%>
 
     <!-- DATOS DE LA PROPIEDAD -->
     <div class="container text-center">
@@ -334,4 +298,80 @@
             <asp:Label ID="lblDescripcion" CssClass="p card-text small text-body-secondary" runat="server"></asp:Label>
         </div>
     </div>
+    <br />
+    <%-- INFO A CONSIDERAR --%>
+    <h2 class="txtContacto" style="text-align: center">TURNOS DE VISITA DISPONIBLES</h2>
+    <div id="info" class="row custom-border text-center">
+        <div class="txtInfo">
+            Informacion a considerar:
+        </div>
+        <div class="txtInfoDescripcion">
+            TURNO MAÑANA: 9hs. - 11hs.
+        </div>
+        <div class="txtInfoDescripcion">
+            TURNO MEDIODIA: 11:30hs. - 13:30hs.
+        </div>
+        <div class="txtInfoDescripcion">
+            TURNO TARDE: 14hs. - 16hs.
+        </div>
+        <br />
+    </div>
+    <br />
+    <% if (Session["Usuario"] != null)
+        {
+
+    %>
+    <%-- CALENDARIO --%>
+    <div class="container text-center">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-5" style="margin-left: 16.8%">
+
+                <asp:ScriptManager runat="server" />
+                <asp:UpdatePanel ID="updCalendario" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+
+                        <asp:Calendar ID="Calendario" runat="server" OnSelectionChanged="Calendario_SelectionChanged">
+
+                            <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
+                            <TitleStyle BackColor="#4c6444" ForeColor="Black"></TitleStyle>
+                            <DayStyle BackColor="White"></DayStyle>
+                            <SelectedDayStyle BackColor="#4d2d18" Font-Bold="True"></SelectedDayStyle>
+
+                        </asp:Calendar>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+
+            </div>
+            <br />
+
+            <div style="margin-left: -202px">
+                <br />
+                <asp:RadioButton ID="TurnoMañana" Text="Turno Mañana" CssClass="btn btn-verde turno small-space" GroupName="RadioGroup1" runat="server" />
+                <asp:RadioButton ID="TurnoMediodia" Text="Turno Mediodia" CssClass="btn btn-verde turno small-space" GroupName="RadioGroup1" runat="server" />
+                <asp:RadioButton ID="TurnoTarde" Text="Turno Tarde" CssClass="btn btn-verde turno small-space" GroupName="RadioGroup1" runat="server" /><br />
+                <br />
+                <asp:UpdatePanel runat="server">
+                    <ContentTemplate>
+                        <asp:Button ID="Confirmar" Text="Confirmar turno" CssClass="btn btn-primary" OnClick="Confirmar_Click" runat="server" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <br />
+                <asp:UpdatePanel runat="server">
+                    <ContentTemplate>
+                        <asp:Label ID="LblCapturaDia" CssClass="h3 capturado" runat="server"></asp:Label>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+        </div>
+    </div>
+    <%}
+        else
+        {%>
+    <div style="text-align: center;" id="calendario">
+        Para seleccionar un turno en el calendario por favor, 
+        <a href="InicioSesion.aspx">inicie sesión</a>.
+    </div>
+    <% } %>
+    <br />
+    <%-- FIN CALENDARIO  --%>
 </asp:Content>

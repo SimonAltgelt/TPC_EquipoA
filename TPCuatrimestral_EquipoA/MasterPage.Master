@@ -302,9 +302,9 @@
             <div class="autores">
                 <p>Autores: Victoria Kowalk - Lucas Delfino - Simon Altgelt © 2024</p>
                 <p>
-                    <a href="mailto:lucas.delfino@alumnos.frgp.utn.edu.ar" style="margin-right: 10px;">lucas.delfino@alumnos.frgp.utn.edu.ar</a>
-                    <a href="mailto:simon.altgelt@alumnos.frgp.utn.edu.ar" style="margin-right: 10px;">simon.altgelt@alumnos.frgp.utn.edu.ar</a>
-                    <a href="mailto:victoria.kowalk@alumnos.frgp.utn.edu.ar">maria.kowalk@alumnos.frgp.utn.edu.ar</a>
+                    <a href="mailto:lucas.delfino@alumnos.frgp.utn.edu.ar" style="margin-right: 10px; color: #4d2d18; font: bold">lucas.delfino@alumnos.frgp.utn.edu.ar</a>
+                    <a href="mailto:simon.altgelt@alumnos.frgp.utn.edu.ar" style="margin-right: 10px;  color: #4d2d18; font: bold">simon.altgelt@alumnos.frgp.utn.edu.ar</a>
+                    <a href="mailto:victoria.kowalk@alumnos.frgp.utn.edu.ar" style="margin-right: 10px;  color: #4d2d18; font: bold">maria.kowalk@alumnos.frgp.utn.edu.ar</a>
                 </p>
             </div>
         </div>
