@@ -300,7 +300,7 @@
     </div>
     <br />
     <%-- INFO A CONSIDERAR --%>
-    <h2 class="txtContacto" style="text-align: center">TURNOS DE VISITA DISPONIBLES</h2>
+    <h2 class="txtContacto" style="text-align: center" id="calendario">TURNOS DE VISITA DISPONIBLES</h2>
     <div id="info" class="row custom-border text-center">
         <div class="txtInfo">
             Informacion a considerar:
@@ -367,7 +367,7 @@
     <%}
         else
         {%>
-    <div style="text-align: center;" id="calendario">
+    <div style="text-align: center;">
         Para seleccionar un turno en el calendario por favor, 
         <a href="InicioSesion.aspx">inicie sesión</a>.
     </div>

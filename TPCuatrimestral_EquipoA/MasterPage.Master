@@ -249,6 +249,10 @@
                                      <a href="InicioSesion.aspx" class="btn btn-outline">Cerrar sesión</a>
                                     <%}%>
                                  </li>
+                                <%if (Session["Usuario"] != null)
+                                    {%>
+                                <asp:Image ID="imgAvatar" style="height:40px; width:40px; border-radius:50%; margin-top: 6px;" runat="server" />
+                                <%}%>
                             </ul>
                         </div>
                     </div>

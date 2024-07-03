@@ -11,7 +11,27 @@ namespace TPCuatrimestral_EquipoA
 {
     public partial class MasterPage : System.Web.UI.MasterPage
     {
-
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            imgAvatar.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
+            if (!(Page is InicioSesion || Page is Registro))
+            {
+                if ((Session["Usuario"]) != null)
+                {
+                    Usuario user = (Usuario)Session["Usuario"];
+                    if (!string.IsNullOrEmpty(user.ImagenPerfil))
+                    {
+                        imgAvatar.ImageUrl = "~/img/" + user.ImagenPerfil;
+                    }
+                }
+                //else
+                //{
+                //      hacer la logica que si hay una foto vacia, te deje logear
+                //      y ademas acá en la master mostrar foto x default
+                //    imgAvatar.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
+                //}
+            }
+        }
         protected void btnAlquilar_Click(object sender, EventArgs e)
         {
             string disponibilidad = "Alquiler";

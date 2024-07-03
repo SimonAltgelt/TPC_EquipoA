@@ -15,7 +15,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setConsulta("SELECT ID, TipoUsuario, Apellido, Nombre, Telefono, Documento, Domicilio FROM USUARIOS WHERE Email = @Usuario AND Contraseña = @Contraseña");
+                datos.setConsulta("SELECT ID, TipoUsuario, Apellido, Nombre, Telefono, Documento, Domicilio, ImagenPerfil  FROM USUARIOS WHERE Email = @Usuario AND Contraseña = @Contraseña");
                 datos.setParametros("@Usuario", usuario.Email);
                 datos.setParametros("@Contraseña", usuario.Contraseña);
                 datos.ejecutarLectura();
@@ -26,6 +26,7 @@ namespace negocio
                     usuario.Nombre = (string)datos.Lector["Nombre"];
                     usuario.Apellido = (string)datos.Lector["Apellido"];
                     usuario.Telefono = (string)datos.Lector["Telefono"];
+                    usuario.ImagenPerfil = (string)datos.Lector["ImagenPerfil"];
                     if (!(datos.Lector["Documento"] is DBNull))
                     {
                         usuario.Documento = (string)datos.Lector["Documento"];
@@ -33,6 +34,10 @@ namespace negocio
                     if (!(datos.Lector["Domicilio"] is DBNull))
                     {
                         usuario.Domicilio = (string)datos.Lector["Domicilio"];
+                    }
+                    if (!(datos.Lector["Imagenperfil"] is DBNull))
+                    {
+                        usuario.ImagenPerfil = (string)datos.Lector["ImagenPerfil"];
                     }
                     return true;
                 }

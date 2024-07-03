@@ -33,18 +33,38 @@ namespace TPCuatrimestral_EquipoA
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
             /* FALTA TERMINAR LA FUNCION, FALTA MANEJAR VALORES VACÍOS */
-            miUsuario.Nombre = txtNombre.Text;
-            miUsuario.Apellido = txtApellido.Text;
-            miUsuario.Documento = txtDocumento.Text;
-            miUsuario.Domicilio = txtDomicilio.Text;
-            miUsuario.Telefono = txtTelefono.Text;
-            miUsuario.Email = txtEmail.Text;
-            miUsuario.Contraseña = txtContraseña.Text;
-            miUsuario.ImagenPerfil = imagenPerfil.ImageUrl;
+           
+            try
+            {
+                // ESCRIBIR IMG
+                string ruta = Server.MapPath("./img/");
+                miUsuario = (Usuario)Session["usuario"];
+                txtImagen.PostedFile.SaveAs(ruta + "perfil-" + miUsuario.ID + ".jpg");
 
-            UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
-            usuarioNegocio.actualizarUsuario(miUsuario);
-            Response.Redirect("Default.aspx");
+                miUsuario.ImagenPerfil = "perfil-" + miUsuario.ID + ".jpg";
+                miUsuario.Nombre = txtNombre.Text;
+                miUsuario.Apellido = txtApellido.Text;
+                miUsuario.Documento = txtDocumento.Text;
+                miUsuario.Domicilio = txtDomicilio.Text;
+                miUsuario.Telefono = txtTelefono.Text;
+                miUsuario.Email = txtEmail.Text;
+                miUsuario.Contraseña = txtContraseña.Text;
+
+                UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+                usuarioNegocio.actualizarUsuario(miUsuario);
+
+                //LEER IMG
+                Image img = (Image)Master.FindControl("imgAvatar");
+                img.ImageUrl = "~/img/" + miUsuario.ImagenPerfil;
+                //Response.Redirect("Default.aspx");
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            
         }
     }
 }
