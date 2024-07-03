@@ -1,4 +1,4 @@
-﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TPCuatrimestral_EquipoA.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TPCuatrimestral_EquipoA.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -37,10 +37,10 @@
             width: 80%;
         }
 
-        .form-group label {
-            margin-bottom: 5px;
-            font-size: 18px;
-        }
+            .form-group label {
+                margin-bottom: 5px;
+                font-size: 18px;
+            }
 
         .form-control {
             width: 100%;
@@ -62,22 +62,21 @@
             width: 100%;
         }
 
-        .btn-verde:hover {
-            transform: scale(1.01);
-            color: white;
-        }
+            .btn-verde:hover {
+                transform: scale(1.01);
+                color: white;
+            }
 
         .display-4 {
             text-align: center;
         }
-
     </style>
 
     <div class="seccion-busqueda">
         <div class="jumbotron">
             <h1 class="display-4">Encontrá la propiedad que soñás</h1>
             <div class="form-container">
-                
+
                 <!-- Buscar por DDL disponibilidad -->
                 <div class="form-group">
                     <label for="ddlDisponibilidad" class="sr-only">Tipo de operación </label>
