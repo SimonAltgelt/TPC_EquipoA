@@ -58,14 +58,14 @@
                         <label class="txtVenta">Completá el formulario y nuestro staff se pondrá en contacto con vos para asesorarte.</label>
                     </div>
                     <div class="form-group">
-                        <asp:TextBox ID="Nombre" runat="server" CssClass="form-control" placeholder="Nombre*" type="text" />
-                        <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="Nombre" ValidationGroup="Group1" ErrorMessage="El nombre es obligatorio." CssClass="text-danger" Display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="Nombre" ValidationGroup="Group1" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre*" type="text" />
+                        <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="Group1" ErrorMessage="El nombre es obligatorio." CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="Group1" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group">
-                        <asp:TextBox ID="Apellido" runat="server" CssClass="form-control" placeholder="Apellido*" type="text" />    
-                       <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="Apellido" ValidationGroup="Group1" ErrorMessage="El apellido es obligatorio." CssClass="text-danger" Display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="Apellido" ValidationGroup="Group1" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido*" type="text" />    
+                       <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Group1" ErrorMessage="El apellido es obligatorio." CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Group1" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group">
                         <asp:TextBox id="txtTelefono" runat="server" CssClass="form-control" placeholder="Telefono*" type="tel" />
@@ -81,13 +81,13 @@
                         <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationGroup="Group1" ErrorMessage="El email no es válido." ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group">
-                        <asp:TextBox ID="Localidad" runat="server" CssClass="form-control" placeholder="Localidad/provincia*" type="text" />
-                        <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="Localidad" ValidationGroup="Group1" ErrorMessage="La localidad es obligatoria." CssClass="text-danger" Display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="Localidad" ValidationGroup="Group1" ErrorMessage="La localidad solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:TextBox ID="txtLocalidad" runat="server" CssClass="form-control" placeholder="Localidad/provincia*" type="text" />
+                        <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="Group1" ErrorMessage="La localidad es obligatoria." CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="Group1" ErrorMessage="La localidad solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group">
-                        <asp:TextBox ID="Consulta" TextMode="MultiLine" Rows="6" runat="server" placeholder="Dejanos tu consulta acá." Class="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvConsulta" runat="server" ControlToValidate="Consulta" ValidationGroup="Group1" ErrorMessage="El detalle de tu consulta es obligatorio." CssClass="text-danger" Display="Dynamic" />
+                        <asp:TextBox ID="txtConsulta" TextMode="MultiLine" Rows="6" runat="server" placeholder="Dejanos tu consulta acá." Class="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvConsulta" runat="server" ControlToValidate="txtConsulta" ValidationGroup="Group1" ErrorMessage="El detalle de tu consulta es obligatorio." CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
                     <asp:Button Text="Enviar" ValidationGroup="Group1" CssClass="btn btn-outline-success btn-largo" runat="server" />

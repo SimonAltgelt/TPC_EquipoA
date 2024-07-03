@@ -129,7 +129,7 @@
     <%foreach (dominio.Inmueble miInmueble in listaInmuebles)
         {
             lblDireccion.Text = miInmueble.Ubicacion.Direccion.ToString();
-            lblPrecio.Text = "$" + miInmueble.Precio.ToString();
+            lblPrecio.Text = miInmueble.Precio.ToString() + " USD";
             lblLocalidad.Text = miInmueble.Ubicacion.Localidad.ToString() + ", Buenos Aires, Argentina";
             lblMtsTotales.Text = miInmueble.Metros2.ToString() + "mts totales";
             lblMtsCubiertos.Text = miInmueble.Metros2Cubiertos.ToString() + "mts cubiertos";
@@ -166,8 +166,10 @@
 
                         <div class="iconos">
                             <i class="fa-brands fa-whatsapp fa-xl"></i>
-                            <i class="fa-regular fa-envelope fa-xl"></i>
-                            <a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>#calendario" style="margin-top:-10px; margin-left:5px"><i class="fa-regular fa-calendar-days fa-xl"></i></a>
+                            <a href="Contacto.aspx"><i class="fa-regular fa-envelope fa-xl"></i></a>
+                            <%if (Session["usuario"] != null)
+                {%><a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>#calendario" style="margin-top:-10px; margin-left:5px"><i class="fa-regular fa-calendar-days fa-xl"></i></a>
+                <%}%>
                         </div>
                         <br />
 

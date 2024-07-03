@@ -53,7 +53,7 @@ namespace TPCuatrimestral_EquipoA
             suUbicacion.Direccion = txtDireccion.Text;
             suUbicacion.Localidad = txtLocalidad.Text;
             miInmueble.Ubicacion = suUbicacion;
-            miInmueble.Precio = decimal.Parse(txtPrecio.Text);
+            miInmueble.Precio = txtPrecio.Text;
             miInmueble.Descripcion = txtDescripcion.Text;
             miInmueble.Metros2 = int.Parse(MetrosCuadrados.Text);
             miInmueble.Metros2Cubiertos = int.Parse(MetrosCubiertos.Text);

@@ -140,7 +140,7 @@
                             <asp:TextBox ID="txtPrecio" runat="server" class="form-control" placeholder="Precio" />
                             <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$"
+                            <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^\d{1,3}(,\d{3})*(\.\d{2})?$"
                                 CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">

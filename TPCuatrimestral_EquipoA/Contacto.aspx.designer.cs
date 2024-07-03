@@ -15,13 +15,13 @@ namespace TPCuatrimestral_EquipoA
     {
 
         /// <summary>
-        /// Nombre control.
+        /// txtNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Nombre;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
         /// rfvNombre control.
@@ -42,13 +42,13 @@ namespace TPCuatrimestral_EquipoA
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombre;
 
         /// <summary>
-        /// Apellido control.
+        /// txtApellido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Apellido;
+        protected global::System.Web.UI.WebControls.TextBox txtApellido;
 
         /// <summary>
         /// rfvApellido control.
@@ -123,13 +123,13 @@ namespace TPCuatrimestral_EquipoA
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
 
         /// <summary>
-        /// Localidad control.
+        /// txtLocalidad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Localidad;
+        protected global::System.Web.UI.WebControls.TextBox txtLocalidad;
 
         /// <summary>
         /// rfvLocalidad control.
@@ -150,13 +150,13 @@ namespace TPCuatrimestral_EquipoA
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revLocalidad;
 
         /// <summary>
-        /// Consulta control.
+        /// txtConsulta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Consulta;
+        protected global::System.Web.UI.WebControls.TextBox txtConsulta;
 
         /// <summary>
         /// rfvConsulta control.

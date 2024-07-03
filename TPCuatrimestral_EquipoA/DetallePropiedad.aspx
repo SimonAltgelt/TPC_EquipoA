@@ -206,30 +206,39 @@
                     <br />
                     <br />
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre*">
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre" />
+                        <asp:RequiredFieldValidator id="rfvNombre" runat="server" controltovalidate="txtNombre" ValidationGroup="Consulta" errormessage="El nombre es obligatorio." cssclass="text-danger" display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="Consulta" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Apellido*">
+                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido" />
+                        <asp:RequiredFieldValidator id="rfvApellido" runat="server" controltovalidate="txtApellido" ValidationGroup="Consulta" errormessage="El apellido es obligatorio." cssclass="text-danger" display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Consulta" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
                     <div class="form-group">
-                        <input type="tel" class="form-control" id="exampleFormControlInput3" placeholder="Telefono*">
+                        <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" placeholder="Teléfono" />
+                        <asp:RequiredFieldValidator ID="rfvTel" runat="server" ControlToValidate="txtTelefono" ValidationGroup="Consulta" ErrorMessage="El teléfono es obligatorio." CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revTel" runat="server" ControlToValidate="txtTelefono" ValidationGroup="Consulta" ErrorMessage="El teléfono solo debe contener números." ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
                         <label class="txtTel">
                             Ingrese un número completo con código de área. Ej: 112345678 (CABA) o 3511234567 (Ciudad de Córdoba)
                         </label>
                     </div>
                     <br />
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="name@example.com">
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Email" />
+                        <asp:RequiredFieldValidator id="rfvEmail" runat="server" controltovalidate="txtEmail" ValidationGroup="Consulta" errormessage="El email es obligatorio." cssclass="text-danger" display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationGroup="Consulta" ErrorMessage="El email no es válido." ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
                     <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Comentarios"></textarea>
+                        <asp:TextBox ID="txtConsulta" TextMode="MultiLine" Rows="6" runat="server" placeholder="Dejanos tu consulta acá." Class="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvConsulta" runat="server" ControlToValidate="txtConsulta" ValidationGroup="Consulta" ErrorMessage="El detalle de tu consulta es obligatorio." CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
                     <br />
-                    <button type="button" class="btn btn-verde">Enviar</button>
+                    <asp:Button CssClass="btn btn-verde" Text="Enviar" ValidationGroup="Consulta" runat="server"/>
                 </div>
             </div>
         </div>
@@ -240,7 +249,7 @@
     <!-- DATOS DE LA PROPIEDAD -->
     <div class="container text-center">
         <%
-            lblPrecio.Text = "$" + miInmueble.Precio.ToString();
+            lblPrecio.Text = miInmueble.Precio.ToString() + " USD";
             lblNombre.Text = miInmueble.Ubicacion.Direccion.ToString() + ", " + miInmueble.Ubicacion.Localidad.ToString();
             lblMetrosTotales.Text = miInmueble.Metros2.ToString() + "mts Totales";
             lblMetrosCubiertos.Text = miInmueble.Metros2Cubiertos.ToString() + "mts Cubiertos";
@@ -303,7 +312,7 @@
     <h2 class="txtContacto" style="text-align: center" id="calendario">TURNOS DE VISITA DISPONIBLES</h2>
     <div id="info" class="row custom-border text-center">
         <div class="txtInfo">
-            Informacion a considerar:
+            Información a considerar:
         </div>
         <div class="txtInfoDescripcion">
             TURNO MAÑANA: 9hs. - 11hs.

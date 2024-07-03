@@ -33,6 +33,15 @@ namespace TPCuatrimestral_EquipoA
                 fechaSeleccionada = (string)Session["fecha"];
                 LblCapturaDia.Text = "";
             }
+
+            if (Session["usuario"] != null)
+            {
+                Usuario miUsuario = (Usuario)Session["usuario"];
+                txtNombre.Text = miUsuario.Nombre;
+                txtApellido.Text = miUsuario.Apellido;
+                txtTelefono.Text = miUsuario.Telefono;
+                txtEmail.Text = miUsuario.Email;
+            }
         }
 
         protected void Confirmar_Click(object sender, EventArgs e)

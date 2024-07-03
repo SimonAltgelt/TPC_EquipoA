@@ -38,7 +38,7 @@ namespace negocio
                     inmueble.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
                     inmueble.Ambientes = (int)datos.Lector["AMBIENTES"];
                     inmueble.Baños = (int)datos.Lector["BAÑOS"];
-                    inmueble.Precio = (decimal)datos.Lector["PRECIO"];
+                    inmueble.Precio = formatearDecimal((decimal)datos.Lector["PRECIO"]);
                     inmueble.Descripcion = (string)datos.Lector["DESCRIPCION"];
                     inmueble.Estado = (bool)datos.Lector["ESTADO"];
                     listaInmuebles.Add(inmueble);
@@ -100,7 +100,7 @@ namespace negocio
                     inmueble.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
                     inmueble.Ambientes = (int)datos.Lector["AMBIENTES"];
                     inmueble.Baños = (int)datos.Lector["BAÑOS"];
-                    inmueble.Precio = (decimal)datos.Lector["PRECIO"];
+                    inmueble.Precio = formatearDecimal((decimal)datos.Lector["PRECIO"]);
                     inmueble.Descripcion = (string)datos.Lector["DESCRIPCION"];
                     inmueble.Estado = (bool)datos.Lector["ESTADO"];
                     listaInmuebles.Add(inmueble);
@@ -179,7 +179,7 @@ namespace negocio
                     inmueble.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
                     inmueble.Ambientes = (int)datos.Lector["AMBIENTES"];
                     inmueble.Baños = (int)datos.Lector["BAÑOS"];
-                    inmueble.Precio = (decimal)datos.Lector["PRECIO"];
+                    inmueble.Precio = formatearDecimal((decimal)datos.Lector["PRECIO"]);
                     inmueble.Descripcion = (string)datos.Lector["DESCRIPCION"];
                     inmueble.Estado = (bool)datos.Lector["ESTADO"];
                     listaInmuebles.Add(inmueble);
@@ -279,6 +279,15 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
+        }
+
+        string formatearDecimal(decimal precio)
+        {
+            NumberFormatInfo nfi = new CultureInfo("es-ES", false).NumberFormat;
+            nfi.NumberDecimalSeparator = ",";
+            nfi.NumberGroupSeparator = ".";
+
+            return precio.ToString("N2", nfi);
         }
 
     }

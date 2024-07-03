@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,14 @@ namespace TPCuatrimestral_EquipoA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["usuario"] != null)
+            {
+                Usuario miUsuario = (Usuario)Session["usuario"];
+                txtNombre.Text = miUsuario.Nombre;
+                txtApellido.Text = miUsuario.Apellido;
+                txtTelefono.Text = miUsuario.Telefono;
+                txtEmail.Text = miUsuario.Email;
+            }
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)

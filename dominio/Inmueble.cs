@@ -17,7 +17,7 @@ namespace dominio
         public int Metros2Cubiertos { get; set; }
         public int Ambientes { get; set; }
         public int Baños { get; set; }
-        public decimal Precio { get; set; }
+        public string Precio { get; set; }
         public string Descripcion { get; set; }
         public bool Estado { get; set; }
     }
