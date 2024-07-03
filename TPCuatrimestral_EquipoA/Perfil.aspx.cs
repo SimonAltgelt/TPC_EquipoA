@@ -15,9 +15,8 @@ namespace TPCuatrimestral_EquipoA
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            miUsuario = (Usuario)Session["usuario"];
             if (!IsPostBack) {
-                miUsuario = (Usuario)Session["usuario"];
-
                 txtNombre.Text = miUsuario.Nombre;
                 txtApellido.Text = miUsuario.Apellido;
                 txtDocumento.Text = miUsuario.Documento;
@@ -25,23 +24,26 @@ namespace TPCuatrimestral_EquipoA
                 txtTelefono.Text = miUsuario.Telefono;
                 txtEmail.Text = miUsuario.Email;
                 txtContraseña.Text = miUsuario.Contraseña;
-                imagenPerfil.ImageUrl = miUsuario.ImagenPerfil;
+                if (!string.IsNullOrEmpty(miUsuario.ImagenPerfil))
+                {
+                    imagenPerfil.ImageUrl = "~/img/" + miUsuario.ImagenPerfil;
+                } 
+                else
+                {
+                    imagenPerfil.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
+                }
             }
-            miUsuario = (Usuario)Session["usuario"];
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            /* FALTA TERMINAR LA FUNCION, FALTA MANEJAR VALORES VACÍOS */
-           
             try
             {
-                // ESCRIBIR IMG
                 string ruta = Server.MapPath("./img/");
-                miUsuario = (Usuario)Session["usuario"];
-                txtImagen.PostedFile.SaveAs(ruta + "perfil-" + miUsuario.ID + ".jpg");
+                string nombreImagen = "perfil-" + miUsuario.ID + ".jpg";
+                txtImagen.PostedFile.SaveAs(ruta + nombreImagen);
 
-                miUsuario.ImagenPerfil = "perfil-" + miUsuario.ID + ".jpg";
+                miUsuario.ImagenPerfil = nombreImagen;
                 miUsuario.Nombre = txtNombre.Text;
                 miUsuario.Apellido = txtApellido.Text;
                 miUsuario.Documento = txtDocumento.Text;
@@ -53,18 +55,19 @@ namespace TPCuatrimestral_EquipoA
                 UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
                 usuarioNegocio.actualizarUsuario(miUsuario);
 
-                //LEER IMG
-                Image img = (Image)Master.FindControl("imgAvatar");
-                img.ImageUrl = "~/img/" + miUsuario.ImagenPerfil;
-                //Response.Redirect("Default.aspx");
+                // Refrescamos el usuario ya guardado en sesión con el actualizado
+                // para que figuren los datos actualizados en los campos
+                Session["usuario"] = miUsuario; 
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
+        }
 
-            
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
         }
     }
 }

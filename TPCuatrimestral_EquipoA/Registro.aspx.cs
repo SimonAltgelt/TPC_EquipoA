@@ -22,25 +22,18 @@ namespace TPCuatrimestral_EquipoA
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Usuario miusuario = new Usuario();
-                miusuario.Nombre = txtNombre.Text;
-                miusuario.Apellido = txtApellido.Text;
-                miusuario.Email = txtEmail.Text;
-                miusuario.Contraseña = txtContraseña.Text;
-                miusuario.Telefono = txtTel.Text;
-                UsuarioNegocio negocio = new UsuarioNegocio();
-                negocio.insertarNuevo(miusuario);
+            Usuario miusuario = new Usuario();
+            miusuario.Nombre = txtNombre.Text;
+            miusuario.Apellido = txtApellido.Text;
+            miusuario.Email = txtEmail.Text;
+            miusuario.Contraseña = txtContraseña.Text;
+            miusuario.Telefono = txtTel.Text;
+            
+            UsuarioNegocio negocio = new UsuarioNegocio();
+            negocio.insertarNuevo(miusuario);
 
-                Session.Add("usuario", miusuario);
-                Response.Redirect("Default.aspx");
-            }
-            catch (Exception ex)
-            {
-                Session.Add("error", false);
-                throw ex;
-            }
+            Session.Add("usuario", miusuario);
+            Response.Redirect("Default.aspx");
         }
     }
 }

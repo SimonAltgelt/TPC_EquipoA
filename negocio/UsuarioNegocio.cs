@@ -26,7 +26,6 @@ namespace negocio
                     usuario.Nombre = (string)datos.Lector["Nombre"];
                     usuario.Apellido = (string)datos.Lector["Apellido"];
                     usuario.Telefono = (string)datos.Lector["Telefono"];
-                    usuario.ImagenPerfil = (string)datos.Lector["ImagenPerfil"];
                     if (!(datos.Lector["Documento"] is DBNull))
                     {
                         usuario.Documento = (string)datos.Lector["Documento"];

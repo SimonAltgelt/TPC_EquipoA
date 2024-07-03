@@ -14,22 +14,13 @@ namespace TPCuatrimestral_EquipoA
         protected void Page_Load(object sender, EventArgs e)
         {
             imgAvatar.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
-            if (!(Page is InicioSesion || Page is Registro))
+            if (Session["Usuario"] != null)
             {
-                if ((Session["Usuario"]) != null)
+                Usuario miUsuario = (Usuario)Session["Usuario"];
+                if (!string.IsNullOrEmpty(miUsuario.ImagenPerfil))
                 {
-                    Usuario user = (Usuario)Session["Usuario"];
-                    if (!string.IsNullOrEmpty(user.ImagenPerfil))
-                    {
-                        imgAvatar.ImageUrl = "~/img/" + user.ImagenPerfil;
-                    }
+                    imgAvatar.ImageUrl = "~/img/" + miUsuario.ImagenPerfil;
                 }
-                //else
-                //{
-                //      hacer la logica que si hay una foto vacia, te deje logear
-                //      y ademas acá en la master mostrar foto x default
-                //    imgAvatar.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
-                //}
             }
         }
         protected void btnAlquilar_Click(object sender, EventArgs e)

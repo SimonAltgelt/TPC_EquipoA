@@ -124,60 +124,60 @@
                         <div class="form-group">
                             <asp:Label Text="Direccion" runat="server" />
                             <asp:TextBox ID="txtDireccion" runat="server" class="form-control" placeholder="Dirección" />
-                            <asp:RequiredFieldValidator ID="rfvdireccion" runat="server" ControlToValidate="txtDireccion" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvdireccion" runat="server" ControlToValidate="txtDireccion" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revDireccion" runat="server" ControlToValidate="txtDireccion" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revDireccion" runat="server" ControlToValidate="txtDireccion" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Localidad" runat="server" />
                             <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" placeholder="Localidad" />
-                            <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ErrorMessage="Solo letras" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Precio" runat="server" />
                             <asp:TextBox ID="txtPrecio" runat="server" class="form-control" placeholder="Precio" />
-                            <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$"
+                            <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$"
                                 CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Descripción" runat="server" />
                             <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" placeholder="Descripción" />
-                            <asp:RequiredFieldValidator ID="rfvDescripcion" runat="server" ControlToValidate="txtDescripcion" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvDescripcion" runat="server" ControlToValidate="txtDescripcion" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revDescripcion" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revDescripcion" runat="server" ControlToValidate="txtDescripcion" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Metros cuadrados totales" runat="server" />
                             <asp:TextBox ID="MetrosCuadrados" runat="server" class="form-control" placeholder="Metros Cuadrados" />
-                            <asp:RequiredFieldValidator ID="rfvMetrosCuadrados" runat="server" ControlToValidate="MetrosCuadrados" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvMetrosCuadrados" runat="server" ControlToValidate="MetrosCuadrados" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revMetrosCuadrados" runat="server" ControlToValidate="MetrosCuadrados" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revMetrosCuadrados" runat="server" ControlToValidate="MetrosCuadrados" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Metros cubiertos" runat="server" />
                             <asp:TextBox ID="MetrosCubiertos" runat="server" class="form-control" placeholder="Metros Cubiertos" />
-                            <asp:RequiredFieldValidator ID="rfvMetrosCubiertos" runat="server" ControlToValidate="MetrosCubiertos" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvMetrosCubiertos" runat="server" ControlToValidate="MetrosCubiertos" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revMetrosCubiertos" runat="server" ControlToValidate="MetrosCubiertos" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revMetrosCubiertos" runat="server" ControlToValidate="MetrosCubiertos" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Cantidad de ambientes" runat="server" />
                             <asp:TextBox ID="CantAmbientes" runat="server" class="form-control" placeholder="Cantidad de Ambientes" />
-                            <asp:RequiredFieldValidator ID="rfvCantAmbientes" runat="server" ControlToValidate="CantAmbientes" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvCantAmbientes" runat="server" ControlToValidate="CantAmbientes" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revCantAmbientes" runat="server" ControlToValidate="CantAmbientes" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revCantAmbientes" runat="server" ControlToValidate="CantAmbientes" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^\d+([.,]\d+)?$" CssClass="text-danger" Display="Dynamic" />
 
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Cantidad de baños" runat="server" />
                             <asp:TextBox ID="CantBaños" runat="server" class="form-control" placeholder="Cantidad de Baños" />
-                            <asp:RequiredFieldValidator ID="rfvCantBaños" runat="server" ControlToValidate="CantBaños" ValidationGroup="Group1"
+                            <asp:RequiredFieldValidator ID="rfvCantBaños" runat="server" ControlToValidate="CantBaños" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revCantBaños" runat="server" ControlToValidate="CantBaños" ErrorMessage="Solo números" ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revCantBaños" runat="server" ControlToValidate="CantBaños" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Tipo de operacion" runat="server" />
@@ -187,11 +187,11 @@
                             </asp:DropDownList>
                         </div>
                         <div class="form-group">
-                            <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" ValidationGroup="Group1"
+                            <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" ValidationGroup="GroupInmueble"
                                 Text="Aceptar" class="btn btn-secondary" />
                         </div>
                         <div class="form-group">
-                            <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" ValidationGroup="Group1" CssClass="btn btn-secondary" />
+                            <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" CausesValidation="false" Text="Volver" CssClass="btn btn-secondary" />
                         </div>
                     </div>
                 </div>
