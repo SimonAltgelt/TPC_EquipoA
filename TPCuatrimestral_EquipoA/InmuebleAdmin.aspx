@@ -124,34 +124,51 @@
                         <div class="form-group">
                             <asp:Label Text="Direccion" runat="server" />
                             <asp:TextBox ID="txtDireccion" runat="server" class="form-control" placeholder="Dirección" />
+                            <asp:RequiredFieldValidator ID="rfvdireccion" runat="server" ControlToValidate="txtDireccion" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revDireccion" runat="server" ControlToValidate="txtDireccion" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\s]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Localidad" runat="server" />
                             <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" placeholder="Localidad" />
+                            <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txtLocalidad" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ErrorMessage="Solo letras" ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Precio" runat="server" />
                             <asp:TextBox ID="txtPrecio" runat="server" class="form-control" placeholder="Precio" />
+                            <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ErrorMessage="Solo números" ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Descripción" runat="server" />
                             <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" placeholder="Descripción" />
-                        </div>
+                            <asp:RequiredFieldValidator ID="rfvDescripcion" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revDescripcion" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\s]+$" CssClass="text-danger" Display="Dynamic" />
+                                </div>
                         <div class="form-group">
                             <asp:Label Text="Metros cuadrados totales" runat="server" />
                             <asp:TextBox ID="MetrosCuadrados" runat="server" class="form-control" placeholder="Metros Cuadrados" />
+                            <asp:RequiredFieldValidator ID="rfvMetrosCuadrados" runat="server" ControlToValidate="MetrosCuadrados" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revMetrosCuadrados" runat="server" ControlToValidate="MetrosCuadrados" ErrorMessage="Solo números" ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Metros cubiertos" runat="server" />
                             <asp:TextBox ID="MetrosCubiertos" runat="server" class="form-control" placeholder="Metros Cubiertos" />
+                            <asp:RequiredFieldValidator ID="rfvMetrosCubiertos" runat="server" ControlToValidate="MetrosCubiertos" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revMetrosCubiertos" runat="server" ControlToValidate="MetrosCubiertos" ErrorMessage="Solo números" ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Cantidad de ambientes" runat="server" />
                             <asp:TextBox ID="CantAmbientes" runat="server" class="form-control" placeholder="Cantidad de Ambientes" />
+                            <asp:RequiredFieldValidator ID="rfvCantAmbientes" runat="server" ControlToValidate="CantAmbientes" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revCantAmbientes" runat="server" ControlToValidate="CantAmbientes" ErrorMessage="Solo números" ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
+
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Cantidad de baños" runat="server" />
                             <asp:TextBox ID="CantBaños" runat="server" class="form-control" placeholder="Cantidad de Baños" />
+                            <asp:RequiredFieldValidator ID="rfvCantBaños" runat="server" ControlToValidate="CantBaños" ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revCantBaños" runat="server" ControlToValidate="CantBaños" ErrorMessage="Solo números" ValidationExpression="^[0-9]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Tipo de operacion" runat="server" />
