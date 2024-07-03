@@ -50,11 +50,13 @@ namespace TPCuatrimestral_EquipoA
                 return;
             }
 
+            Usuario miUsuario = (Usuario)Session["usuario"];
+
             AccesoDatos datos = new AccesoDatos();
 
-            datos.setConsulta("Exec SP_ComprobarTurno @fecha, @turno;");
-            datos.setParametros("@fecha", fechaSeleccionada);
-            datos.setParametros("turno", turno);
+            datos.setConsulta("Exec SP_ComprobarTurno @Fecha, @Turno;");
+            datos.setParametros("@Fecha", fechaSeleccionada);
+            datos.setParametros("@Turno", turno);
             int resultado = datos.ejecutarScalar();
             datos.cerrarConexion();
             if (resultado > 0)
@@ -68,9 +70,11 @@ namespace TPCuatrimestral_EquipoA
                 try
                 {
                     
-                    datos2.setConsulta("Exec SP_InsertarTurno @fecha, @turno;");
-                    datos2.setParametros("@fecha", fechaSeleccionada);
-                    datos2.setParametros("turno", turno);
+                    datos2.setConsulta("Exec SP_InsertarTurno @Fecha, @Turno, @IDUsuario, @IDInmueble;");
+                    datos2.setParametros("@Fecha", fechaSeleccionada);
+                    datos2.setParametros("@Turno", turno);
+                    datos2.setParametros("@IDUsuario", miUsuario.ID.ToString());
+                    datos2.setParametros("IDInmueble", miInmueble.ID.ToString());
                     datos2.ejecutarAccion();
                 }
                 catch (Exception ex)

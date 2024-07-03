@@ -58,6 +58,14 @@ CREATE TABLE IMAGENES(
 	DESCRIPCION VARCHAR(100) NULL,
 )
 
+CREATE TABLE TURNOS(
+	IDTurno int primary key identity(1,1),
+	IDUsuario int foreign key references USUARIOS(ID),
+	IDInmueble int foreign key references INMUEBLES(ID),
+	Fecha date not null,
+	Turno char not null
+)
+
 -- Insertando datos en la tabla LOCALIDADES
 INSERT INTO LOCALIDADES (NOMBRE) VALUES
 ('25 de Mayo'),
@@ -356,25 +364,40 @@ BEGIN
 END
 GO
 
-
-go
-create or alter procedure InsertarUsuario(
-@Nombre varchar (20),
-@Apellido varchar (20),
-@Email varchar (50),
-@Contraseña varchar (20),
-@Telefono varchar (20)
+CREATE OR ALTER PROCEDURE SP_InsertarUsuario(
+	@Nombre varchar (20),
+	@Apellido varchar (20),
+	@Email varchar (50),
+	@Contraseña varchar (20),
+	@Telefono varchar (20)
 )
-as
-insert into USUARIOS (NOMBRE, APELLIDO,EMAIL, CONTRASEÑA, TELEFONO, TIPOUSUARIO)
---para que traiga el id del ultimo creado
-output inserted.ID
-values	(@Nombre, @Apellido, @Email, @Contraseña,@Telefono, 0)
+AS
+BEGIN
+	INSERT INTO USUARIOS (NOMBRE, APELLIDO,EMAIL, CONTRASEÑA, TELEFONO, TIPOUSUARIO)
+	OUTPUT inserted.ID --para que traiga el id del ultimo creado
+	VALUES	(@Nombre, @Apellido, @Email, @Contraseña,@Telefono, 0)
+END
+GO
 
+CREATE OR ALTER PROCEDURE SP_ComprobarTurno(
+	@Fecha date,
+	@Turno char
+)
+AS
+BEGIN
+	SELECT COUNT(*) FROM TURNOS WHERE Fecha=@Fecha AND Turno=@Turno;
+END
+GO
 
---exec InsertarUsuario 'juan', 'Perez', 'pepe@email.com', 'pass123', '1165423699'
-
-SELECT * FROM INMUEBLES
-SELECT * FROM IMAGENES
-
-select * from USUARIOS
+CREATE OR ALTER PROCEDURE SP_InsertarTurno(
+	@Fecha date,
+	@Turno char,
+	@IDUsuario int,
+	@IDInmueble int
+)
+AS
+BEGIN
+	INSERT INTO TURNOS (IDUsuario, IDInmueble, Fecha, Turno)
+	VALUES(@IDUsuario, @IDInmueble, @Fecha, @Turno)
+END
+GO

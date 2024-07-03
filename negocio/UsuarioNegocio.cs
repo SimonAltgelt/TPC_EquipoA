@@ -84,7 +84,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setConsulta("exec InsertarUsuario @Nombre, @Apellido, @Email, @Contraseña, @Telefono");
+                datos.setConsulta("exec SP_InsertarUsuario @Nombre, @Apellido, @Email, @Contraseña, @Telefono");
                 datos.setParametros("@Nombre", nuevoUsuario.Nombre);
                 datos.setParametros("@Apellido", nuevoUsuario.Apellido);
                 datos.setParametros("@Email", nuevoUsuario.Email);
