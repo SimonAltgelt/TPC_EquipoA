@@ -103,5 +103,14 @@ namespace TPCuatrimestral_EquipoA
             fechaSeleccionada = Calendario.SelectedDate.ToString("dd/MM/yyyy");
             Session["fecha"] = fechaSeleccionada;
         }
+
+        protected void Calendario_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if(e.Day.Date < DateTime.Now.Date)
+            {
+                e.Day.IsSelectable = false;
+                e.Cell.ForeColor = System.Drawing.Color.LightGray;
+            }
+        }
     }
 }

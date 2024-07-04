@@ -339,7 +339,7 @@
                 <asp:UpdatePanel ID="updCalendario" runat="server" UpdateMode="Conditional">
                     <ContentTemplate>
 
-                        <asp:Calendar ID="Calendario" runat="server" OnSelectionChanged="Calendario_SelectionChanged">
+                        <asp:Calendar ID="Calendario" runat="server" OnSelectionChanged="Calendario_SelectionChanged" OnDayRender="Calendario_DayRender">
 
                             <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
                             <TitleStyle BackColor="#4c6444" ForeColor="Black"></TitleStyle>
