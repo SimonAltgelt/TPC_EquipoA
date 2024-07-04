@@ -101,5 +101,13 @@ namespace TPCuatrimestral_EquipoA
         {
             Response.Redirect("Administracion.aspx");
         }
+
+        /*protected void EliminarImagen_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int IDImagen = int.Parse(btn.CommandArgument);
+            imagenesNegocio.eliminarImagenes(IDImagen);
+            Response.Write("<script>alert('Imagen eliminada correctamente.');window.location = 'InmuebleAdmin.aspx?id=" + IDInmueble + "';</script>");
+        }*/
     }
 }

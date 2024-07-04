@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="TPCuatrimestral_EquipoA.Contacto" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -48,6 +49,8 @@
         }
     </style>
 
+       <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
     <div class="container">
         <div class="row" style="height: 100vh;">
             <!-- Columna del formulario -->
@@ -63,12 +66,12 @@
                         <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="Group1" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group">
-                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido*" type="text" />    
-                       <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Group1" ErrorMessage="El apellido es obligatorio." CssClass="text-danger" Display="Dynamic" />
+                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido*" type="text" />
+                        <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Group1" ErrorMessage="El apellido es obligatorio." CssClass="text-danger" Display="Dynamic" />
                         <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Group1" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group">
-                        <asp:TextBox id="txtTelefono" runat="server" CssClass="form-control" placeholder="Telefono*" type="tel" />
+                        <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" placeholder="Telefono*" type="tel" />
                         <label class="txtTelefono">
                             Ingrese un número completo con código de área. Ej: 112345678 (CABA) o 3511234567 (Ciudad de Córdoba)
                         </label>
@@ -86,11 +89,15 @@
                         <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="Group1" ErrorMessage="La localidad solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group">
+                        <asp:TextBox ID="txtAsunto" runat="server" placeholder="Asunto" Class="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvAsunto" runat="server" ControlToValidate="txtAsunto" ValidationGroup="Group1" ErrorMessage="El asunto de tu consulta es obligatorio." CssClass="text-danger" Display="Dynamic" />
+                    </div>
+                    <div class="form-group">
                         <asp:TextBox ID="txtConsulta" TextMode="MultiLine" Rows="6" runat="server" placeholder="Dejanos tu consulta acá." Class="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvConsulta" runat="server" ControlToValidate="txtConsulta" ValidationGroup="Group1" ErrorMessage="El detalle de tu consulta es obligatorio." CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
-                    <asp:Button Text="Enviar" ValidationGroup="Group1" CssClass="btn btn-outline-success btn-largo" runat="server" />
+                    <asp:Button Text="Enviar" ValidationGroup="Group1" CssClass="btn btn-outline-success btn-largo" runat="server" OnClick="btnEnviar_Click" />
                     <asp:Button Text="Volver" CssClass="btn btn-outline-success btn-largo" CausesValidation="false" runat="server" OnClick="btnVolver_Click" />
                 </div>
             </div>

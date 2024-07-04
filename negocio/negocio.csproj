@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="EmailService.cs" />
     <Compile Include="ImagenesNegocio.cs" />
     <Compile Include="InmuebleNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

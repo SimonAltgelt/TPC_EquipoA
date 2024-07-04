@@ -31,10 +31,10 @@
             color: #000000;
             cursor: pointer;
             transition: font-weight 0.3s ease;
-            margin-bottom: 15px; 
+            margin-bottom: 15px;
             display: flex;
             justify-content: center;
-            align-items:center;
+            align-items: center;
         }
 
             .iconos i {
@@ -172,9 +172,9 @@
                         <br />
                         <br />
                         <div class="iconos">
-                            <i class="fa-brands fa-whatsapp fa-xl"></i>
-                            <a href="Contacto.aspx"><i class="fa-regular fa-envelope fa-xl"></i></a>
-                            <a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>#calendario"><i class="fa-regular fa-calendar-days fa-xl"></i></a>
+                            <a href="whatsapp://send?phone=541167814237&text=Hola,%20quiero%20contactarte"><i class="fab fa-whatsapp fa-xl"></i></a>
+                            <a href="Contacto.aspx"><i class="far fa-envelope fa-xl"></i></a>
+                            <a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>#calendario"><i class="far fa-calendar-days fa-xl"></i></a>
                         </div>
 
                         <br />

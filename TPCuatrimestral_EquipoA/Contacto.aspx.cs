@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using negocio;
 
 namespace TPCuatrimestral_EquipoA
 {
@@ -27,5 +28,26 @@ namespace TPCuatrimestral_EquipoA
             Response.Redirect("Default.aspx");
         }
 
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            EmailService emailService = new EmailService();
+            emailService.ArmarEmail(txtEmail.Text, txtAsunto.Text, txtConsulta.Text);
+
+            emailService.EnviarEmail();
+            string script = "alert(¡Gracias por enviarnos tu consulta!');";
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
+
+            /*try
+            {
+                emailService.EnviarEmail();
+                string script = "alert(¡Gracias por enviarnos tu consulta!');";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
+
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex);
+            }*/
+        }
     }
 }

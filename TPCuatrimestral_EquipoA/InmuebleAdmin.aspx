@@ -33,7 +33,21 @@
             .img-grid img {
                 width: 100%;
                 height: auto;
+                position: relative;
             }
+
+            .img-grid .img-container {
+                position: relative;
+            }
+
+                .img-grid .img-container .delete-icon {
+                    position: absolute;
+                    top: 5px; /* Ajusta la posición verticalmente según sea necesario */
+                    right: 5px; /* Ajusta la posición horizontalmente según sea necesario */
+                    color: #000000; /* Color del icono */
+                    font-size: 20px; /* Tamaño del icono */
+                    cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+                }
 
         .btn-verde {
             background-color: #4c6444;
@@ -94,7 +108,14 @@
                             if (imagen.IDInmueble == IDInmueble)
                             {%>
 
-                <img src="<%=imagen.URLImagen.ToString()%>" />
+
+                <div class="img-container">
+                    <img src="<%=imagen.URLImagen %>" />
+                   <%--<asp:Button ID="btnEliminar" runat="server" CssClass="delete-button" CommandArgument='<%# Eval("ID") %>' OnClick="EliminarImagen_Click" Text="Eliminar" />--%>                    
+                    <i class="fa-solid fa-trash-can delete-icon" style="color: #000000;"></i>
+                </div>
+
+
                 <%}
                         }
                     }
@@ -103,7 +124,7 @@
         </div>
         <div class="col-8">
             <div class="mb-3" style="width: 40%;">
-                <h3>Imágenes de inmueble</h3>
+                <h6>Sube las imágenes del inmueble aquí</h6>
                 <asp:FileUpload ID="txtImagen" runat="server" AllowMultiple="true" />
             </div>
         </div>
