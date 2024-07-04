@@ -17,6 +17,12 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
+
+        .img-small {
+            width: 150px; /* Ajusta el ancho de la imagen */
+            height: 150px; /* Ajusta el alto de la imagen */
+            object-fit: cover; /* Ajusta la imagen para que se recorte según el contenedor */
+        }
     </style>
 
     <div class="contenidoPrincipal">
@@ -70,7 +76,7 @@
             <label class="form-label">Imagen de Perfil</label>
             <input type="file" id="txtImagen" runat="server" class="form-control" />
         </div>
-        <asp:Image ID="imagenPerfil" runat="server" CssClass="img-fluid"/>
+        <asp:Image ID="imagenPerfil" runat="server" CssClass="img-small"/>
         <div class="form-group">
             <asp:Button ID="btnAceptar" runat="server" Text="Guardar cambios" class="btn btn-primary" ValidationGroup="GroupPerfil" OnClick="btnAceptar_Click" />
             <asp:Button ID="btnVolver" runat="server" Text="Volver" CausesValidation="false" class="btn btn-primary" OnClick="btnVolver_Click" />
