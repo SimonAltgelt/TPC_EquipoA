@@ -100,26 +100,19 @@
         <h1>Gestión de Inmuebles</h1>
         <div class="col-8">
             <div class="imagenes">
-                <%if (!esNuevo)
-                    {
-                        List<dominio.Imagen> imagenes = imagenesNegocio.listar();
-                        foreach (dominio.Imagen imagen in imagenes)
-                        {
-                            if (imagen.IDInmueble == IDInmueble)
-                            {%>
+                <%--nuevo--%>
+                <asp:Repeater runat="server" ID="repetidorImagenes">
+                    <ItemTemplate>
+                        <div class="img-container">
+                            <img src="<%#Eval("URLImagen")%>" />
+                            <i class="fa-solid fa-trash-can delete-icon" style="color: #000000;"></i>
+                            <asp:Button ID="btnEliminar" runat="server" CssClass="delete-button" CommandArgument='<%# Eval("ID") %>' CommandName="ImagenID" OnClick="EliminarImagen_Click" Text="Eliminar" /> 
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <%--nuevo--%>
+                
 
-
-                <div class="img-container">
-                    <img src="<%=imagen.URLImagen %>" />
-                  <%-- <asp:Button ID="btnEliminar" runat="server" CssClass="delete-button" CommandArgument='<%# Eval("ID") %>' OnClick="EliminarImagen_Click" Text="Eliminar" />   --%>               
-                    <i class="fa-solid fa-trash-can delete-icon" style="color: #000000;"></i>
-                </div>
-
-
-                <%}
-                        }
-                    }
-                %>
             </div>
         </div>
         <div class="col-8">
@@ -147,14 +140,14 @@
                             <asp:TextBox ID="txtDireccion" runat="server" class="form-control" placeholder="Dirección" />
                             <asp:RequiredFieldValidator ID="rfvdireccion" runat="server" ControlToValidate="txtDireccion" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revDireccion" runat="server" ControlToValidate="txtDireccion" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revDireccion" runat="server" ControlToValidate="txtDireccion" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚñÑ]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Localidad" runat="server" />
                             <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" placeholder="Localidad" />
                             <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚñÑ]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Precio" runat="server" />
@@ -166,10 +159,10 @@
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Descripción" runat="server" />
-                            <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" placeholder="Descripción" />
+                            <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" placeholder="Descripción" TextMode="MultiLine" Rows="6"/>
                             <asp:RequiredFieldValidator ID="rfvDescripcion" runat="server" ControlToValidate="txtDescripcion" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revDescripcion" runat="server" ControlToValidate="txtDescripcion" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revDescripcion" runat="server" ControlToValidate="txtDescripcion" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚñÑ.,]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Metros cuadrados totales" runat="server" />

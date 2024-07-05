@@ -16,6 +16,14 @@ namespace TPCuatrimestral_EquipoA
         protected void Page_Load(object sender, EventArgs e)
         {
             miUsuario = (Usuario)Session["usuario"];
+            if (!string.IsNullOrEmpty(miUsuario.ImagenPerfil))
+            {
+                imagenPerfil.ImageUrl = "~/img/" + miUsuario.ImagenPerfil;
+            }
+            else
+            {
+                imagenPerfil.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
+            }
             if (!IsPostBack) {
                 txtNombre.Text = miUsuario.Nombre;
                 txtApellido.Text = miUsuario.Apellido;
@@ -24,14 +32,7 @@ namespace TPCuatrimestral_EquipoA
                 txtTelefono.Text = miUsuario.Telefono;
                 txtEmail.Text = miUsuario.Email;
                 txtContraseña.Text = miUsuario.Contraseña;
-                if (!string.IsNullOrEmpty(miUsuario.ImagenPerfil))
-                {
-                    imagenPerfil.ImageUrl = "~/img/" + miUsuario.ImagenPerfil;
-                } 
-                else
-                {
-                    imagenPerfil.ImageUrl = "https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png";
-                }
+
             }
         }
 

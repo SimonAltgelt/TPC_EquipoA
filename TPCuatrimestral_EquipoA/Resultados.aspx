@@ -57,7 +57,7 @@
 
         .card {
             width: 900px;
-            height: 300px;
+            height: auto;
             margin: 30px;
         }
 

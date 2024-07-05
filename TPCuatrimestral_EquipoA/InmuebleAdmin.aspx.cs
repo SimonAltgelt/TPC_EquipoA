@@ -24,6 +24,10 @@ namespace TPCuatrimestral_EquipoA
         public bool esNuevo=true;
         protected void Page_Load(object sender, EventArgs e)
         {
+            ImagenesNegocio imagenesNegocio = new ImagenesNegocio();
+            List<Imagen> listaImagenes = imagenesNegocio.listar();
+            List<Imagen> imagenesInmueble = new List<Imagen>();
+
             if (Request.QueryString["id"] != null)
             // L.D. 29/06 Si llegamos con un ID, buscamos el inmueble pertinente
             {
@@ -31,17 +35,35 @@ namespace TPCuatrimestral_EquipoA
                 IDInmueble = int.Parse(Request.QueryString["id"]);
                 miInmueble = ((List<Inmueble>)Session["inmuebles"]).Find(x => x.ID == IDInmueble);
 
-                ddlTipoPropiedad.Items.FindByText(miInmueble.Tipo).Selected = true;
-                txtDireccion.Text = miInmueble.Ubicacion.Direccion;
-                txtLocalidad.Text = miInmueble.Ubicacion.Localidad;
-                txtPrecio.Text = miInmueble.Precio.ToString();
-                txtDescripcion.Text = miInmueble.Descripcion;
-                MetrosCuadrados.Text = miInmueble.Metros2.ToString();
-                MetrosCubiertos.Text = miInmueble.Metros2Cubiertos.ToString();
-                CantAmbientes.Text = miInmueble.Ambientes.ToString();
-                CantBaños.Text = miInmueble.Baños.ToString();
-                ddlTipoOperacion.Items.FindByText(miInmueble.Disponibilidad).Selected = true;
+                if (!IsPostBack)
+                {
+                    ddlTipoPropiedad.Items.FindByText(miInmueble.Tipo).Selected = true;
+                    txtDireccion.Text = miInmueble.Ubicacion.Direccion;
+                    txtLocalidad.Text = miInmueble.Ubicacion.Localidad;
+                    txtPrecio.Text = miInmueble.Precio.ToString();
+                    txtDescripcion.Text = miInmueble.Descripcion;
+                    MetrosCuadrados.Text = miInmueble.Metros2.ToString();
+                    MetrosCubiertos.Text = miInmueble.Metros2Cubiertos.ToString();
+                    CantAmbientes.Text = miInmueble.Ambientes.ToString();
+                    CantBaños.Text = miInmueble.Baños.ToString();
+                    ddlTipoOperacion.Items.FindByText(miInmueble.Disponibilidad).Selected = true;
+                }
             }
+
+            foreach (Imagen imagen in listaImagenes)
+            {
+                if (imagen.IDInmueble == miInmueble.ID)
+                {
+                    imagenesInmueble.Add(imagen);
+                }
+            }
+
+            if (!IsPostBack)
+            {
+                repetidorImagenes.DataSource = imagenesInmueble;
+                repetidorImagenes.DataBind();
+            }
+
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
@@ -92,9 +114,8 @@ namespace TPCuatrimestral_EquipoA
             }
 
             imagenesNegocio.agregarImagenes(imagenesSubidas, IDInmueble);
-
-            Response.Write("<script>alert('Inmueble agregado correctamente.');window.location = 'Administracion.aspx';</script>");
-            // Debería redirigir a una página que diga carga exitosa
+            
+            Response.Write("<script>alert('Inmueble modificado correctamente.');window.location = 'Administracion.aspx';</script>");
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)
@@ -102,12 +123,12 @@ namespace TPCuatrimestral_EquipoA
             Response.Redirect("Administracion.aspx");
         }
 
-        /*protected void EliminarImagen_Click(object sender, EventArgs e)
+        protected void EliminarImagen_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             int IDImagen = int.Parse(btn.CommandArgument);
             imagenesNegocio.eliminarImagenes(IDImagen);
             Response.Write("<script>alert('Imagen eliminada correctamente.');window.location = 'InmuebleAdmin.aspx?id=" + IDInmueble + "';</script>");
-        }*/
+        }
     }
 }

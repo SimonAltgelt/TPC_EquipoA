@@ -61,14 +61,14 @@
                         <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre*" type="text" />
                         <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="GroupVenta"
                             ErrorMessage="El nombre es obligatorio." CssClass="text-danger" Display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="GroupVenta" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="GroupVenta" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\sáéíóúÁÉÍÓÚñÑ]+$" CssClass="text-danger" Display="Dynamic" />
 
                     </div>
                     <div class="form-group">
                         <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido*" type="text" />
                         <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="GroupVenta"
                             ErrorMessage="El apellido es obligatorio." CssClass="text-danger" Display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="GroupVenta" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="GroupVenta" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\sáéíóúÁÉÍÓÚñÑ]+$" CssClass="text-danger" Display="Dynamic" />
 
                     </div>
                     <div class="form-group">
@@ -90,7 +90,7 @@
                         <asp:TextBox ID="txtLocalidad" runat="server" CssClass="form-control" placeholder="Localidad/provincia*" type="text" />
                         <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupVenta"
                             ErrorMessage="La localidad es obligatoria." CssClass="text-danger" Display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupVenta" ErrorMessage="La localidad solo puede contener letras y números." ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupVenta" ErrorMessage="La localidad solo puede contener letras y números." ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚñÑ]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <div class="form-group text-left">
                         <label class="tipoPropiedad">Tipo de propiedad*</label>

@@ -88,7 +88,7 @@ namespace negocio
             }
         }
 
-        /*public void eliminarImagenes(int IDImagen)
+        public void eliminarImagenes(int IDImagen)
         {
             AccesoDatos datos = new AccesoDatos();
             try
@@ -105,6 +105,6 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
-        }*/
+        }
     }
 }
