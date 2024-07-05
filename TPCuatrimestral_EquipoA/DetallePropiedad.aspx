@@ -208,13 +208,13 @@
                     <div class="form-group">
                         <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre" />
                         <asp:RequiredFieldValidator id="rfvNombre" runat="server" controltovalidate="txtNombre" ValidationGroup="Consulta" errormessage="El nombre es obligatorio." cssclass="text-danger" display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="Consulta" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationGroup="Consulta" ErrorMessage="El nombre solo debe contener letras." ValidationExpression="^[a-zA-Z\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
                     <div class="form-group">
                         <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido" />
                         <asp:RequiredFieldValidator id="rfvApellido" runat="server" controltovalidate="txtApellido" ValidationGroup="Consulta" errormessage="El apellido es obligatorio." cssclass="text-danger" display="Dynamic" />
-                        <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Consulta" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\s]+$" CssClass="text-danger" Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="revApellido" runat="server" ControlToValidate="txtApellido" ValidationGroup="Consulta" ErrorMessage="El apellido solo debe contener letras." ValidationExpression="^[a-zA-Z\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
                     </div>
                     <br />
                     <div class="form-group">

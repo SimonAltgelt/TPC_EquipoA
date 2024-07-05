@@ -15,11 +15,14 @@ namespace TPCuatrimestral_EquipoA
         {
             if (Session["usuario"] != null)
             {
-                Usuario miUsuario = (Usuario)Session["usuario"];
-                txtNombre.Text = miUsuario.Nombre;
-                txtApellido.Text = miUsuario.Apellido;
-                txtTelefono.Text = miUsuario.Telefono;
-                txtEmail.Text = miUsuario.Email;
+                if (!IsPostBack)
+                {
+                    Usuario miUsuario = (Usuario)Session["usuario"];
+                    txtNombre.Text = miUsuario.Nombre;
+                    txtApellido.Text = miUsuario.Apellido;
+                    txtTelefono.Text = miUsuario.Telefono;
+                    txtEmail.Text = miUsuario.Email;
+                }
             }
         }
 

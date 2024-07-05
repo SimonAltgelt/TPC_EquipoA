@@ -111,7 +111,7 @@
 
                 <div class="img-container">
                     <img src="<%=imagen.URLImagen %>" />
-                   <%--<asp:Button ID="btnEliminar" runat="server" CssClass="delete-button" CommandArgument='<%# Eval("ID") %>' OnClick="EliminarImagen_Click" Text="Eliminar" />--%>                    
+                  <%-- <asp:Button ID="btnEliminar" runat="server" CssClass="delete-button" CommandArgument='<%# Eval("ID") %>' OnClick="EliminarImagen_Click" Text="Eliminar" />   --%>               
                     <i class="fa-solid fa-trash-can delete-icon" style="color: #000000;"></i>
                 </div>
 
@@ -154,14 +154,14 @@
                             <asp:TextBox ID="txtLocalidad" runat="server" class="form-control" placeholder="Localidad" />
                             <asp:RequiredFieldValidator ID="rfvLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
+                            <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtLocalidad" ValidationGroup="GroupInmueble" ErrorMessage="Solo letras y números" ValidationExpression="^[a-zA-Z0-9\sáéíóúÁÉÍÓÚ]+$" CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">
                             <asp:Label Text="Precio" runat="server" />
                             <asp:TextBox ID="txtPrecio" runat="server" class="form-control" placeholder="Precio" />
                             <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble"
                                 ErrorMessage="Campo requerido" CssClass="text-danger" Display="Dynamic" />
-                            <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble" ErrorMessage="Solo números" ValidationExpression="^\d{1,3}(,\d{3})*(\.\d{2})?$"
+                            <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ValidationGroup="GroupInmueble" ErrorMessage="Solo números positivos y con dos decimales máximo (expresados con coma)" ValidationExpression="^\d{1,3}(?:\.\d{3})*(?:,\d{2})?$|^\d+(?:,\d{2})?$"
                                 CssClass="text-danger" Display="Dynamic" />
                         </div>
                         <div class="form-group">

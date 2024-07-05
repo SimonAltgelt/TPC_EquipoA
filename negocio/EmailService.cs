@@ -14,17 +14,17 @@ namespace negocio
 
         public EmailService()
         {
-            server = new SmtpClient("smtp.gmail.com", 587);
-            server.Credentials = new NetworkCredential("lusiviinmobiliaria@gmail.com", "lusivi.2024");
-            server.EnableSsl = false;
+            server = new SmtpClient();
+            server.Credentials = new NetworkCredential("maria.kowalk@alumnos.frgp.utn.edu.ar", PONER LA CONTRASEÑA REAL);
+            server.EnableSsl = true;
             server.Port = 587;
-            server.Host = "smtp.gmail.com";
+            server.Host = "smtp-mail.outlook.com";
         }
 
         public void ArmarEmail(string emailOrigen, string asunto, string mensaje) 
         {
             email = new MailMessage();
-            email.From = new MailAddress("lusiviinmobiliaria@gmail.com");// el from mail del usuario
+            email.From = new MailAddress("maria.kowalk@alumnos.frgp.utn.edu.ar");// el from mail del usuario
             email.To.Add(emailOrigen);
             email.Subject = asunto;
             email.Body = mensaje;
