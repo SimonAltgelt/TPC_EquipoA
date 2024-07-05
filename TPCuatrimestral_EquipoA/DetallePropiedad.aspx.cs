@@ -14,8 +14,10 @@ namespace TPCuatrimestral_EquipoA
         public Inmueble miInmueble;
         public string fechaSeleccionada = "";
         public string turno = "";
+        public string hora = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack) //Verifica si la página se carga por primera vez o si se carga por una acción del usuario
             {
                 int id = int.Parse(Request.QueryString["id"]);
@@ -37,21 +39,37 @@ namespace TPCuatrimestral_EquipoA
             if (Session["usuario"] != null)
             {
                 Usuario miUsuario = (Usuario)Session["usuario"];
-                txtNombre.Text = miUsuario.Nombre;
-                txtApellido.Text = miUsuario.Apellido;
-                txtTelefono.Text = miUsuario.Telefono;
-                txtEmail.Text = miUsuario.Email;
+                if (!IsPostBack)
+                {
+                    txtNombre.Text = miUsuario.Nombre;
+                    txtApellido.Text = miUsuario.Apellido;
+                    txtTelefono.Text = miUsuario.Telefono;
+                    txtEmail.Text = miUsuario.Email;
+                }
             }
         }
 
         protected void Confirmar_Click(object sender, EventArgs e)
         {
             if (TurnoMañana.Checked)
+            {
                 turno = "m";
+                hora = "9:00";
+            }
+                
+                
             else if (TurnoMediodia.Checked)
+            {
                 turno = "d";
+                hora = "11:30";
+            }
+                
             else if (TurnoTarde.Checked)
+            {
                 turno = "t";
+                hora = "14:00";
+            }
+                
             
             if (string.IsNullOrEmpty(turno) || string.IsNullOrEmpty(fechaSeleccionada))
             {
@@ -83,7 +101,7 @@ namespace TPCuatrimestral_EquipoA
                     datos2.setParametros("@Fecha", fechaSeleccionada);
                     datos2.setParametros("@Turno", turno);
                     datos2.setParametros("@IDUsuario", miUsuario.ID.ToString());
-                    datos2.setParametros("IDInmueble", miInmueble.ID.ToString());
+                    datos2.setParametros("@IDInmueble", miInmueble.ID.ToString());
                     datos2.ejecutarAccion();
                 }
                 catch (Exception ex)
@@ -94,13 +112,20 @@ namespace TPCuatrimestral_EquipoA
                 {
                     datos2.cerrarConexion();
                 }
-                LblCapturaDia.Text = "Se guardó correctamente el turno para el día " + fechaSeleccionada + ".";
+                LblCapturaDia.Text = "¡Reservaste un turno para el día " + fechaSeleccionada + "!";
+
+                EmailService emailService = new EmailService();
+                emailService.ArmarEmail(miUsuario.Email, "¡Reservaste un turno para visitar un inmueble!", "¡Hola " + miUsuario.Nombre + "! Reservaste un turno para visitar el inmueble ubicado en " + miInmueble.Ubicacion.Direccion + ", " + miInmueble.Ubicacion.Localidad + ", para el día " + fechaSeleccionada + " a las " + hora + " horas. ¡Te esperamos!");
+
+                emailService.EnviarEmail();
+                string script = "alert(¡Gracias por enviarnos tu consulta!');";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
             }
         }
 
         protected void Calendario_SelectionChanged(object sender, EventArgs e)
         {
-            fechaSeleccionada = Calendario.SelectedDate.ToString("dd/MM/yyyy");
+            fechaSeleccionada = Calendario.SelectedDate.ToString("MM/dd/yyyy");
             Session["fecha"] = fechaSeleccionada;
         }
 
@@ -111,6 +136,16 @@ namespace TPCuatrimestral_EquipoA
                 e.Day.IsSelectable = false;
                 e.Cell.ForeColor = System.Drawing.Color.LightGray;
             }
+        }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            EmailService emailService = new EmailService();
+            emailService.ArmarEmail(txtEmail.Text, "Consulta sobre el inmueble " + miInmueble.ID.ToString(), txtConsulta.Text);
+
+            emailService.EnviarEmail();
+            string script = "alert('¡Gracias por enviarnos tu consulta!');";
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
         }
     }
 }

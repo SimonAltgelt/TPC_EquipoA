@@ -238,7 +238,7 @@
                     </div>
                     <br />
                     <br />
-                    <asp:Button CssClass="btn btn-verde" Text="Enviar" ValidationGroup="Consulta" runat="server"/>
+                    <asp:Button CssClass="btn btn-verde" ID="btnEnviar" Text="Enviar" ValidationGroup="Consulta" runat="server" OnClick="btnEnviar_Click"/>
                 </div>
             </div>
         </div>
