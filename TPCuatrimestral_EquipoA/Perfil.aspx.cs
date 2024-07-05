@@ -32,7 +32,6 @@ namespace TPCuatrimestral_EquipoA
                 txtTelefono.Text = miUsuario.Telefono;
                 txtEmail.Text = miUsuario.Email;
                 txtContraseña.Text = miUsuario.Contraseña;
-
             }
         }
 
@@ -40,11 +39,17 @@ namespace TPCuatrimestral_EquipoA
         {
             try
             {
-                string ruta = Server.MapPath("./img/");
-                string nombreImagen = "perfil-" + miUsuario.ID + ".jpg";
-                txtImagen.PostedFile.SaveAs(ruta + nombreImagen);
 
-                miUsuario.ImagenPerfil = nombreImagen;
+                HttpPostedFile miArchivo = txtImagen.PostedFile;
+
+                if (miArchivo.ContentLength > 0)
+                {
+                    string ruta = Server.MapPath("./img/");
+                    string nombreImagen = "perfil-" + miUsuario.ID + ".jpg";
+                    txtImagen.PostedFile.SaveAs(ruta + nombreImagen);
+                    miUsuario.ImagenPerfil = nombreImagen;
+                }
+                
                 miUsuario.Nombre = txtNombre.Text;
                 miUsuario.Apellido = txtApellido.Text;
                 miUsuario.Documento = txtDocumento.Text;
