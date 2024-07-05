@@ -97,7 +97,7 @@
     <div class="grid-container">
         <asp:GridView ID="InmueblesGridView"
             AutoGenerateColumns="False"
-            AllowPaging="True"
+            AllowPaging="False"
             OnRowCommand="InmueblesGridView_RowCommand"
             runat="server">
             <Columns>
