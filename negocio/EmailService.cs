@@ -15,7 +15,7 @@ namespace negocio
         public EmailService()
         {
             server = new SmtpClient();
-            server.Credentials = new NetworkCredential("maria.kowalk@alumnos.frgp.utn.edu.ar", "Manfreteamo1");
+            server.Credentials = new NetworkCredential("maria.kowalk@alumnos.frgp.utn.edu.ar", "pass");
             server.EnableSsl = true;
             server.Port = 587;
             server.Host = "smtp-mail.outlook.com";
