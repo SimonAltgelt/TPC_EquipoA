@@ -290,6 +290,49 @@ namespace negocio
             return precio.ToString("N2", nfi);
         }
 
+        public List<Inmueble> listarFavoritos(int IDUsuario)
+        {
+            List<Inmueble> listaInmuebles = new List<Inmueble>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("SP_ListarFavoritos @IDUsuario");
+                datos.setParametros("@IDUsuario", IDUsuario);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Inmueble inmueble = new Inmueble();
+                    Ubicacion ubicacion = new Ubicacion();
+
+                    inmueble.ID = (int)datos.Lector["ID"];
+                    inmueble.Tipo = (string)datos.Lector["TIPO"];
+                    ubicacion.Direccion = (string)datos.Lector["DIRECCION"];
+                    ubicacion.Localidad = (string)datos.Lector["LOCALIDAD"];
+                    inmueble.Ubicacion = ubicacion;
+                    inmueble.Metros2 = (int)datos.Lector["METROS2"];
+                    inmueble.Metros2Cubiertos = (int)datos.Lector["METROS2CUBIERTOS"];
+                    inmueble.Disponibilidad = (string)datos.Lector["DISPONIBILIDAD"];
+                    inmueble.Ambientes = (int)datos.Lector["AMBIENTES"];
+                    inmueble.Baños = (int)datos.Lector["BAÑOS"];
+                    inmueble.Precio = formatearDecimal((decimal)datos.Lector["PRECIO"]);
+                    inmueble.Descripcion = (string)datos.Lector["DESCRIPCION"];
+                    inmueble.Estado = (bool)datos.Lector["ESTADO"];
+                    listaInmuebles.Add(inmueble);
+                }
+                return listaInmuebles;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 
 }

@@ -230,6 +230,16 @@
                                         <asp:Button ID="btnPerfil" runat="server" CssClass="nav-link-button" Text="Perfil" OnClick="btnPerfil_Click" />
                                     </div>
                                 </li>
+                                <li class="nav-item">
+                                    <div class="nav-link-button-wrapper">
+                                        <asp:Button ID="btnMisFavoritos" runat="server" CssClass="nav-link-button" Text="Mis Favoritos" OnClick="btnMisFavoritos_Click" />
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="nav-link-button-wrapper">
+                                        <asp:Button ID="btnMisTurnos" runat="server" CssClass="nav-link-button" Text="Mis Turnos" OnClick="btnMisTurnos_Click" />
+                                    </div>
+                                </li>
                                 <% } %>
                             </ul>
                             <ul class="navbar-nav ms-auto">

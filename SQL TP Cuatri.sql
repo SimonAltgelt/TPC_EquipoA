@@ -66,6 +66,13 @@ CREATE TABLE TURNOS(
 	Turno char not null
 )
 
+CREATE TABLE FAVORITOS(
+	IDFavorito int primary key identity(1,1),
+	IDUsuario int foreign key references USUARIOS(ID),
+	IDInmueble int foreign key references INMUEBLES(ID),
+	UNIQUE(IDUsuario, IDInmueble)
+)
+
 USE [Inmobiliaria]
 GO
 SET IDENTITY_INSERT [dbo].[LOCALIDADES] ON 
@@ -326,7 +333,6 @@ GO
 
 
 
-
 -- Creación de la view
 GO
 CREATE OR ALTER VIEW VW_DatosInmuebles AS
@@ -471,3 +477,42 @@ BEGIN
 	VALUES(@IDUsuario, @IDInmueble, @Fecha, @Turno)
 END
 GO
+
+CREATE OR ALTER PROCEDURE SP_AdministrarFavorito(
+	@IDUsuario int,
+	@IDInmueble int
+)
+AS
+BEGIN
+	Declare @Cantidad int;
+	SELECT @Cantidad = COUNT(*) FROM FAVORITOS WHERE IDUsuario=@IDUsuario AND IDInmueble=@IDInmueble;
+	IF @CANTIDAD = 0
+	BEGIN
+		INSERT INTO FAVORITOS(IDUsuario,IDInmueble)
+		VALUES(@IDUsuario,@IDInmueble)
+	END
+	ELSE
+	BEGIN
+		DELETE FROM FAVORITOS WHERE IDUsuario=@IDUsuario AND IDInmueble=@IDInmueble;
+	END
+END
+GO
+
+CREATE OR ALTER PROCEDURE SP_ListarFavoritos(
+	@IDUsuario int
+)
+AS
+BEGIN
+	SELECT i.ID, t.Nombre AS 'TIPO', u.DIRECCION, l.NOMBRE AS 'LOCALIDAD', i.METROS2, i.METROS2CUBIERTOS, d.NOMBRE AS 'DISPONIBILIDAD', i.AMBIENTES, i.BAÑOS, i.PRECIO, i.DESCRIPCION, i.ESTADO FROM Inmuebles i
+	INNER JOIN DISPONIBILIDADES d ON i.IDDISPONIBILIDAD=d.ID
+	INNER JOIN UBICACIONES u ON i.IDUBICACION=u.ID
+	INNER JOIN LOCALIDADES l ON u.IDLOCALIDAD=l.ID
+	INNER JOIN TIPOS t ON i.IDTIPO=t.ID
+	INNER JOIN FAVORITOS f ON f.IDInmueble=i.ID
+	WHERE f.IDUsuario=@IDUsuario
+END
+GO
+
+DELETE  FROM FAVORITOS
+
+SP_ListarFavoritos 6

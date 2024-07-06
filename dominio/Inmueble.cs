@@ -11,7 +11,7 @@ namespace dominio
         public string Tipo { get; set; }
         public int Vendedor { get; set; }
         public Ubicacion Ubicacion { get; set; }
-        public List<Imagen> Imagenes = new List<Imagen>();
+        public List<Imagen> Imagenes { get; set; }
         public string Disponibilidad { get; set; }
         public int Metros2 { get; set; }
         public int Metros2Cubiertos { get; set; }

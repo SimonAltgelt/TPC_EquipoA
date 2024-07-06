@@ -69,6 +69,7 @@ namespace negocio
         {
             foreach (Inmueble miInmueble in inmuebles)
             {
+                miInmueble.Imagenes = new List<Imagen>();
                 foreach (Imagen miImagen in imagenes)
                 {
                     if (miImagen.IDInmueble.ToString() == miInmueble.ID.ToString())

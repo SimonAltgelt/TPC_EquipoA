@@ -105,6 +105,8 @@
     <Content Include="InicioSesion.aspx" />
     <Content Include="InmuebleAdmin.aspx" />
     <Content Include="LoginExitoso.aspx" />
+    <Content Include="MisFavoritos.aspx" />
+    <Content Include="MisTurnos.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Resultados.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -183,6 +185,20 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MisFavoritos.aspx.cs">
+      <DependentUpon>MisFavoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisFavoritos.aspx.designer.cs">
+      <DependentUpon>MisFavoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MisTurnos.aspx.cs">
+      <DependentUpon>MisTurnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisTurnos.aspx.designer.cs">
+      <DependentUpon>MisTurnos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.aspx.cs">

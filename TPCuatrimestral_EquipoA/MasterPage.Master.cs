@@ -69,6 +69,16 @@ namespace TPCuatrimestral_EquipoA
         {
             Response.Redirect("Perfil.aspx");
         }
+
+        protected void btnMisFavoritos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MisFavoritos.aspx");
+        }
+
+        protected void btnMisTurnos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MisTurnos.aspx");
+        }
     }
 
 }

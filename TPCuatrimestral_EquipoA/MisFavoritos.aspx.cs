@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace TPCuatrimestral_EquipoA
 {
-    public partial class Resultados : System.Web.UI.Page
+    public partial class MisFavoritos : System.Web.UI.Page
     {
         public List<Inmueble> listaInmuebles;
         public List<Imagen> listaImagenes;
@@ -19,28 +19,32 @@ namespace TPCuatrimestral_EquipoA
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Usuario"] != null)
-            {
-                miUsuario = (Usuario)Session["Usuario"];
-            }
+            miUsuario = (Usuario)Session["usuario"];
             if (!IsPostBack)
             {
-                string disponibilidad = (string)Session["disponibilidad"];
-                string localidad = (string)Session["localidad"];
-                string tipoPropiedad = (string)Session["tipoPropiedad"];
-                obtenerInmuebles(disponibilidad, localidad, tipoPropiedad);
-                repetidorInmuebles.DataSource = (List<Inmueble>)Session["inmuebles"];
-                repetidorInmuebles.DataBind();
+                obtenerFavoritos();
+                repetidorFavoritos.DataSource = (List<Inmueble>)Session["favoritos"];
+                repetidorFavoritos.DataBind();
             }
-            listaInmuebles = (List<Inmueble>)Session["inmuebles"];
+            listaInmuebles = (List<Inmueble>)Session["favoritos"];
         }
 
-        private void obtenerInmuebles(string disponibilidad, string localidad, string tipoPropiedad)
+        private void obtenerFavoritos()
         {
-            listaInmuebles = inmuebleNegocio.listarFiltrados(disponibilidad, localidad, tipoPropiedad);
+            listaInmuebles = inmuebleNegocio.listarFavoritos(miUsuario.ID);
             listaImagenes = imagenesNegocio.listar();
             imagenesNegocio.vincularImagenes(listaInmuebles, listaImagenes);
-            Session["inmuebles"] = listaInmuebles;
+            Session["favoritos"] = listaInmuebles;
+        }
+
+        protected string obtenerPrimerImagen(object imagenes)
+        {
+            var imagenList = imagenes as List<Imagen>; // Adjust 'YourImageType' to the actual type of images
+            if (imagenList != null && imagenList.Count > 0)
+            {
+                return imagenList[0].URLImagen;
+            }
+            return "https://images.posthousing.com/nophoto.png"; // Default image URL
         }
 
         protected void btnFavoritos_Click(object sender, EventArgs e)
@@ -54,6 +58,7 @@ namespace TPCuatrimestral_EquipoA
                 datos.setParametros("@IDUsuario", miUsuario.ID);
                 datos.setParametros("@IDInmueble", IDInmueble);
                 datos.ejecutarAccion();
+                obtenerFavoritos();
             }
             catch (Exception ex)
             {
@@ -65,14 +70,5 @@ namespace TPCuatrimestral_EquipoA
             }
         }
 
-        protected string obtenerPrimerImagen(object imagenes)
-        {
-            var imagenList = imagenes as List<Imagen>; // Adjust 'YourImageType' to the actual type of images
-            if (imagenList != null && imagenList.Count > 0)
-            {
-                return imagenList[0].URLImagen;
-            }
-            return "https://images.posthousing.com/nophoto.png"; // Default image URL
-        }
-    } 
+    }
 }

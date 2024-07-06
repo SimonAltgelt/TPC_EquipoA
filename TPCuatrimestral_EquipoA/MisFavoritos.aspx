@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Resultados.aspx.cs" Inherits="TPCuatrimestral_EquipoA.Resultados" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="MisFavoritos.aspx.cs" Inherits="TPCuatrimestral_EquipoA.MisFavoritos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <style>
         .resultados {
             background-image: url('img/edificiosupp.jpg');
@@ -125,13 +125,13 @@
     </div>
     <br />
 
-    <% 
-    if (listaInmuebles.Count == 0){%>
+    <% if (listaInmuebles.Count == 0)
+        { %>
         <div class="no-resultados">
-            No hay inmuebles que coincidan con tu búsqueda.
+            No tenés inmuebles seguidos todavía.
         </div>
     <%}else{%>
-    <asp:Repeater ID="repetidorInmuebles" runat="server">
+    <asp:Repeater ID="repetidorFavoritos" runat="server">
         <ItemTemplate>
             <div class="card-container">
                 <div class="card mb-3">
@@ -162,12 +162,9 @@
                                 <div class="iconos">
                                     <a href="whatsapp://send?phone=541167814237&text=Hola,%20quiero%20contactarte"><i class="fab fa-whatsapp fa-xl"></i></a>
                                     <a href="Contacto.aspx"><i class="far fa-envelope fa-xl"></i></a>
-                                    <%if (Session["usuario"] != null)
-                                        {%>
                                     <asp:LinkButton ID="btnFavoritos" runat="server" CommandArgument='<%# Eval("ID") %>' CommandName="ThisBtnClick" OnClick="btnFavoritos_Click">
                                         <i class="far fa-heart fa-xl"></i>
                                     </asp:LinkButton>
-                                    <%}%>
                                     <a href='DetallePropiedad.aspx?id=<%# Eval("ID") %>#calendario'><i class="far fa-calendar-days fa-xl"></i></a>
                                 </div>
                                 <br />
@@ -182,4 +179,5 @@
         </ItemTemplate>
     </asp:Repeater>
     <% } %>
+
 </asp:Content>
