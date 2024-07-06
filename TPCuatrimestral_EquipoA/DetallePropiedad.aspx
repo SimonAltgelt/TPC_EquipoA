@@ -129,7 +129,6 @@
         .btn-primary {
             background-color: #356AA0;
             border-color: #356AA0;
-            margin-left: 15.8%;
         }
 
             .btn-primary:hover {
@@ -139,8 +138,6 @@
             }
 
         #info {
-            width: 570px;
-            margin-left: 35%;
             padding: 14px;
         }
 
@@ -159,7 +156,6 @@
             align-content: center;
             align-items: center;
             width: 40%;
-            margin-left: 15.8%;
         }
 
         .small-space {
@@ -306,34 +302,33 @@
         <div class="row custom-border">
             <asp:Label ID="lblDescripcion" CssClass="p card-text small text-body-secondary" runat="server"></asp:Label>
         </div>
-    </div>
-    <br />
-    <%-- INFO A CONSIDERAR --%>
-    <h2 class="txtContacto" style="text-align: center" id="calendario">TURNOS DE VISITA DISPONIBLES</h2>
-    <div id="info" class="row custom-border text-center">
-        <div class="txtInfo">
-            Información a considerar:
-        </div>
-        <div class="txtInfoDescripcion">
-            TURNO MAÑANA: 9hs. - 11hs.
-        </div>
-        <div class="txtInfoDescripcion">
-            TURNO MEDIODIA: 11:30hs. - 13:30hs.
-        </div>
-        <div class="txtInfoDescripcion">
-            TURNO TARDE: 14hs. - 16hs.
-        </div>
         <br />
-    </div>
+        <br />
+        <h2 class="txtContacto" style="text-align: center" id="calendario">TURNOS DE VISITA DISPONIBLES</h2>
+        <br />
+        <div id="info" class="row custom-border text-center">
+            <div class="txtInfo">
+                Información a considerar:
+            </div>
+            <div class="txtInfoDescripcion">
+                TURNO MAÑANA: 9hs. - 11hs.
+            </div>
+            <div class="txtInfoDescripcion">
+                TURNO MEDIODIA: 11:30hs. - 13:30hs.
+            </div>
+            <div class="txtInfoDescripcion">
+                TURNO TARDE: 14hs. - 16hs.
+            </div>
+            <br />
+        </div>
     <br />
+    <%-- CALENDARIO --%>
     <% if (Session["Usuario"] != null)
         {
 
     %>
-    <%-- CALENDARIO --%>
-    <div class="container text-center">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-5" style="margin-left: 16.8%">
+        <div class="custom-border d-flex flex-column justify-content-between align-items-center" style="border:none;">
+            <div>
 
                 <asp:ScriptManager runat="server" />
                 <asp:UpdatePanel ID="updCalendario" runat="server" UpdateMode="Conditional">
@@ -342,7 +337,7 @@
                         <asp:Calendar ID="Calendario" runat="server" OnSelectionChanged="Calendario_SelectionChanged" OnDayRender="Calendario_DayRender">
 
                             <OtherMonthDayStyle ForeColor="LightGray"></OtherMonthDayStyle>
-                            <TitleStyle BackColor="#4c6444" ForeColor="Black"></TitleStyle>
+                            <TitleStyle BackColor="#4c6444" ForeColor="White" ></TitleStyle>
                             <DayStyle BackColor="White"></DayStyle>
                             <SelectedDayStyle BackColor="#4d2d18" Font-Bold="True"></SelectedDayStyle>
 
@@ -353,10 +348,12 @@
             </div>
             <br />
 
-            <div style="margin-left: -202px">
+            <div style="width: 500px">
                 <br />
                 <asp:RadioButton ID="TurnoMañana" Text="Turno Mañana" CssClass="btn btn-verde turno small-space" GroupName="RadioGroup1" runat="server" />
+                <br />
                 <asp:RadioButton ID="TurnoMediodia" Text="Turno Mediodia" CssClass="btn btn-verde turno small-space" GroupName="RadioGroup1" runat="server" />
+                <br />
                 <asp:RadioButton ID="TurnoTarde" Text="Turno Tarde" CssClass="btn btn-verde turno small-space" GroupName="RadioGroup1" runat="server" /><br />
                 <br />
                 <asp:UpdatePanel runat="server">
@@ -372,7 +369,6 @@
                 </asp:UpdatePanel>
             </div>
         </div>
-    </div>
     <%}
         else
         {%>
@@ -381,6 +377,8 @@
         <a href="InicioSesion.aspx">inicie sesión</a>.
     </div>
     <% } %>
+    </div>
     <br />
+    
     <%-- FIN CALENDARIO  --%>
 </asp:Content>

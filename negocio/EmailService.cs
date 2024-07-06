@@ -15,7 +15,8 @@ namespace negocio
         public EmailService()
         {
             server = new SmtpClient();
-            server.Credentials = new NetworkCredential("maria.kowalk@alumnos.frgp.utn.edu.ar", "pass");
+            //server.Credentials = new NetworkCredential("lusivinmobiliaria@outlook.com.ar", "PanchitoMuchacho");
+            server.Credentials = new NetworkCredential("maria.kowalk@alumnos.frgp.utn.edu.ar", "");
             server.EnableSsl = true;
             server.Port = 587;
             server.Host = "smtp-mail.outlook.com";
@@ -24,6 +25,7 @@ namespace negocio
         public void ArmarEmail(string emailOrigen, string asunto, string mensaje) 
         {
             email = new MailMessage();
+            //email.From = new MailAddress("lusivinmobiliaria@outlook.com.ar");
             email.From = new MailAddress("maria.kowalk@alumnos.frgp.utn.edu.ar");
             email.To.Add(emailOrigen);
             email.Subject = asunto;
