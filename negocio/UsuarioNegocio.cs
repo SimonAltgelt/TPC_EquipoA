@@ -83,7 +83,7 @@ namespace negocio
             }
         }
 
-        public void insertarNuevo(Usuario nuevoUsuario)
+        public void agregarUsuario(Usuario nuevoUsuario)
         {
             AccesoDatos datos = new AccesoDatos();
             try

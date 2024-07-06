@@ -106,7 +106,8 @@ namespace TPCuatrimestral_EquipoA
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    Session.Add("error", "Hubo un error al reservar tu turno, inténtalo otra vez.");
+                    Response.Redirect("Error.aspx", false);
                 }
                 finally
                 {

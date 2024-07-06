@@ -30,10 +30,13 @@ namespace TPCuatrimestral_EquipoA
             miusuario.Telefono = txtTel.Text;
             
             UsuarioNegocio negocio = new UsuarioNegocio();
-            negocio.insertarNuevo(miusuario);
+            negocio.agregarUsuario(miusuario);
+            if (negocio.Login(miusuario)) //si el usuario existe en la base de datos
+            {
+                Session.Add("usuario", miusuario);
 
-            Session.Add("usuario", miusuario);
-            Response.Redirect("Default.aspx");
+                Response.Redirect("LoginExitoso.aspx", false);
+            }
         }
     }
 }

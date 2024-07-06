@@ -174,6 +174,7 @@
                         <div class="iconos">
                             <a href="whatsapp://send?phone=541167814237&text=Hola,%20quiero%20contactarte"><i class="fab fa-whatsapp fa-xl"></i></a>
                             <a href="Contacto.aspx"><i class="far fa-envelope fa-xl"></i></a>
+                            <i class="far fa-heart fa-xl"></i>
                             <a href="DetallePropiedad.aspx?id=<%=miInmueble.ID%>#calendario"><i class="far fa-calendar-days fa-xl"></i></a>
                         </div>
 
